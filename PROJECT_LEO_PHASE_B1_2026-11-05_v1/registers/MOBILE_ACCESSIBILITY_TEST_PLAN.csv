@@ -1,0 +1,9 @@
+﻿test_id,test,steps_NOT_EXECUTED,status,actual,reason
+MA-01,Android و viewport,phone portrait و tablet/landscape مورد توافق,NOT TESTED,NOT EXECUTED,No accessible Android device/emulator/adb/TalkBack evidence; no installation attempted
+MA-02,Keyboard/focus,Tab/Shift+Tab/Enter/Space/arrow/back/dialog focus,NOT TESTED,NOT EXECUTED,No accessible Android device/emulator/adb/TalkBack evidence; no installation attempted
+MA-03,FA/English/IPA,mixed-direction text، caret، wrapping و glyph واقعی,NOT TESTED,NOT EXECUTED,No accessible Android device/emulator/adb/TalkBack evidence; no installation attempted
+MA-04,TalkBack,ترتیب خواندن، language context، label و state announcement,NOT TESTED,NOT EXECUTED,No accessible Android device/emulator/adb/TalkBack evidence; no installation attempted
+MA-05,Touch target,اندازهٔ واقعی hitbox در دستگاه، نه صرفاً artboard,NOT TESTED,NOT EXECUTED,No accessible Android device/emulator/adb/TalkBack evidence; no installation attempted
+MA-06,Large text,150/200٪ و reflow بدون حذف کنترل‌های لازم,NOT TESTED,NOT EXECUTED,No accessible Android device/emulator/adb/TalkBack evidence; no installation attempted
+MA-07,Reduced/low motion,ترجیح واقعی OS، توقف background و fallback,NOT TESTED,NOT EXECUTED,No accessible Android device/emulator/adb/TalkBack evidence; no installation attempted
+MA-08,Audio/hardware,پخش قابل شنیدن و distinction recording/ASR/scoring؛ prototype نباید ضبط واقعی ادعا کند,NOT TESTED,NOT EXECUTED,No accessible Android device/emulator/adb/TalkBack evidence; no installation attempted

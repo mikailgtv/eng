@@ -1,0 +1,37 @@
+{
+  "name": "English Training LMS",
+  "short_name": "EnglishBridge",
+  "description": "Professional English Language LMS & Assessment Intelligence Platform",
+  "start_url": "/",
+  "id": "com.company.englishtraining",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#1d4ed8",
+  "background_color": "#f8fafc",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "My Learning",
+      "url": "/student/learning",
+      "description": "Continue courses and lessons"
+    },
+    {
+      "name": "Review & Practice",
+      "url": "/student/review",
+      "description": "Adaptive spaced-repetition vocabulary"
+    },
+    {
+      "name": "Exams",
+      "url": "/student/exams",
+      "description": "Take scheduled quizzes and exams"
+    }
+  ]
+}

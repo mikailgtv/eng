@@ -1,0 +1,12 @@
+{
+  "artifact": "PROJECT_LEO_PHASE_B1_2026-11-05_v1.zip",
+  "bytes": 2203105,
+  "sha256": "c49a0970c92833a209e0b2dfd214975745618a0fcedf001d1365f9530a29c159",
+  "members": 65,
+  "B1_archive_crc_verified": true,
+  "B1_archive_member_bytes_verified": true,
+  "original_B_archive_validation": "BLOCKED; not substituted by the B1 archive check",
+  "main_report": "PROJECT_LEO_PHASE_B1_2026-11-05_v1/PHASE_B1_FINAL_REPORT_FA.md",
+  "decision": "PARTIAL — MORE VALIDATION REQUIRED",
+  "C_started": false
+}

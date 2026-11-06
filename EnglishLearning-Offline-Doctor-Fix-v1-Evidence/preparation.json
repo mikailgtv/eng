@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-04",
+  "icon": {
+    "file": "assets/icon-square-v1.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "sha256": "360e01b31c255d3108b4cd221f4e26f1fd0095b4bb068cd795006c33d7da22a3",
+    "method": "Center square crop removes blank side margins; resize to 672x672 and pad on a white 1024x1024 canvas. No stretching or AI generation."
+  },
+  "original_file_hashes": {
+    "EnglishLearning-Offline/app.json": "1143745c3dd0be95fef6bf5a95354a0728f7560d086a10073edb909a40b584de",
+    "EnglishLearning-Offline/package.json": "1b0c4566f86412c05ef55eb9e3227a3fdb05961afc18a00aecc5cf143e783faf",
+    "EnglishLearning-Offline/assets/icon.png": "0c07088d4fc64299a0c622ff49b4fecac862fbcf58152f97cc081d5dafb7143d"
+  }
+}

@@ -1,0 +1,26 @@
+﻿directive_section,requirement,document,phase_status
+0,ماموریت و مرز فاز,PRODUCT_VISION.md,A policy; product planned
+1,حفاظت و موجودی,PROJECT_MASTER_INVENTORY.md,A discovery done
+2,معماری ۲۰ مسئولیت / ۱۲ گروه,PROJECT_MASTER_ARCHITECTURE.md,A proposed architecture
+3,هویت و art categories,design/LEO_CHARACTER_BIBLE.md,B/D planned
+4,Design system,docs/03_DESIGN_SYSTEM.md,B/C planned
+5,Animation engine,ANIMATION_ROADMAP.md,D planned
+6,Pedagogy,docs/06_PEDAGOGY_FRAMEWORK.md,E/H planned
+7,Curriculum/content factory,CURRICULUM_MASTER_MAP.md,Legacy inventory; H planned
+8,۲۳ نوع تمرین,docs/09_EXERCISE_ENGINE.md,F planned; legacy mapping only
+9,صوت/گفتار,audio/AUDIO_SPEECH_ARCHITECTURE.md,G planned
+10,Gamification,product/GAMIFICATION_SPEC.md,I planned
+11,حرفه‌ای/آتش‌نشانی,CURRICULUM_MASTER_MAP.md,J and expert review planned
+12,مدرس,docs/13_TEACHER_WORKSPACE.md,Legacy web inventory; K planned
+13,Enterprise,ENTERPRISE_FEATURE_MAP.md,"K planned, tenant verification required"
+14,Offline/data/backup,docs/11_OFFLINE_DATABASE.md,Architecture only; L1/L2 planned
+15,Windows,docs/16_WINDOWS_ROADMAP.md,N deferred after Android
+16,Authoring/admin,docs/08_CONTENT_SCHEMA.md,M09 contract; implementation planned
+17,پایگاه دانش ۲۶ فصل,README_FA.md,A documentation created
+18,فازهای A–O,MASTER_PHASE_ROADMAP.md,"A only, dependency gates documented"
+19,Definition of Done,docs/01_PRODUCT_REQUIREMENTS.md,Policy; no new complete feature claim
+20,Visual gate,docs/17_ACCESSIBILITY.md,"Plan, not tested"
+21,منابع/کارایی,docs/19_PERFORMANCE_BUDGET.md,Observed environment + provisional budgets
+22,امنیت/حریم خصوصی,docs/18_SECURITY_PRIVACY.md,Inventory/planning; no remediation
+23,۹ خروجی Phase A و توقف,README_FA.md,A deliverable scope
+24,گزارش فارسی/تحویل فایل,docs/00_EXECUTIVE_OVERVIEW.md,A report/package

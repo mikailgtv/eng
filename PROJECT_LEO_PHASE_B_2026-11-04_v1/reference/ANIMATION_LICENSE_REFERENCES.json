@@ -1,0 +1,30 @@
+[
+  {
+    "component": "Reanimated",
+    "reference": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/main/LICENSE",
+    "license_detected": "MIT",
+    "sha256": "f1ae22eddd3a96c3b7b8a494ef03749ae6a1e19574bacc9c195d83c916de09e2",
+    "scope": "Referenced upstream license only; exact runtime/version not selected or installed"
+  },
+  {
+    "component": "Lottie Android",
+    "reference": "https://raw.githubusercontent.com/airbnb/lottie-android/master/LICENSE",
+    "license_detected": "Apache-2.0",
+    "sha256": "c5accbbd8546e94c34aed24afe689a617627d18eed5a6c48277e48db57c23851",
+    "scope": "Referenced upstream license only; exact runtime/version not selected or installed"
+  },
+  {
+    "component": "Lottie Web",
+    "reference": "https://raw.githubusercontent.com/airbnb/lottie-web/master/LICENSE.md",
+    "license_detected": "MIT",
+    "sha256": "9d8d4d8b4bb99572ee8b51025a30b8493d949798cac465c6c15b1b29420bcb06",
+    "scope": "Referenced upstream license only; exact runtime/version not selected or installed"
+  },
+  {
+    "component": "Rive runtime",
+    "reference": "https://raw.githubusercontent.com/rive-app/rive-runtime/master/LICENSE",
+    "license_detected": "MIT",
+    "sha256": "fa43eb0d7fbf66f9504182d92dd097311278bb80111a5bf1403c366d6a403144",
+    "scope": "Referenced upstream license only; exact runtime/version not selected or installed"
+  }
+]

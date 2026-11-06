@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-04",
+  "deliverable": "EnglishLearning-Features-Preview-v1.html",
+  "purpose": "Separate interactive source-content walkthrough, NOT native Android UI or APK execution",
+  "counts": {
+    "courses": 1,
+    "modules": 6,
+    "lessons": 25,
+    "words": 100,
+    "questions": 25,
+    "grammar_notes": 6,
+    "audio_files": 8
+  },
+  "source_files_sha256": {
+    "app/settings.tsx": "584e6e77318a5d1576e0aa9e56474ee1fbdfbb7ea534158b219a4bc05661afae",
+    "app/progress.tsx": "e4d92b6cb7bc6e39686d9cd0302d8aa7cc0e6f58b21cf4ada8e79d3f731859ab",
+    "app/courses.tsx": "2e8552e675d38a15348f0bfb4b732ca5f689d896227cb0a9a10e3db95db20f38",
+    "app/index.tsx": "a104dcc1ff04b738193e381e793e7ee15c70e39d8b64b0081f243ecfe5a6d0bd",
+    "app/vocab.tsx": "314a6e27706c59d45a7727c39de48252e8eabedf170a6cb1ac8ca74e44b33606",
+    "app/_layout.tsx": "62196524f8fa09fb8b62141e2d064b160b87f50b090ddbab684fc2fe774a665a",
+    "app/lesson/[id].tsx": "ebe8e6853453c39d5469c038d298e1cf4239f298fddc183968826c113aea12fc",
+    "lib/db.ts": "124cbd45323bb1a423f3bcdaf4fbf600028197c9ace9491c242ee192b7b13c18",
+    "lib/content.ts": "a090b4e65f5cfcd22b4fdb57122e2e4308b5ab1150eeca1bfbdfc4665f1876de",
+    "assets/curriculum.json": "7a09e4cb81b4d054d7eca9a56002f9fd75876fcf5ac02dc23d73d73644b98e7b",
+    "assets/mascot.png": "0c07088d4fc64299a0c622ff49b4fecac862fbcf58152f97cc081d5dafb7143d",
+    "assets/audio/colors-1.mp3": "e042ea21f4c8d921b8dd61df799131b50a7168be66096639bacdf65b09c3af0b",
+    "assets/audio/days-1.mp3": "3908da47de37a2c8c093cc4497e71d3f597ca9b5481e2219a7881e996a639760",
+    "assets/audio/family-1.mp3": "5dea7a729b7ea0848719248da00727f8729d14e0e5b7fddf82e707cd73828936",
+    "assets/audio/hello-1.mp3": "f2948b6f2d3baeceaef45bf60a1baeb17d66aaa8d3ae7c9e0bf25593d436f2ef",
+    "assets/audio/hello-2.mp3": "5965f3b538ad441165e00bb8c8f02e9b9e443772806c912422452aaf988a3a14",
+    "assets/audio/myname-1.mp3": "5da8cae84afefd10ce0d24e6f54b46ee955e4183473722eec48a7b615ddefb59",
+    "assets/audio/numbers-1.mp3": "30bd47291e53509a9f26e15cdb4cd163cf1f36cca4e5be2658c0ad7bd792ce34",
+    "assets/audio/questions-1.mp3": "81926ada46df0478ae435375a0f2d8bf9f33dbfbfdeec7366c70879e49699904"
+  },
+  "source_modifications": "None",
+  "external_resources": "None; curriculum, image, and original MP3 files embedded",
+  "browser_execution": "NOT TESTED at creation",
+  "android_execution": "NOT TESTED",
+  "security_remediation": "None",
+  "bytes": 265762,
+  "sha256": "8bb738fb00ff1caf148db02414a1768d7a5556d42f9e558dcd18176610e16e25"
+}

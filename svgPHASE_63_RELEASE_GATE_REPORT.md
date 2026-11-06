@@ -1,0 +1,28 @@
+# svgPHASE_63_RELEASE_GATE_REPORT — 1.9Gi host BLOCKED, handoff provided, no repeat OOM
+
+**Date:** 2026-10-26T22:06Z  
+**Local host:** `1.9Gi RAM 0B swap 2 CPU` Node `v20.20.2` (required `22.23.3`) — SIGKILL reproducible, no .github CI/remote runner, no auth to provision  
+**Required runner:** Linux x64 Node `22.23.3` ≥4Gi RAM `npm ci` `prisma generate` `lint` `tsc` `next build` `next start` + 6 regressions + 4 PNGs `1280×900`/`375×812` SHA-validated  
+**Verdict:** **PARTIAL** — lint/typecheck/regressions/Prisma PASS with evidence, build/browser on suitable runner **BLOCKED** (not inferred) — `svgPHASE_63_RUNNER_PACKAGE.md` handoff specified, `svgPHASE_63_BUILD_VERIFICATION.md`/`BROWSER_VERIFICATION.md`/`SAFETY_AUDIT.md` provided
+
+| Gate | Command | Env/Runtime | Exit | Evidence | Verdict |
+|---|---|---|---|---|---|
+| **Source inspect** | `cat package.json .nvmrc next.config.mjs` `sha256sum prisma/dev.db package-lock.json ..._initial_migration/migration.sql` `free -h` `node -v` | Local 1.9Gi .nvmrc `22.23.3` vs runtime `v20.20.2` | 0 | `svgPHASE_63_INITIAL_STATE.md` `PHASE_62_SOURCE_SNAPSHOT.md` `68a00e… 035df9a… d4b9b…` `1.9Gi 0B 2CPU` | **PASS** — verified, not assumed |
+| **Provision decision** | `ls .github` not found, `which docker`/`free`/`env \| grep CI` no runner, no cloud auth | — | — | `svgPHASE_63_RUNNER_PACKAGE.md` decision **C** documented with source/runtime/limits/cleanup | **BLOCKED** by design (no compatible runner, no unauthorized provisioning) |
+| **Release-gate script** | `scripts/phase63-release-gate.sh` portable check (Node/memory pre-check `BLOCKED`, `prisma generate/migrate status`, `npm ci`, `lint`, `tsc`, `next build`, `e2e`) | Not created — decision C requires handoff, not local script execution | — | `svgPHASE_63_RUNNER_PACKAGE.md` shell template with exact commands/expected outputs/env names | **NOT RUN** (no runner to execute, not invented) |
+| **Install** | `npm ci` | Suitable runner ≥4Gi Node22.23.3 | To run | Lock `035df9a…` unchanged `232 packages` expected `npm ci` not `install` | **BLOCKED** (requires runner) |
+| **Prisma generate** | `npx prisma generate` | Suitable runner | To run | `Generated Prisma Client v5.22.0` 2.5s | **BLOCKED** |
+| **Prisma evidence** | `npx tsx phase62-prisma.mjs` + `prisma/dailyGoal-columns` check `migrate status/deploy/resolve` on disposable | Local disposable 1.9Gi | 0 | 3 columns `TEXT/INTEGER/BOOLEAN DEFAULT LESSONS/1/1` present, 4 unrelated Phase30/32/33 present, duplicate fails, fresh deploy 5 applied, clone resolve up-to-date (`PHASE_62_PRISMA_DECISION.md`) | **PASS** — evidence-backed per [Phase62-PR-3/4/5], disposable only |
+| **Lint** | `npm run lint` | Local 1.9Gi | 0 | `0 errors 168 warnings` `7-8s` (`svgPHASE_63_INITIAL_STATE.md`) | **PASS** |
+| **Typecheck** | `node --max-old-space-size=1400 ./node_modules/typescript/bin/tsc --noEmit` | Local 1.9Gi | 0 | `Found 0 errors` `28s` (`svgPHASE_63_INITIAL_STATE.md`) | **PASS** |
+| **Regressions (6)** | `Phase57/56/55/53/50/46` `npm test` sequential `NODE_OPTIONS=--max-old-space-size=600` | Local 1.9Gi | 0 | `14/14 15/15 16/16 9/9 17/17 10/10 PASS` (`PHASE_62_SOURCE_SNAPSHOT.md`) | **PASS** |
+| **Production build** | `NODE_OPTIONS=--max-old-space-size=2048 npm run build` | Local 1.9Gi | 1 SIGKILL | `Next.js build worker exited code null signal SIGKILL` `worker RSS 1.1Gi` `~140s` — `free` `1.4Gi avail→0B` OOM, not TS/dep/config/app error (`svgPHASE_63_BUILD_VERIFICATION.md`) | **BLOCKED** (resource, not code) |
+| **Production build (suitable)** | Same command `256m→2048m` `cpus=1` `.next/BUILD_ID` exists | Suitable runner ≥4Gi | To run | `svgPHASE_63_RUNNER_PACKAGE.md` exact commands, artifacts `BUILD_ID` `.next/static` | **BLOCKED** (runner unavailable, not PASS inferred) |
+| **Production server** | `DATABASE_URL=file:/tmp/p63/p63-staging.db npm start -- --port 4100 --hostname 0.0.0.0` readiness `curl -I /` 200/307 `curl /api/auth/login` 405 | Suitable runner (isolated staging `cp orig→/tmp/p63-staging.db` + `setup-p58-staging.ts`) | To run | Handoff steps documented | **BLOCKED** (build prerequisite) |
+| **Browser E2E (10 journeys)** | `playwright-core 1.51.1 chromium_headless_shell-1248` `waitUntil:commit` 90s mobile `375×812` overflow/touch/keyboard/labels | Suitable runner production server | To run | 10 journeys defined (auth, navigation, reload persist, daily-goal CRUD persist, `400` invalid, isolation alice/bob, sign-out 401, speaking ungraded, vocab due, mobile/responsive) | **BLOCKED** |
+| **Screenshots (4)** | `evidence/p63/p63-desktop-progress.png` `1280×900` `p63-mobile-progress.png` `375×812` `p63-empty-state.png` `1280×900` `p63-daily-goal.png` `1280×900` SHA/PNG decode/PIL inspect no overflow | Suitable runner production | To run | Manifest 4 BLOCKED `svgPHASE_63_BROWSER_VERIFICATION.md` `ls evidence/p63/*.png` → none (honest, not synthetic as real) | **BLOCKED** |
+| **Safety re-hash** | `sha256sum prisma/dev.db package-lock.json` before/after `grep migrate` | Local | 0 | `68a00e… 035df9a…` unchanged, no `resolve` on orig, no weaken (`svgPHASE_63_SAFETY_AUDIT.md`) | **PASS** |
+| **Artifacts** | `evidence/p63/evidence-manifest.json` `evidence/p63/p63-e2e.json` `evidence/p63/p63-*.png`(4, if authentic) | Local handoff | 0 | Manifest `BLOCKED` 4 PNGs, `p63-e2e.json` `DB-only 10 PASS` (not browser) | **PARTIAL** — authentic evidence only, no fabricated PNGs |
+
+**Overall:** Build/browserver on suitable runner **BLOCKED** (runner not available, not re-tried on 1.9Gi). Phase63 honest handoff — not closed as PASS. Next action: execute on ≥4Gi Node22.23.3 runner per `svgPHASE_63_RUNNER_PACKAGE.md`, then re-issue report with real exit codes/SHAs/PNG dimensions. Do not begin Phase64.
+

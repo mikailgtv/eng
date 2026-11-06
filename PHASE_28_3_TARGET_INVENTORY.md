@@ -1,0 +1,236 @@
+# Phase 28.3 — PostgreSQL Staging Inventory
+
+**Date:** 2026-10-08 (Asia/Tehran)  
+**Target:** disposable PostgreSQL 17.11 database `phase28_3_stage` in the local temporary cluster  
+**Scope:** application schema only; no Production target was accessed.
+
+## Summary
+
+- Application tables: **213**; application rows: **3,716**.
+- Application columns: **1,984**, exactly matching the 1,984 scalar fields in `prisma/schema.postgresql.prisma`.
+- Target column type distribution: `{"boolean": 92, "bytea": 2, "double precision": 18, "integer": 163, "text": 1307, "timestamp without time zone": 402}`.
+- All 213 application tables have the expected source columns; see the row-count inventory below.
+- Catalog integrity: 213 application PKs, 277 validated FKs, 602 application indexes, 315 unique indexes checked.
+- PostgreSQL sequences: 0; enum types: 0. Internal `_prisma_migrations` and `phase28_meta.import_progress` bookkeeping are excluded from application counts.
+
+## Table inventory (rows)
+
+| PostgreSQL application table | Rows |
+|---|---:|
+| `access_review_decisions` | 0 |
+| `access_reviews` | 11 |
+| `account_security_events` | 232 |
+| `activities` | 71 |
+| `activity_attempts` | 4 |
+| `activity_vocabulary` | 41 |
+| `adaptive_assessment_events` | 0 |
+| `adaptive_assessment_sessions` | 0 |
+| `adaptive_rules` | 1 |
+| `ai_feedback` | 0 |
+| `ai_generated_content` | 0 |
+| `ai_messages` | 8 |
+| `ai_recommendations` | 2 |
+| `ai_sessions` | 4 |
+| `ai_settings` | 1 |
+| `ai_usage` | 6 |
+| `announcement_acknowledgements` | 0 |
+| `announcement_targets` | 0 |
+| `announcements` | 0 |
+| `api_client_credentials` | 18 |
+| `assessment_accommodations` | 6 |
+| `assessment_answers` | 0 |
+| `assessment_attempt_events` | 0 |
+| `assessment_attempt_snapshots` | 0 |
+| `assessment_attempts` | 0 |
+| `assessment_blueprint_versions` | 6 |
+| `assessment_blueprints` | 6 |
+| `assessment_corrections` | 0 |
+| `assessment_diagnostic_profiles` | 0 |
+| `assessment_distractor_statistics` | 0 |
+| `assessment_item_statistics` | 6 |
+| `assessment_quality_checks` | 0 |
+| `assessment_question_pools` | 0 |
+| `assessment_questions` | 51 |
+| `assessment_report_snapshots` | 6 |
+| `assessment_retake_policies` | 1 |
+| `assessment_retention_policies` | 0 |
+| `assessment_review_queue` | 0 |
+| `assessment_rubric_scores` | 0 |
+| `assessment_speaking_submissions` | 0 |
+| `assessment_variants` | 12 |
+| `assessments` | 4 |
+| `assignment_submissions` | 7 |
+| `attendance_changes` | 14 |
+| `attendance_records` | 7 |
+| `audio_assets` | 0 |
+| `audit_logs` | 647 |
+| `badges` | 8 |
+| `book_content_nodes` | 21 |
+| `book_versions` | 1 |
+| `books` | 1 |
+| `calendar_sync_mappings` | 0 |
+| `certificate_preferences` | 1 |
+| `certificate_revocations` | 1 |
+| `certificate_sequences` | 1 |
+| `certificate_signatories` | 2 |
+| `certificate_templates` | 2 |
+| `certificate_verifications` | 12 |
+| `certificate_versions` | 5 |
+| `certificates` | 5 |
+| `certification_settings` | 1 |
+| `challenge_participants` | 5 |
+| `challenges` | 3 |
+| `class_assignments` | 15 |
+| `class_sessions` | 15 |
+| `communication_preferences` | 0 |
+| `communication_settings` | 0 |
+| `content_ai_drafts` | 0 |
+| `content_assignments` | 0 |
+| `content_comments` | 0 |
+| `content_item_tags` | 0 |
+| `content_item_usages` | 0 |
+| `content_items` | 0 |
+| `content_media` | 0 |
+| `content_metrics` | 0 |
+| `content_overrides` | 0 |
+| `content_prerequisites` | 0 |
+| `content_quality_checks` | 40 |
+| `content_releases` | 0 |
+| `content_reviews` | 0 |
+| `content_settings` | 0 |
+| `content_tags` | 14 |
+| `content_versions` | 0 |
+| `conversation_participants` | 0 |
+| `conversations` | 0 |
+| `course_assignments` | 20 |
+| `course_completion_records` | 2 |
+| `course_completion_rules` | 0 |
+| `course_versions` | 0 |
+| `courses` | 4 |
+| `curriculum_versions` | 0 |
+| `curriculums` | 2 |
+| `daily_learning_plans` | 4 |
+| `delegations` | 0 |
+| `departments` | 0 |
+| `external_data_import_batches` | 15 |
+| `external_identity_links` | 14 |
+| `gamification_profiles` | 5 |
+| `gamification_settings` | 1 |
+| `grammar_content` | 6 |
+| `group_challenge_progress` | 1 |
+| `group_challenges` | 1 |
+| `import_batches` | 0 |
+| `integration_connections` | 13 |
+| `integration_credentials` | 0 |
+| `integration_field_mappings` | 0 |
+| `integration_logs` | 17 |
+| `integration_sync_jobs` | 0 |
+| `knowledge_items` | 1 |
+| `learning_events` | 32 |
+| `learning_goals` | 3 |
+| `learning_groups` | 5 |
+| `learning_levels` | 12 |
+| `learning_objectives` | 20 |
+| `learning_recommendations` | 30 |
+| `learning_streaks` | 1 |
+| `lesson_content_blocks` | 156 |
+| `lesson_drafts` | 0 |
+| `lessons` | 39 |
+| `level_access_policies` | 0 |
+| `levels` | 7 |
+| `listening_assignments` | 0 |
+| `listening_attempts` | 6 |
+| `listening_exercises` | 1 |
+| `login_attempts` | 210 |
+| `mascot_reaction_logs` | 0 |
+| `message_attachments` | 0 |
+| `message_revisions` | 0 |
+| `messages` | 0 |
+| `mfa_backup_codes` | 0 |
+| `mfa_challenges` | 11 |
+| `mfa_methods` | 1 |
+| `milestones` | 4 |
+| `modules` | 9 |
+| `notification_deliveries` | 258 |
+| `notification_preferences` | 0 |
+| `notification_rules` | 14 |
+| `notification_template_versions` | 0 |
+| `notification_templates` | 0 |
+| `notifications` | 318 |
+| `organization_settings` | 1 |
+| `organizations` | 1 |
+| `password_history` | 5 |
+| `permissions` | 49 |
+| `placement_results` | 6 |
+| `push_subscriptions` | 0 |
+| `question_bank_meta` | 0 |
+| `question_options` | 97 |
+| `question_versions` | 1 |
+| `questions` | 57 |
+| `recurrence_rules` | 1 |
+| `requirement_overrides` | 0 |
+| `review_schedules` | 1 |
+| `role_permissions` | 161 |
+| `roles` | 8 |
+| `rubric_versions` | 6 |
+| `rubrics` | 6 |
+| `scheduled_notices` | 47 |
+| `skill_mappings` | 0 |
+| `skills` | 19 |
+| `speaking_assignments` | 3 |
+| `speaking_submissions` | 0 |
+| `speech_attempts` | 3 |
+| `speech_recognition_requests` | 12 |
+| `streak_freezes` | 1 |
+| `student_badges` | 3 |
+| `student_course_assignments` | 0 |
+| `student_knowledge_states` | 1 |
+| `student_learning_preferences` | 1 |
+| `student_learning_profiles` | 77 |
+| `student_lesson_progress` | 5 |
+| `student_milestones` | 0 |
+| `student_skill_states` | 7 |
+| `student_voice_preferences` | 0 |
+| `support_access_sessions` | 12 |
+| `teacher_approvals` | 2 |
+| `teacher_group_assignments` | 2 |
+| `teacher_learning_overrides` | 3 |
+| `teacher_notes` | 7 |
+| `teacher_student_assignments` | 0 |
+| `teaching_plans` | 8 |
+| `teams` | 0 |
+| `temporary_permissions` | 0 |
+| `transcripts` | 0 |
+| `tts_requests` | 0 |
+| `units` | 1 |
+| `user_departments` | 0 |
+| `user_groups` | 11 |
+| `user_invitations` | 23 |
+| `user_organizations` | 87 |
+| `user_profiles` | 0 |
+| `user_roles` | 6 |
+| `user_sessions` | 165 |
+| `users` | 87 |
+| `vocabulary` | 118 |
+| `vocabulary_review` | 0 |
+| `voice_consents` | 0 |
+| `voice_messages` | 6 |
+| `voice_sessions` | 6 |
+| `voice_settings` | 0 |
+| `webhook_deliveries` | 0 |
+| `webhook_inbound_receipts` | 0 |
+| `webhook_subscriptions` | 0 |
+| `weekly_learning_plans` | 2 |
+| `workflow_approvals` | 0 |
+| `workflow_events` | 0 |
+| `workflow_idempotency_records` | 0 |
+| `workflow_run_steps` | 0 |
+| `workflow_runs` | 0 |
+| `workflow_versions` | 0 |
+| `workflows` | 0 |
+| `writing_submissions` | 0 |
+| `xp_transactions` | 23 |
+
+## Method
+
+Inventory was collected from PostgreSQL catalogs/information schema and independently compared with the read-only SQLite source. The final independent source/target count and content-hash results are in `PHASE_28_3_ROW_COUNTS.md` and `PHASE_28_3_CONTENT_FINGERPRINTS.md`.

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-05",
+  "phase": "B.1 validation only",
+  "decision": "PARTIAL — MORE VALIDATION REQUIRED",
+  "C_authorized": false,
+  "source_changed": false,
+  "original_B_archive_available": false,
+  "test_groups": 35,
+  "test_status_counts": {
+    "BLOCKED": 6,
+    "PASS": 13,
+    "FAIL": 8,
+    "NEEDS REVIEW": 7,
+    "NOT TESTED": 1
+  },
+  "required_files_present": 13,
+  "retained_delivered_files_checked": 74,
+  "missing_current_mirror_files": 234,
+  "asset_payloads_verified_with_explicit_provenance": 32,
+  "individual_reference_artboards_available": 0,
+  "screen_contracts": 67,
+  "state_cells": 938,
+  "na_preserved": 248,
+  "new_browser_runs": 0,
+  "new_simulated_DOM_runs": 0,
+  "mobile_runs": 0,
+  "qualified_approval_granted": false,
+  "runtime_console_errors": "NOT COLLECTED",
+  "runtime_network_errors": "NOT COLLECTED",
+  "new_confirmed_critical_findings": 0,
+  "historical_CRITICAL_report_retained_unresolved": true,
+  "note": "FAIL items include source/content defects and an explicitly scoped current-input completeness failure, not a new claim that the original ZIP was corrupt."
+}

@@ -1,0 +1,99 @@
+﻿document,label,target,normalized_target,declared_in_package,available_now,namespace_status,current_resolution_status,runtime_link_navigation
+PHASE_B_ACCESSIBILITY_REVIEW.md,contrast evidence,evidence/CONTRAST_MEASUREMENTS.csv,evidence/CONTRAST_MEASUREMENTS.csv,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_ACCESSIBILITY_REVIEW.md,glyph proof,evidence/LATIN_IPA_FONT_PROVENANCE.json,evidence/LATIN_IPA_FONT_PROVENANCE.json,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_ACCESSIBILITY_REVIEW.md,raster geometry,evidence/MOCKUP_GEOMETRY_MEASUREMENTS_DELIVERY.json,evidence/MOCKUP_GEOMETRY_MEASUREMENTS_DELIVERY.json,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_ACCESSIBILITY_REVIEW.md,static markup,evidence/STATIC_MARKUP_REVIEW_DELIVERY.json,evidence/STATIC_MARKUP_REVIEW_DELIVERY.json,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_ACCESSIBILITY_REVIEW.md,prototype logic,evidence/PROTOTYPE_LOGIC_TESTS_DELIVERY.json,evidence/PROTOTYPE_LOGIC_TESTS_DELIVERY.json,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_ANIMATION_STORYBOARD.md,ANIMATION_LICENSE_REFERENCES,reference/ANIMATION_LICENSE_REFERENCES.json,reference/ANIMATION_LICENSE_REFERENCES.json,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_DECISION_LOG.md,INITIAL_CONFLICT_LOG,design/INITIAL_CONFLICT_LOG.md,design/INITIAL_CONFLICT_LOG.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_DESIGN_SYSTEM.md,tokens-v2.json,design/tokens-v2.json,design/tokens-v2.json,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_DESIGN_SYSTEM.md,Component Sheet,design/COMPONENT_REFERENCE_SHEET.png,design/COMPONENT_REFERENCE_SHEET.png,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_FINAL_REPORT_FA.md,Prototype را باز کن,prototype/LEO_DESIGN_PROTOTYPE_FINAL.html,prototype/LEO_DESIGN_PROTOTYPE_FINAL.html,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_LEO_CHARACTER_BIBLE.md,Sheet چهار نما,design/LEO_CHARACTER_REFERENCE_v2.png,design/LEO_CHARACTER_REFERENCE_v2.png,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_LEO_CHARACTER_BIBLE.md,۱۶ حالت,design/LEO_EXPRESSION_SHEET.png,design/LEO_EXPRESSION_SHEET.png,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_LEO_CHARACTER_BIBLE.md,فهرست source/PNG فعال,design/ACTIVE_LEO_ASSETS.json,design/ACTIVE_LEO_ASSETS.json,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_PRODUCT_DECISIONS.md,INITIAL_CONFLICT_LOG,design/INITIAL_CONFLICT_LOG.md,design/INITIAL_CONFLICT_LOG.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_PRODUCT_DECISIONS.md,مقایسهٔ تصویری,design/VISUAL_DIRECTION_STUDY.png,design/VISUAL_DIRECTION_STUDY.png,True,True,PASS,PASS,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/A01__Available.webp,mockups/phone/A01__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/A02__Available.webp,mockups/phone/A02__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/A03__Available.webp,mockups/phone/A03__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/A04__Available.webp,mockups/phone/A04__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/A05__Available.webp,mockups/phone/A05__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/A06__Available.webp,mockups/phone/A06__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/A07__Available.webp,mockups/phone/A07__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/A08__Available.webp,mockups/phone/A08__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/B01__Available.webp,mockups/phone/B01__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/B02__Available.webp,mockups/phone/B02__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/B03__Available.webp,mockups/phone/B03__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/B04__Available.webp,mockups/phone/B04__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/B05__Available.webp,mockups/phone/B05__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/B06__Available.webp,mockups/phone/B06__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/B07__Available.webp,mockups/phone/B07__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/C01__Available.webp,mockups/phone/C01__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/C02__Available.webp,mockups/phone/C02__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/C03__Available_v2.webp,mockups/phone/C03__Available_v2.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/C04__Available_v2.webp,mockups/phone/C04__Available_v2.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/C05__Available_v2.webp,mockups/phone/C05__Available_v2.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/C06__Available.webp,mockups/phone/C06__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/C07__Available.webp,mockups/phone/C07__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/D01__Available.webp,mockups/phone/D01__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/D02__Available.webp,mockups/phone/D02__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/D03__Available.webp,mockups/phone/D03__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/D04__Available_v2.webp,mockups/phone/D04__Available_v2.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/D05__Available.webp,mockups/phone/D05__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/D06__Available.webp,mockups/phone/D06__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/D07__Available.webp,mockups/phone/D07__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/E01__Available.webp,mockups/phone/E01__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/E02__Available.webp,mockups/phone/E02__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/E03__Available.webp,mockups/phone/E03__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/E04__Available.webp,mockups/phone/E04__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/E05__Available.webp,mockups/phone/E05__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/E06__Available.webp,mockups/phone/E06__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/E07__Available.webp,mockups/phone/E07__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/E08__Available.webp,mockups/phone/E08__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/F01__Available.webp,mockups/phone/F01__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/F02__Available.webp,mockups/phone/F02__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/F03__Available.webp,mockups/phone/F03__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/F04__Available.webp,mockups/phone/F04__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/F05__Available.webp,mockups/phone/F05__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/F06__Available.webp,mockups/phone/F06__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/F07__Available.webp,mockups/phone/F07__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/G01__Available.webp,mockups/phone/G01__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/G02__Available.webp,mockups/phone/G02__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/G03__Available.webp,mockups/phone/G03__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/G04__Available.webp,mockups/phone/G04__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/G05__Available.webp,mockups/phone/G05__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/G06__Available.webp,mockups/phone/G06__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/G07__Available.webp,mockups/phone/G07__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H01__Available.webp,mockups/phone/H01__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H02__Available.webp,mockups/phone/H02__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H03__Available.webp,mockups/phone/H03__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H04__Available.webp,mockups/phone/H04__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H05__Available.webp,mockups/phone/H05__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H06__Available.webp,mockups/phone/H06__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H07__Available.webp,mockups/phone/H07__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H08__Available.webp,mockups/phone/H08__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H09__Available.webp,mockups/phone/H09__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/H10__Available.webp,mockups/phone/H10__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/I01__Available.webp,mockups/phone/I01__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/I02__Available.webp,mockups/phone/I02__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/I03__Available.webp,mockups/phone/I03__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/I04__Available.webp,mockups/phone/I04__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/I05__Available.webp,mockups/phone/I05__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,mockup,mockups/phone/I06__Available.webp,mockups/phone/I06__Available.webp,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_MAP.md,Prototype مستقل,prototype/LEO_DESIGN_PROTOTYPE_FINAL.html,prototype/LEO_DESIGN_PROTOTYPE_FINAL.html,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+PHASE_B_SCREEN_SPECIFICATIONS.md,SCREEN_STATE_MATRIX_v2.csv,design/SCREEN_STATE_MATRIX_v2.csv,design/SCREEN_STATE_MATRIX_v2.csv,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,DESIGN PROTOTYPE,prototype/LEO_DESIGN_PROTOTYPE_FINAL.html,prototype/LEO_DESIGN_PROTOTYPE_FINAL.html,True,False,PASS,BLOCKED,BLOCKED — real browser unavailable
+README_FA.md,Product decisions,PHASE_B_PRODUCT_DECISIONS.md,PHASE_B_PRODUCT_DECISIONS.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Character Bible,PHASE_B_LEO_CHARACTER_BIBLE.md,PHASE_B_LEO_CHARACTER_BIBLE.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Design System,PHASE_B_DESIGN_SYSTEM.md,PHASE_B_DESIGN_SYSTEM.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Color/Typography tokens,PHASE_B_COLOR_TYPOGRAPHY_TOKENS.md,PHASE_B_COLOR_TYPOGRAPHY_TOKENS.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Screen map,PHASE_B_SCREEN_MAP.md,PHASE_B_SCREEN_MAP.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Screen/state specifications,PHASE_B_SCREEN_SPECIFICATIONS.md,PHASE_B_SCREEN_SPECIFICATIONS.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,UX flows,PHASE_B_UX_FLOWS.md,PHASE_B_UX_FLOWS.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Animation storyboard,PHASE_B_ANIMATION_STORYBOARD.md,PHASE_B_ANIMATION_STORYBOARD.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Accessibility review,PHASE_B_ACCESSIBILITY_REVIEW.md,PHASE_B_ACCESSIBILITY_REVIEW.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Asset manifest,PHASE_B_ASSET_MANIFEST.csv,PHASE_B_ASSET_MANIFEST.csv,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Design QA,PHASE_B_DESIGN_QA_REPORT.md,PHASE_B_DESIGN_QA_REPORT.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,Decision log,PHASE_B_DECISION_LOG.md,PHASE_B_DECISION_LOG.md,True,True,PASS,PASS,BLOCKED — real browser unavailable
+README_FA.md,گزارش فارسی,PHASE_B_FINAL_REPORT_FA.md,PHASE_B_FINAL_REPORT_FA.md,True,True,PASS,PASS,BLOCKED — real browser unavailable

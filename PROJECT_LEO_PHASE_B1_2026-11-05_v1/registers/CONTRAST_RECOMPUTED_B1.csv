@@ -1,0 +1,33 @@
+﻿route,foreground_token,background_token,foreground,background,role,fresh_ratio,required_minimum,matches_prior_rounded_value,status,scope
+routeA,ink,paper,#17372F,#F6F5F0,text,11.846,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,ink,surface,#17372F,#FFFFFF,text,12.931,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,muted,paper,#52655F,#F6F5F0,text,5.682,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,muted,surface,#52655F,#FFFFFF,text,6.203,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,primaryInk,primary,#FFFFFF,#1B5C4E,text,7.814,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,primary,primarySoft,#1B5C4E,#E7F0E9,text,6.712,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,accentInk,accent,#392A1E,#D6954D,text,5.424,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,accentInk,accentSoft,#392A1E,#F6EBD5,text,11.656,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,error,errorSoft,#A23C2F,#FBEDE7,text,5.698,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,warning,warningSoft,#77501F,#FFF1D2,text,6.357,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,info,infoSoft,#315F76,#EAF2F6,text,6.117,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,disabledInk,disabledBg,#52655F,#E3E7E2,disabled explanatory text,4.961,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,border,paper,#70867D,#F6F5F0,essential boundary,3.566,3.0,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,border,surface,#70867D,#FFFFFF,essential boundary,3.892,3.0,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,focus,paper,#134F43,#F6F5F0,focus indicator,8.638,3.0,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeA,primary,primarySoft,#1B5C4E,#E7F0E9,progress fill,6.712,3.0,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,ink,paper,#26324A,#F3F5FA,text,11.757,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,ink,surface,#26324A,#FFFFFF,text,12.824,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,muted,paper,#53627A,#F3F5FA,text,5.669,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,muted,surface,#53627A,#FFFFFF,text,6.184,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,primaryInk,primary,#FFFFFF,#3D507E,text,7.933,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,primary,primarySoft,#3D507E,#E9EDF8,text,6.775,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,accentInk,accent,#213C45,#86BBC4,text,5.52,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,accentInk,accentSoft,#213C45,#E7F3F4,text,10.309,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,error,errorSoft,#A23C2F,#FBEDE7,text,5.698,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,warning,warningSoft,#77501F,#FFF1D2,text,6.357,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,info,infoSoft,#315F76,#EAF2F6,text,6.117,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,disabledInk,disabledBg,#53627A,#E3E7EE,disabled explanatory text,4.986,4.5,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,border,paper,#74839A,#F3F5FA,essential boundary,3.529,3.0,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,border,surface,#74839A,#FFFFFF,essential boundary,3.849,3.0,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,focus,paper,#34456E,#F3F5FA,focus indicator,8.663,3.0,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested
+routeB,primary,primarySoft,#3D507E,#E9EDF8,progress fill,6.775,3.0,True,PASS,Token arithmetic only; computed browser/native styles and OS media controls not tested

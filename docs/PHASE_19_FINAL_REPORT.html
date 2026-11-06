@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="گزارش نهایی فاز ۱۹: زیرساخت اتوماسیون و موتور گردش‌کار EnglishBridge LMS">
+<title>گزارش نهایی فاز ۱۹ | EnglishBridge LMS</title>
+<style>
+:root{color-scheme:light;--ink:#172033;--muted:#536176;--line:#dce4ef;--blue:#174ea6;--pale:#eef5ff;--green:#126747;--greenbg:#e9f7f0;--amber:#80540a;--amberbg:#fff5d9;--paper:#fff;--bg:#f3f6fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",Arial,sans-serif;line-height:1.9}.page{max-width:1040px;margin:32px auto;padding:0 22px}.sheet{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 34px #1a31520b;overflow:hidden}.hero{padding:42px 48px 34px;background:linear-gradient(135deg,#102e5d,#1a58a8);color:white}.eyebrow{font-size:13px;letter-spacing:.04em;opacity:.82}.hero h1{font-size:30px;line-height:1.5;margin:8px 0}.hero p{margin:0;color:#e6efff;max-width:790px}.badges{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.badge{display:inline-block;border:1px solid #ffffff55;background:#ffffff18;border-radius:999px;padding:4px 12px;font-size:13px}.content{padding:30px 48px 46px}.callout{padding:17px 20px;margin:0 0 25px;border-radius:12px;background:var(--amberbg);border-right:4px solid #e2a528;color:#513a0b}.callout strong{color:#432e00}.success{background:var(--greenbg);border-right-color:#36a477;color:#164b37}h2{font-size:21px;margin:34px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);color:#153d78}h3{font-size:16px;margin:22px 0 8px;color:#213b60}p{margin:8px 0 14px}ul,ol{padding-right:23px;margin:8px 0 16px}li{padding-right:3px;margin:5px 0}a{color:var(--blue)}code{direction:ltr;unicode-bidi:embed;font-family:Consolas,monospace;background:#f0f3f8;padding:2px 5px;border-radius:4px;font-size:.92em}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}.card{border:1px solid var(--line);border-radius:12px;padding:15px 17px;background:#fff}.card h3{margin:0 0 6px}.card p{margin:0;color:var(--muted);font-size:14px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:14px}th,td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top}th{background:var(--pale);color:#173e77}tr:nth-child(even) td{background:#fbfcfe}.pill{display:inline-block;border-radius:6px;padding:1px 8px;background:#eef2f8;font-family:Consolas,monospace;direction:ltr;unicode-bidi:embed}.footer{padding:18px 48px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;background:#fbfcfe}.small{font-size:13px;color:var(--muted)}@media(max-width:700px){.page{margin:0;padding:0}.sheet{border-radius:0;border:0}.hero{padding:28px 22px}.hero h1{font-size:24px}.content{padding:22px}.grid{grid-template-columns:1fr}.footer{padding:18px 22px}h2{font-size:19px}}
+@media print{body{background:white}.page{max-width:none;margin:0;padding:0}.sheet{border:0;box-shadow:none}.hero{background:#173e77!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.content{padding:22px 30px}.card,table{break-inside:avoid}h2{break-after:avoid}}
+</style>
+</head>
+<body>
+<div class="page"><main class="sheet">
+<header class="hero">
+<div class="eyebrow">EnglishBridge LMS · گزارش تحویل فنی</div>
+<h1>فاز ۱۹ — اتوماسیون و موتور گردش‌کار</h1>
+<p>گزارش پیاده‌سازی، چرخه انتشار نسخه‌ها، نتایج اعتبارسنجی و محدودیت‌های شناخته‌شده</p>
+<div class="badges"><span class="badge">وضعیت: زیرساخت اصلی پیاده‌سازی شده</span><span class="badge">ارزیابی: هنوز آماده بهره‌برداری کامل در محیط تولید نیست</span><span class="badge">دامنه: توسعه درون LMS موجود</span></div>
+</header>
+<div class="content">
+<div class="callout"><strong>نکته مهم:</strong> فاز ۱۹ قابلیت پایه گردش‌کار را پیاده‌سازی می‌کند، اما به‌دلیل نبود زمان‌بند/worker پیکربندی‌شده، migration تولید بازبینی‌شده و پوشش کامل تولیدکنندگان رویداد، این تحویل به‌معنای آمادگی کامل برای production نیست. برای ادامه، Phase 20 آغاز نشده است.</div>
+
+<h2>خلاصه اجرا</h2>
+<p>این قابلیت به LMS موجود EnglishBridge افزوده شده و جایگزین یا بازسازی برنامه نیست. URL، backend، پایگاه‌داده، حساب‌ها، نشست‌ها و سوابق یادگیری موجود حفظ شده‌اند. رویدادها، گردش‌کارها، نسخه‌ها، اجراها، گام‌ها، تأییدها و کلیدهای idempotency به‌صورت سازمان‌محور در پایگاه‌داده ذخیره می‌شوند.</p>
+<div class="grid">
+<section class="card"><h3>ساخت و انتشار امن</h3><p>تعریف محدود و اعتبارسنجی‌شده؛ بدون اجرای کد دلخواه؛ نسخه‌های منتشرشده immutable و دارای checksum.</p></section>
+<section class="card"><h3>صف و بازیابی</h3><p>رویداد و اجرای پایدار، مکث قابل‌بازیابی، retry محدود، قفل‌های منقضی و جلوگیری از اجرای تکراری.</p></section>
+<section class="card"><h3>کنترل دسترسی</h3><p>مجوزدهی سمت سرور و محدوده سازمانی در عملیات مدیریت، اجرا و تأیید؛ دسترسی دانش‌آموز رد می‌شود.</p></section>
+<section class="card"><h3>یکپارچگی موجود</h3><p>اعلان درون‌برنامه‌ای از Communication Hub و پیشنهاد یادگیری از مدل توصیه‌گر موجود استفاده می‌کنند.</p></section>
+</div>
+
+<h2>قابلیت‌های تحویل‌شده</h2>
+<ul>
+<li>رویدادهای گردش‌کار، تعریف‌ها و نسخه‌ها، run history، تاریخچه گام‌ها، وضعیت انتظار، تأیید انسانی و رکوردهای idempotency با محدوده سازمانی.</li>
+<li>Event bus سمت سرور با فهرست مجاز رویدادها، کلیدهای idempotency سازمان‌محور و پالایش داده‌های حساس از metadata.</li>
+<li>ارزیاب شرط ایمن با گروه‌های AND/OR و فیلدها/operatorهای ثابت؛ بدون کد یا expression دلخواه.</li>
+<li>مرکز مدیریتی واکنش‌گرا در <code>/admin/automation</code> شامل نمای کلی، گردش‌کارها، الگوها، اجراها و تأییدها.</li>
+<li>ذخیره draft، شبیه‌سازی بدون اثر جانبی، انتشار، pause، ساخت نسخه جدید، مشاهده خلاصه اجرا و پذیرش/رد تأیید.</li>
+<li>APIهای حفاظت‌شده برای مدیریت، اجرای دستی، شبیه‌سازی، تأییدها و worker داخلی.</li>
+<li>سرویس‌های مشخص در سمت سرور برای صف/زمان‌بند، audit، approval، run tracking، rate limiting، simulation، rule/condition/action، retry و loop protection.</li>
+</ul>
+
+<h2>رویدادها و محرک‌ها</h2>
+<p>محرک‌های اجرایی فعلی: رویداد LMS و اجرای دستی مجاز. در زمان حاضر، تنها <code>LESSON_COMPLETED</code> به‌طور عادی به event bus متصل است؛ رویداد <code>MANUAL_TRIGGERED</code> نیز برای اجرای دستی داخلی استفاده می‌شود. نام‌های دیگری مانند حضور، ارزیابی، gamification، گواهی و ارتباطات در catalog تعریف شده‌اند، اما وجود نام در catalog به معنی اتصال producer نیست.</p>
+<p>رویداد تکمیل درس پس از تراکنش تکمیل موجود به‌صورت best-effort ثبت می‌شود. درخواست تکمیل درس اجرای گردش‌کار را هم‌زمان انجام نمی‌دهد؛ اجرای workflow با worker جداگانه صورت می‌گیرد.</p>
+
+<h2>ویرایش، نسخه‌بندی و چرخه انتشار</h2>
+<p>ویرایش گردش‌کار منتشرشده یک نسخه draft جدید می‌سازد و نسخه منتشرشده قبلی را فعال نگه می‌دارد. انتشار draft جدید، نسخه فعال را جابه‌جا می‌کند؛ runهای قبلی به نسخه‌ای که با آن اجرا شده‌اند متصل می‌مانند و snapshotهای منتشرشده checksum دارند.</p>
+<div class="callout success"><strong>تأیید API روی build تولید:</strong> ورود مدیر 200، ساخت draft 201، انتشار 200، ساخت نسخه دوم 200، حفظ وضعیت کلی Published با نسخه 2 و اجرای دستی 202. این تست نشان داد هنگام بازبینی نسخه جدید، نسخه منتشرشده قبلی همچنان قابل اجرا می‌ماند. داده آزمایشی پس از تست پاک شد.</div>
+<p>اجرای دستی باید آخرین نسخه Published را انتخاب کند، نه draft در حال بازبینی. این رفتار در API با smoke test روی build تولید بررسی شد.</p>
+
+<h2>شرط‌ها و گام‌های قابل اجرا</h2>
+<h3>فیلدهای شرط</h3>
+<p>نقش کاربر، سطح زبان انگلیسی، شناسه گروه، نوع رویداد، نوع شیء رویداد و منبع رویداد.</p>
+<h3>عملگرها</h3>
+<p>برابری/نابرابری، IN/NOT IN، CONTAINS، IS EMPTY و IS NOT EMPTY.</p>
+<div class="table-wrap"><table><thead><tr><th>نوع گام</th><th>رفتار</th><th>محدودیت</th></tr></thead><tbody>
+<tr><td><span class="pill">SEND_NOTIFICATION</span></td><td>اعلان درون‌برنامه‌ای با Communication Hub موجود.</td><td>ترجیح اعلان کاربر، quiet hours، تجمیع، سقف ارسال و تنظیمات provider تابع همان سرویس‌اند.</td></tr>
+<tr><td><span class="pill">CREATE_LEARNING_RECOMMENDATION</span></td><td>ایجاد پیشنهاد یادگیری برای دانش‌آموز فعال در همان سازمان.</td><td>از مدل توصیه‌گر موجود و نشانگر idempotency استفاده می‌کند.</td></tr>
+<tr><td><span class="pill">WAIT</span></td><td>توقف ۱ دقیقه تا ۳۰ روز و ادامه در tick بعدی worker.</td><td>مدت سپری‌شده برحسب دقیقه؛ زمان‌بندی تقویمی/منطقه زمانی پیاده‌سازی نشده.</td></tr>
+<tr><td><span class="pill">REQUIRE_APPROVAL</span></td><td>ایجاد تأیید انسانی و مکث اجرا؛ ادامه پس از تأیید یا لغو در رد/انقضا.</td><td>تأیید عمومی است و به‌خودی‌خود گواهی صادر یا داده رسمی را تغییر نمی‌دهد.</td></tr>
+</tbody></table></div>
+
+<h2>ایمنی، مجوزدهی و حریم داده</h2>
+<ul>
+<li>هیچ arbitrary user code یا اجرای expression آزاد در builder وجود ندارد؛ اقدامات محدود به allowlist هستند.</li>
+<li>موضوع هر اقدام کاربرمحور در محدوده سازمان رویداد resolve می‌شود. کنترل مجوز سمت سرور است و endpointها برای دانش‌آموز مجاز نیستند.</li>
+<li>ورودی لینک خارجی برای اقدام‌ها رد می‌شود و هیچ اقدام SSRF-capable یا webhook اجرایی در این فاز وجود ندارد.</li>
+<li>رویدادهای مشتق‌شده از workflow و اقدام‌های فعلی از انتشار زنجیره‌ای بازگشتی جلوگیری می‌کنند؛ سقف صف، اندازه تعریف، تعداد گام‌ها، نرخ اجرای دستی و batch worker محدود است.</li>
+<li>هیچ اقدام workflow نمره رسمی، مجوز، حساب کاربری یا گواهی را تغییر نمی‌دهد. صدور رسمی گواهی در صورت نیاز همچنان باید از مسیر approval انسانی و سرویس معتبر خودش پیروی کند.</li>
+<li>محتوای اعلان فقط جایگزینی محدود <code>{{firstName}}</code> و <code>{{eventType}}</code> دارد؛ داده حساس در metadata رویداد فیلتر می‌شود.</li>
+<li>ایجاد/نسخه‌بندی/انتشار، اجرای دستی، شبیه‌سازی و تصمیم تأیید در audit ثبت می‌شوند.</li>
+</ul>
+
+<h2>صف، retry و پایداری</h2>
+<p>رویدادها، wait state، approval state و تاریخچه در پایگاه‌داده ذخیره می‌شوند و با restart فرایند از بین نمی‌روند. endpoint محافظت‌شده <code>POST /api/internal/workflow-worker</code> batch محدود را پردازش می‌کند، waitهای سررسیدشده را ادامه می‌دهد و approvalهای منقضی را بررسی می‌کند. خطاها با backoff نمایی و حداکثر پنج تلاش مدیریت می‌شوند؛ قفل پردازش قدیمی پس از پنج دقیقه قابل‌بازیابی است.</p>
+<div class="callout"><strong>نیازمندی deployment:</strong> باید secret سمت سرور <code>WORKFLOW_WORKER_SECRET</code> با حداقل ۳۲ کاراکتر تصادفی تنظیم و endpoint از یک scheduler مورداعتماد فراخوانی شود. در محیط فعلی scheduler یا worker دائمی پیکربندی نشده است؛ تا زمان فراهم‌کردن آن، کارهای صف‌شده اجرا نمی‌شوند.</div>
+<p>تضمین exactly-once برای پذیرش provider بیرونی ادعا نمی‌شود. در صورت crash پس از پذیرش بیرونی و پیش از تکمیل ثبت محلی، reconciliation وابسته به provider لازم است. در این فاز هیچ adapter اقدام خارجی ارائه نشده است.</p>
+
+<h2>APIهای اصلی</h2>
+<div class="table-wrap"><table><thead><tr><th>مسیر</th><th>کارکرد</th></tr></thead><tbody>
+<tr><td><code>GET/POST /api/admin/automation</code></td><td>فهرست/آمار سازمان‌محور و ذخیره draft یا نسخه جدید.</td></tr>
+<tr><td><code>PATCH /api/admin/automation/workflows/:id</code></td><td>انتشار، توقف یا archive.</td></tr>
+<tr><td><code>POST /api/admin/automation/workflows/:id/run</code></td><td>قرار دادن اجرای دستی مجاز در صف.</td></tr>
+<tr><td><code>POST /api/admin/automation/simulate</code></td><td>شبیه‌سازی بدون اجرای اقدام‌ها یا ایجاد side effect.</td></tr>
+<tr><td><code>GET/POST /api/admin/automation/approvals</code></td><td>صف تأییدها و تصمیم‌گیری مجاز.</td></tr>
+<tr><td><code>POST /api/internal/workflow-worker</code></td><td>ورودی worker محافظت‌شده با secret سرور.</td></tr>
+</tbody></table></div>
+
+<h2>مدل داده و rollout</h2>
+<p>مدل‌های Prisma افزوده‌شده: <code>WorkflowEvent</code>، <code>Workflow</code>، <code>WorkflowVersion</code>، <code>WorkflowRun</code>، <code>WorkflowRunStep</code>، <code>WorkflowApproval</code> و <code>WorkflowIdempotencyRecord</code>. جداول محلی با <code>prisma db push</code> افزوده شدند و جداول موجود reset نشدند.</p>
+<p>مخزن فعلی migration history بازبینی‌شده ندارد؛ rollout تولید نیازمند backup، تولید و بازبینی migration رسمی و برنامه استقرار روی پایگاه‌داده تولید است. <code>db push</code> محلی جایگزین migration تولیدی نیست.</p>
+
+<h2>اعتبارسنجی انجام‌شده</h2>
+<div class="table-wrap"><table><thead><tr><th>بررسی</th><th>نتیجه</th></tr></thead><tbody>
+<tr><td>TypeScript typecheck پس از تغییرات نهایی</td><td>موفق</td></tr>
+<tr><td>تست متمرکز Phase 19</td><td>۸ گروه موفق؛ شامل allowlist، شرط‌ها، رد URL/code ناامن، شبیه‌سازی بدون side effect، نسخه immutable، صف/idempotency/جداسازی سازمانی، wait/approval، فیلتر metadata و جلوگیری از رویداد بازگشتی.</td></tr>
+<tr><td>Build بهینه‌شده production</td><td>موفق با <code>NODE_OPTIONS=--max-old-space-size=2048</code>. build با heap پیش‌فرض در مرحله بررسی type با کمبود حافظه مواجه می‌شد.</td></tr>
+<tr><td>API smoke test روی build production</td><td>ورود/صفحه/خلاصه مدیر موفق؛ خلاصه دانش‌آموز 403؛ URL ناامن 422؛ ساخت/انتشار/اجرای دستی 201/200/202؛ worker بدون secret برابر 503.</td></tr>
+<tr><td>Smoke test چرخه نسخه</td><td>ساخت نسخه دوم draft هنگام فعال بودن نسخه منتشرشده قبلی موفق؛ وضعیت Published حفظ شد و اجرای دستی به نسخه منتشرشده رسید.</td></tr>
+<tr><td>Regression suites اجراشده</td><td>Phase 5: 43/0؛ Phase 7: 20/0؛ Phase 8: 30/0؛ Phase 9: 31/0؛ Phase 11: 57/0؛ Phase 14: 42/0؛ Phase 15: موارد فهرست‌شده موفق؛ Phase 16: بررسی routeها موفق؛ Phase 17: 20/0؛ Phase 18: موفق.</td></tr>
+</tbody></table></div>
+<p class="small">جزئیات خطاها/هشدارهای testهای قدیمی در <code>PHASE_19_QA_REPORT.md</code> نگهداری شده است: Phase 4 دو شکست fixture داشت؛ Phase 10 و Phase 12 با ناسازگاری harness و <code>React.cache</code> مواجه شدند؛ Phase 3، 9 و 12 نیز diagnostic غیرمسدودکننده داشتند. این موارد به Phase 19 نسبت داده نمی‌شوند.</p>
+
+<h2>محدودیت‌ها و کارهای لازم پیش از بهره‌برداری کامل</h2>
+<ol>
+<li>اتصال producer سمت سرور برای رویدادهای catalogشده به سرویس‌های متناظر LMS؛ فعلاً فقط تکمیل درس و اجرای دستی قابل استفاده‌اند.</li>
+<li>پیکربندی scheduler مورداعتماد و secret سمت سرور برای اجرای مداوم صف.</li>
+<li>ایجاد و بازبینی migration تولید و اجرای rollout پس از backup.</li>
+<li>اضافه‌کردن triggerهای زمانی/تقویمی، webhook، import و زمان‌بندی مبتنی بر timezone در صورت نیاز؛ اکنون موجود نیستند.</li>
+<li>توسعه adapterهای اضافی با کنترل‌های جداگانه؛ XP، نمره، گواهی، enrollment، ایمیل/SMS/push مستقیم، webhook و mascot action پیاده‌سازی نشده‌اند.</li>
+<li>الگوها در UI presetهای draft بازبینی‌شده‌اند، نه رکوردهای پایدار template با lifecycle مستقل.</li>
+<li>builder برای مدیران مجاز است؛ مدیریت/نمایش اختصاصی معلم با محدوده گروه پیاده‌سازی نشده است.</li>
+<li>واکنش‌گرایی رابط پیاده‌سازی شده، اما تست viewport روی دستگاه واقعی و ممیزی رسمی دسترس‌پذیری انجام نشده است.</li>
+<li>تست load/soak worker انجام نشده است.</li>
+</ol>
+
+<h2>مستندات مرتبط</h2>
+<ul><li><code>docs/WORKFLOW_ENGINE_ARCHITECTURE.md</code> — معماری رویداد، نسخه، صف، retry، approval و امنیت.</li><li><code>docs/WORKFLOW_CATALOG.md</code> — فهرست triggerها، شرط‌ها، actionها و presetها.</li><li><code>docs/PHASE_19_QA_REPORT.md</code> — جزئیات آزمون‌ها، regressionها و محدودیت‌های محیط.</li><li><code>docs/PHASE_19_FINAL_REPORT.md</code> — نسخه متنی گزارش نهایی.</li></ul>
+<p><strong>جمع‌بندی:</strong> هسته امن و سازمان‌محور گردش‌کار و lifecycle نسخه‌ها پیاده‌سازی و روی build تولید بررسی شده است. تکمیل deployment، producerهای رویداد و migration تولیدی پیش‌نیاز بهره‌برداری کامل هستند. هیچ کاری از Phase 20 آغاز نشده است.</p>
+</div>
+<footer class="footer">EnglishBridge LMS · Phase 19 · گزارش مستقل HTML، قابل مشاهده در مرورگر و مناسب چاپ/ذخیره به PDF.</footer>
+</main></div>
+</body>
+</html>

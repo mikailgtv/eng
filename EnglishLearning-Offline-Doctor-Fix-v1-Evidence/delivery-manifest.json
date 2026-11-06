@@ -1,0 +1,25 @@
+{
+  "archive": "EnglishLearning-Offline-Doctor-Fix-v1.zip",
+  "bytes": 385425,
+  "sha256": "1003a5fd931ebf9f6cc292906a49cf60432faa517e87a880b14e9411baa64379",
+  "files": [
+    {
+      "path": "fix-expo-doctor-v1.cjs",
+      "bytes": 7081,
+      "sha256": "fcb83169240ef0f4ee37340bb5a7324a817ed483e9a6374415715576c4ebf720"
+    },
+    {
+      "path": "assets/icon-square-v1.png",
+      "bytes": 383168,
+      "sha256": "360e01b31c255d3108b4cd221f4e26f1fd0095b4bb068cd795006c33d7da22a3"
+    },
+    {
+      "path": "FIX_EXPO_DOCTOR_FA_v1.md",
+      "bytes": 8105,
+      "sha256": "c84250d36c250c260c9eb77cf45f0c0efbc37da3ffdea723ced6eda6e982f49c"
+    }
+  ],
+  "zip_integrity": "PASS",
+  "original_source": "UNCHANGED",
+  "contains_apk": false
+}

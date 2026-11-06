@@ -1,0 +1,2143 @@
+{
+  "phase": "28.3",
+  "generated_date": "2026-10-08",
+  "status": "PASS",
+  "scope": "STAGING_ONLY",
+  "source": {
+    "path": "/home/user/prisma/dev.db",
+    "engine": "SQLite",
+    "opened_read_only": true,
+    "size_bytes": 4517888,
+    "sha256": "e9b4eac119cc44941d7cdea88c1429945fce40dd1ee7c548759bcfbc68f7fb02",
+    "integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "tables": 213,
+    "rows": 3716,
+    "nonempty_tables": 123
+  },
+  "source_backup_gate": {
+    "backup_path": "/home/user/backups/phase20-local-dev-db-post-change-20261005.sqlite",
+    "backup_file_sha256": "1b161f81e8cf7458dac9860ddfbd71dc99bf462ce5d7ad9538a7a91b20a1ec71",
+    "logical_schema_match": true,
+    "logical_counts_match": true,
+    "logical_content_fingerprints_match": true,
+    "source_backup_tables": 213,
+    "source_backup_rows": 3716
+  },
+  "target": {
+    "database": "phase28_3_stage",
+    "engine": "PostgreSQL 17.11",
+    "environment": "local disposable staging cluster",
+    "tables": 213,
+    "rows": 3716,
+    "columns": 1984,
+    "column_mapping_match": true,
+    "source_count_mismatches": 0,
+    "source_semantic_fingerprint_mismatches": 0,
+    "foreign_keys_validated": 277,
+    "foreign_key_orphans": 0,
+    "unique_indexes_checked": 315,
+    "duplicate_unique_groups": 0,
+    "application_indexes": 602,
+    "application_sequences": 0,
+    "enum_types": 0
+  },
+  "type_mapping": {
+    "SQLite_TEXT_to_PostgreSQL_text": 1307,
+    "SQLite_DATETIME_to_PostgreSQL_timestamp_without_time_zone": 402,
+    "SQLite_INTEGER_to_PostgreSQL_integer": 163,
+    "SQLite_BOOLEAN_to_PostgreSQL_boolean": 92,
+    "SQLite_REAL_to_PostgreSQL_double_precision": 18,
+    "SQLite_BLOB_to_PostgreSQL_bytea": 2,
+    "importer_epoch_ms_to_timestamp_conversions": 5072,
+    "importer_boolean_conversions": 1748,
+    "importer_blob_to_bytea_conversions": 5,
+    "importer_json_text_to_json_conversions": 0
+  },
+  "json_validation": {
+    "typed_json_columns": 0,
+    "source_object_array_text_candidates": 1264,
+    "target_object_array_text_candidates": 1264,
+    "valid_source": 1264,
+    "valid_target": 1264,
+    "invalid_source": 0,
+    "invalid_target": 0,
+    "per_column_count_mismatches": 0
+  },
+  "repeatability": {
+    "stage_imported_tables": 213,
+    "repeat_failure_injected_at_table_boundary": 80,
+    "repeat_tables_completed_before_failure": 79,
+    "resume_verified_skips": 79,
+    "resume_new_imports": 134,
+    "pre_application_repeat_counts_and_fingerprints_match": true
+  },
+  "application_smoke": {
+    "synthetic_logins": {
+      "STUDENT": 200,
+      "TEACHER": 200,
+      "ADMIN": 200
+    },
+    "student_dashboard_routes_200": 6,
+    "teacher_dashboard_routes_200": 4,
+    "admin_routes_200": 2,
+    "health_and_ready_200": true,
+    "teacher_attendance_server_status": 200,
+    "teacher_attendance_elapsed_ms": 144288,
+    "teacher_attendance_client_timeout_ms": 120000,
+    "teacher_exams_and_results_confirmed": false,
+    "workflow_invalid_publish": 422,
+    "workflow_valid_publish": 200,
+    "workflow_manual_run": 202,
+    "workflow_manage_denied_student_teacher": [
+      403,
+      403
+    ],
+    "workflow_execute_denied_student": 403,
+    "transaction_probes_passed": true,
+    "test_database": "phase28_3_repeat"
+  },
+  "postgres_backup_restore": {
+    "source_database": "phase28_3_stage",
+    "archive_format": "custom",
+    "archive_size_bytes": 743850,
+    "archive_sha256": "192674a7e766a22b7129ddf12d1d0cfdc0e84535aa523a1d47b1d749364bd60f",
+    "archive_toc_entries": 1327,
+    "restore_database": "phase28_3_restore",
+    "restore_tables": 213,
+    "restore_rows": 3716,
+    "restore_counts_match": true,
+    "restore_fingerprints_match": true,
+    "restore_foreign_keys_validated": 277,
+    "restore_unique_indexes_checked": 315
+  },
+  "production_changed": false,
+  "sqlite_source_modified": false,
+  "secrets_included": false,
+  "tables": [
+    {
+      "table": "access_review_decisions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "a5f5accfb87520f003a554b90c2d881ce5b4624b7d69719abfeebb1715e47bff",
+      "import_status": "imported"
+    },
+    {
+      "table": "access_reviews",
+      "rows": 11,
+      "source_semantic_fingerprint_sha256": "a918f497af3bec9b47ccc500e283a4bc2413c2e4b0805cbbc4011fc46b43de25",
+      "target_semantic_fingerprint_sha256": "a918f497af3bec9b47ccc500e283a4bc2413c2e4b0805cbbc4011fc46b43de25",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "be3de71ff3fe0d019355474f5dc7566f307f5fe783f069c9d99bcd3d156c6537",
+      "import_status": "imported"
+    },
+    {
+      "table": "account_security_events",
+      "rows": 232,
+      "source_semantic_fingerprint_sha256": "de41fb01d1a66fc2758007a8bdc270f259a3b99b9386b92568a329cfa7636da9",
+      "target_semantic_fingerprint_sha256": "de41fb01d1a66fc2758007a8bdc270f259a3b99b9386b92568a329cfa7636da9",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "3acf19d5c065c6758062876af8fd39b4613c48a28d0e0110639d213b0b5586ac",
+      "import_status": "imported"
+    },
+    {
+      "table": "activities",
+      "rows": 71,
+      "source_semantic_fingerprint_sha256": "a67f24154920d3144c4527fe0811e23d68b592dbc473df6e5b8f45c6e4461964",
+      "target_semantic_fingerprint_sha256": "a67f24154920d3144c4527fe0811e23d68b592dbc473df6e5b8f45c6e4461964",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "ef077054ecfb916f88e3d0b41c7345bd4cff874996aada771a40c3722aa2ea7c",
+      "import_status": "imported"
+    },
+    {
+      "table": "activity_attempts",
+      "rows": 4,
+      "source_semantic_fingerprint_sha256": "02473551d7ed12e8a41565956e24c011150de6cf121d9e021288e352e44d771b",
+      "target_semantic_fingerprint_sha256": "02473551d7ed12e8a41565956e24c011150de6cf121d9e021288e352e44d771b",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "258f0b5e9dcbdd0d213b74570b243bbf6ed6d4fbc47ad40a81cc48204655a3e1",
+      "import_status": "imported"
+    },
+    {
+      "table": "activity_vocabulary",
+      "rows": 41,
+      "source_semantic_fingerprint_sha256": "f57175229bf9538a5f4a31cd6c87d6dbe751c56ca67fb1d4b2536f85974a5f36",
+      "target_semantic_fingerprint_sha256": "f57175229bf9538a5f4a31cd6c87d6dbe751c56ca67fb1d4b2536f85974a5f36",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "b6c85989713afb14943bba71fadff9fa59554e6bc64c2d9494587aa07999382b",
+      "import_status": "imported"
+    },
+    {
+      "table": "adaptive_assessment_events",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "fb8fbf9f907e5f39eb7c215ead0a1f0743020c1683fba2e4d50a69f4ff546ede",
+      "import_status": "imported"
+    },
+    {
+      "table": "adaptive_assessment_sessions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "30df86b3feb1c8888aea9c4576b3abde321022fdd5abbcc0f045974f7eef1d9a",
+      "import_status": "imported"
+    },
+    {
+      "table": "adaptive_rules",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "49db172e436a94e0398c04c5251abbc6907e634b1e1180c16899de9c0144b68d",
+      "target_semantic_fingerprint_sha256": "49db172e436a94e0398c04c5251abbc6907e634b1e1180c16899de9c0144b68d",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "191da5292457ee65a8bbd7ecddb91a7f2a32eba722ded79c88ec9582f0a4731d",
+      "import_status": "imported"
+    },
+    {
+      "table": "ai_feedback",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c663fbf0c7cd403e02ce0ca3bf50811bf2f3002e9433741866f9d9fcbabd28e7",
+      "import_status": "imported"
+    },
+    {
+      "table": "ai_generated_content",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "cf51a3cbc31d57cc3320832cb76066ee6149f60615e05bb493caf11d06768124",
+      "import_status": "imported"
+    },
+    {
+      "table": "ai_messages",
+      "rows": 8,
+      "source_semantic_fingerprint_sha256": "ef95139ff7c1194aec93fab233376a0051975101558d3b6f904e171246d64ccb",
+      "target_semantic_fingerprint_sha256": "ef95139ff7c1194aec93fab233376a0051975101558d3b6f904e171246d64ccb",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "dd6dd50902775dc4ad9b4a76b02ecfdf07a1f0b5f3dc5b6afddf4187a3462e1d",
+      "import_status": "imported"
+    },
+    {
+      "table": "ai_recommendations",
+      "rows": 2,
+      "source_semantic_fingerprint_sha256": "080af0220caaa5854c8c85a8849b2e9fda24ad9745e6ad54842c28b2da2ab2fc",
+      "target_semantic_fingerprint_sha256": "080af0220caaa5854c8c85a8849b2e9fda24ad9745e6ad54842c28b2da2ab2fc",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2cb304760cfa00b641347c1690c5917b33da8949d0a1b683f78391abc5baf226",
+      "import_status": "imported"
+    },
+    {
+      "table": "ai_sessions",
+      "rows": 4,
+      "source_semantic_fingerprint_sha256": "0353b79a3aaa94b188aafa3c9ff88406718455f1bb4e87746fc4f589d4a231eb",
+      "target_semantic_fingerprint_sha256": "0353b79a3aaa94b188aafa3c9ff88406718455f1bb4e87746fc4f589d4a231eb",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5b84f6551e84e8729935dc8062b9dbe92cc855f158065276eb9c89f7144db91e",
+      "import_status": "imported"
+    },
+    {
+      "table": "ai_settings",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "7871e59a8f369a61edc7874a3592caeb562bd3adc29c59ba6edbd931401627ba",
+      "target_semantic_fingerprint_sha256": "7871e59a8f369a61edc7874a3592caeb562bd3adc29c59ba6edbd931401627ba",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "b7e2cc1ffbfb764dd8e761b7c58a8069a5e378936261b9e19a79c87ebe236995",
+      "import_status": "imported"
+    },
+    {
+      "table": "ai_usage",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "153f90cde8d5fc09ccce6e501233405e288df6efa81d498e8118066c76d3d4e1",
+      "target_semantic_fingerprint_sha256": "153f90cde8d5fc09ccce6e501233405e288df6efa81d498e8118066c76d3d4e1",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "68b528236f308b55c4b9801ad98d854374a4b084fb692338a0dee987b831af42",
+      "import_status": "imported"
+    },
+    {
+      "table": "announcement_acknowledgements",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "fa8e25bd3e7188258bfcd0689d89ee7efa38764c10c03b47894de135b4338986",
+      "import_status": "imported"
+    },
+    {
+      "table": "announcement_targets",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "82f072af5adb509c2a62ccd34b911e22084eae7c48864b47e6c8417470d81519",
+      "import_status": "imported"
+    },
+    {
+      "table": "announcements",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2ab6c8df1e1ca94a43ea4eec2156c956bdf9beb31c2b404c0aa64a432b4c4ce9",
+      "import_status": "imported"
+    },
+    {
+      "table": "api_client_credentials",
+      "rows": 18,
+      "source_semantic_fingerprint_sha256": "a95d2240f9587738ca7f949db5ed0204000c3fc1eb5dc85f0e4222f709b447f6",
+      "target_semantic_fingerprint_sha256": "a95d2240f9587738ca7f949db5ed0204000c3fc1eb5dc85f0e4222f709b447f6",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "8552ff9408964841491c80ef69bab870ea10ed97755b98a4401e8a147195b408",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_accommodations",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "e7439bc266c6bd10b481fff9240d9f6f7f18464cbc98e46ccd0a4f8e928e3bb7",
+      "target_semantic_fingerprint_sha256": "e7439bc266c6bd10b481fff9240d9f6f7f18464cbc98e46ccd0a4f8e928e3bb7",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c0620647de0cd3f54abcfe54982425d78bdb0990a2afe223750ef36f1f1c5327",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_answers",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2932dfa73f50f3575e36bd196dd5f1a467c88cdcd4521f4f78f2abeb630d84ca",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_attempt_events",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "4be363ecdd398ce4dea29357942c0cdaf5b909daa5cdc893935f02e80f152166",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_attempt_snapshots",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "47e2069143df2537f5303070071a075823fc9a92ee37107f3d2b7ebb95307d37",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_attempts",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "71c6d1029c14c16df6eb3f357baeaa67ec7e1225041f9df97101ec5025ea13a8",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_blueprint_versions",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "19a6a209d0d8eae32310900d20a0b56fbeaabfe128261c7b78d03c51fd6be111",
+      "target_semantic_fingerprint_sha256": "19a6a209d0d8eae32310900d20a0b56fbeaabfe128261c7b78d03c51fd6be111",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5c796ee2912a94cd33c9ac1b63901eea1ecaab6d8aa8583a7b6c6e5e1b21fef3",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_blueprints",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "aac1551e39b8d32aa62fd43c72dc3fa1dfe4dac3dd17111f35659923ed8c940e",
+      "target_semantic_fingerprint_sha256": "aac1551e39b8d32aa62fd43c72dc3fa1dfe4dac3dd17111f35659923ed8c940e",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "81d4fc8c3a798d2b37cfcecd719a7a412578c6db0ca722138de0d4c04633d7d4",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_corrections",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "7788c84aee9c7487f47c8ec28879fcb7398c6ba7273f280ebb389f471ab0fe55",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_diagnostic_profiles",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "d56c2f500012fb3da2eeb90a90c27d93d50345c9c4c24f7bbe1fbcb27ed75aae",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_distractor_statistics",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5acb6121035abab3f6b830d4ddde3797fda4c1e1a096c449d222d58e8ca23701",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_item_statistics",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "3ee1df743d5e1535edba159f6383a43e10f2aa192a557c1ea7a82e925057b5b3",
+      "target_semantic_fingerprint_sha256": "3ee1df743d5e1535edba159f6383a43e10f2aa192a557c1ea7a82e925057b5b3",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "6c556fae005b13d069113bf1bc62d6bb59d29b4a62b0d20748f89a3d912ac79a",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_quality_checks",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "789af19d67a7eea74745cb0f613d19db4ae610455b3d797fbc1a47729157724e",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_question_pools",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0cc302a5e7c96fca40cffaf1247490d9f8d4b5a8c25c254600094e72b1198ec2",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_questions",
+      "rows": 51,
+      "source_semantic_fingerprint_sha256": "acc4aad85b500c01f260a012b6f83b21bc1f719e48118c73fd6501a28c1743c4",
+      "target_semantic_fingerprint_sha256": "acc4aad85b500c01f260a012b6f83b21bc1f719e48118c73fd6501a28c1743c4",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c876c6a0d09b37ba5d9d38ac11177c5ea8ff267f744e19b2e1417e3d9297c286",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_report_snapshots",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "10bc4e3c66e4bb6abdf96bd744e507955fadcdea0b903d4ff0c388eaf6b6f036",
+      "target_semantic_fingerprint_sha256": "10bc4e3c66e4bb6abdf96bd744e507955fadcdea0b903d4ff0c388eaf6b6f036",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "fba75bbb2c3383f5b9d00b9f094003bcaa2f8bfee88927562a831c2668734a9c",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_retake_policies",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "56aa333ed6b0848c32bac7b2941bb97e7d30da0e029946c2e060855cac9e2866",
+      "target_semantic_fingerprint_sha256": "56aa333ed6b0848c32bac7b2941bb97e7d30da0e029946c2e060855cac9e2866",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c43ec27000e20b23c7466d55e620646d3b538b73643568d65f22e463b0596ba1",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_retention_policies",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "cf646d376582390478292fd76b1306146ad63e7a231ff5ea2363b69915a63fac",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_review_queue",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0d0b8564fac59273ed3416accf98a5cca5d1c46c94bc108ae93c93f71f7b34ea",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_rubric_scores",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "1b8007b023b29d1d40ea4b8d52effeae90e96d5b7d781f6a259908a0e84b9876",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_speaking_submissions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "75e7c8a101c387c7ebe707e19d8127dc180b2085a9523ea95c8a757f4897da4e",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessment_variants",
+      "rows": 12,
+      "source_semantic_fingerprint_sha256": "49f3161ce326546b88ce528fb0589d58d0e504ec0721f00cc1e6feb345d6d84a",
+      "target_semantic_fingerprint_sha256": "49f3161ce326546b88ce528fb0589d58d0e504ec0721f00cc1e6feb345d6d84a",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0dc9f5b5dc52912949b7a27704337b51fcbb799e6a92ee6c70cb71ea6adcbe9f",
+      "import_status": "imported"
+    },
+    {
+      "table": "assessments",
+      "rows": 4,
+      "source_semantic_fingerprint_sha256": "551e5f98c71682886af2966c43045a32479159ad77069468edfbc6a302229173",
+      "target_semantic_fingerprint_sha256": "551e5f98c71682886af2966c43045a32479159ad77069468edfbc6a302229173",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2d976aac9a089b48c4a8ad758678c69114f7a57b08857c8845c0e30f4c870a9c",
+      "import_status": "imported"
+    },
+    {
+      "table": "assignment_submissions",
+      "rows": 7,
+      "source_semantic_fingerprint_sha256": "ef487bc6e3e79440c179f3f466738fa56b60ab297d149c12bc6d2f90a1d30947",
+      "target_semantic_fingerprint_sha256": "ef487bc6e3e79440c179f3f466738fa56b60ab297d149c12bc6d2f90a1d30947",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "1ae4d00933f15d8f7bcc1beaa5ad071343cf1ec9e25f1e1b9f78d3c5f8bea0b8",
+      "import_status": "imported"
+    },
+    {
+      "table": "attendance_changes",
+      "rows": 14,
+      "source_semantic_fingerprint_sha256": "e0ec554f51b5abef61267523f17cd0d05688804f2d54dae7ac57849896a3f42a",
+      "target_semantic_fingerprint_sha256": "e0ec554f51b5abef61267523f17cd0d05688804f2d54dae7ac57849896a3f42a",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f53e5f0cb9225660a6c70a397f1a40078113218e8d504a57b86f11acbdf7a19d",
+      "import_status": "imported"
+    },
+    {
+      "table": "attendance_records",
+      "rows": 7,
+      "source_semantic_fingerprint_sha256": "15cada70649243380f6b588ae5ae1beda74dd3739b9115e76cb91be3e8295959",
+      "target_semantic_fingerprint_sha256": "15cada70649243380f6b588ae5ae1beda74dd3739b9115e76cb91be3e8295959",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "3df9760c17d629f476ff4f074dfe7f405a7b78a6dec2afefe592949b4d9e0966",
+      "import_status": "imported"
+    },
+    {
+      "table": "audio_assets",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "76d18341e883b714f52bf1c9e2c38ba6c77c26a916cb9d550469a1b27f44dfb0",
+      "import_status": "imported"
+    },
+    {
+      "table": "audit_logs",
+      "rows": 647,
+      "source_semantic_fingerprint_sha256": "d2ef0fbe82460a90800c8b9c14bc97b9205fb59b817208b49c2f9420ff079c2e",
+      "target_semantic_fingerprint_sha256": "d2ef0fbe82460a90800c8b9c14bc97b9205fb59b817208b49c2f9420ff079c2e",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "3e4ff6fb400e96cb3baab6538187affddea36ab2d398c0c85bc0fe62c708b2fd",
+      "import_status": "imported"
+    },
+    {
+      "table": "badges",
+      "rows": 8,
+      "source_semantic_fingerprint_sha256": "2f4a22c79f3bea7a9c1f69579da524880f7e0d739b87bb00ed92eef0dd5fd92f",
+      "target_semantic_fingerprint_sha256": "2f4a22c79f3bea7a9c1f69579da524880f7e0d739b87bb00ed92eef0dd5fd92f",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "27095e44f91d2d62ca2279aa45b44c032ecb461a17ae98b38b5ec673c90d15aa",
+      "import_status": "imported"
+    },
+    {
+      "table": "book_content_nodes",
+      "rows": 21,
+      "source_semantic_fingerprint_sha256": "429d893e65167993f09a1e33c6090fed4c564868ea7523734ffef3ed0f416dab",
+      "target_semantic_fingerprint_sha256": "429d893e65167993f09a1e33c6090fed4c564868ea7523734ffef3ed0f416dab",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "34cd6051c6a9043d827ff6962420cd99123f942ccc55cd659f19e86809cb358a",
+      "import_status": "imported"
+    },
+    {
+      "table": "book_versions",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "e9655bb591fb4fb07d7b4675bac9abde2e6c46c77661178f81ef890d2e6895db",
+      "target_semantic_fingerprint_sha256": "e9655bb591fb4fb07d7b4675bac9abde2e6c46c77661178f81ef890d2e6895db",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "cfbfe7fc75a37c5f924bcb93407a2d9d200861e583cbdc0daf5474156bcc786a",
+      "import_status": "imported"
+    },
+    {
+      "table": "books",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "455de8a3e9b998cd34c9dbd1ee0b0a815add65f4d76f1ddbb67baa46ab05e195",
+      "target_semantic_fingerprint_sha256": "455de8a3e9b998cd34c9dbd1ee0b0a815add65f4d76f1ddbb67baa46ab05e195",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "fec45619ad47d9792b059166e212798a680d02b5cf5398427995a57b5e759218",
+      "import_status": "imported"
+    },
+    {
+      "table": "calendar_sync_mappings",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c3a3bd251d33b79be2a9aae57b04c6227400f1a6e29ee4fd3263aa0436514f9f",
+      "import_status": "imported"
+    },
+    {
+      "table": "certificate_preferences",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "1a0d4c13575485a9fa755778e69d92e75b6234b8accddca5fdcfb506e3355c55",
+      "target_semantic_fingerprint_sha256": "1a0d4c13575485a9fa755778e69d92e75b6234b8accddca5fdcfb506e3355c55",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f3d64d2093394bc176854a1fac735b7bb38b6678af8433bf8c96946879163ce3",
+      "import_status": "imported"
+    },
+    {
+      "table": "certificate_revocations",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "8adb25abb14646eb59e5cd04b69712b7a0d09fb3002cb80a9c959b2690026dd5",
+      "target_semantic_fingerprint_sha256": "8adb25abb14646eb59e5cd04b69712b7a0d09fb3002cb80a9c959b2690026dd5",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "862c1b267a74e48367c1dd57d1f8143b9e2d912e8b52bb739e214ac474c511a1",
+      "import_status": "imported"
+    },
+    {
+      "table": "certificate_sequences",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "bb6b4dcf91ff8589b023f3a0901c2e3e19d266923b78f5ddbdb1c4f8642150fe",
+      "target_semantic_fingerprint_sha256": "bb6b4dcf91ff8589b023f3a0901c2e3e19d266923b78f5ddbdb1c4f8642150fe",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "9098dfe9fa95ebd1e905ee1e074fc57e096dcbea83e3f06b6ee57c1ad79cebbb",
+      "import_status": "imported"
+    },
+    {
+      "table": "certificate_signatories",
+      "rows": 2,
+      "source_semantic_fingerprint_sha256": "1b8531aeffef2fbf0b9805e368b2fe59f1faf1e204a86831af9fcb1984903d82",
+      "target_semantic_fingerprint_sha256": "1b8531aeffef2fbf0b9805e368b2fe59f1faf1e204a86831af9fcb1984903d82",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "b0add66307b5d209253fabbbbb27302614e097e0d71f8731e0316771f2bf3903",
+      "import_status": "imported"
+    },
+    {
+      "table": "certificate_templates",
+      "rows": 2,
+      "source_semantic_fingerprint_sha256": "744b902c479e59226b14b9b5c1a4a3a815a5b0f6ba171bdcabb1e24e35d1ec5a",
+      "target_semantic_fingerprint_sha256": "744b902c479e59226b14b9b5c1a4a3a815a5b0f6ba171bdcabb1e24e35d1ec5a",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "a78c97076fd6a609eeff83cd82dc0036bfdc0ace9d79b743852a21e9b8157e6f",
+      "import_status": "imported"
+    },
+    {
+      "table": "certificate_verifications",
+      "rows": 12,
+      "source_semantic_fingerprint_sha256": "148dd13d0c18fe5d9835accf1278f9fe35f7c2c60c009c59e13db76a4acb3699",
+      "target_semantic_fingerprint_sha256": "148dd13d0c18fe5d9835accf1278f9fe35f7c2c60c009c59e13db76a4acb3699",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5b433df36c62e923b92750a5c41ba640375ec824b08763331e17386ece88c5f0",
+      "import_status": "imported"
+    },
+    {
+      "table": "certificate_versions",
+      "rows": 5,
+      "source_semantic_fingerprint_sha256": "03f5f53a8e8c32ebb9e048259b6ac92aa0eabd3a44579c778a38f71a09a1a6fb",
+      "target_semantic_fingerprint_sha256": "03f5f53a8e8c32ebb9e048259b6ac92aa0eabd3a44579c778a38f71a09a1a6fb",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "cae65d27bdf010e9c54c18ac0bfea8a5c726848049ae93a1b42115cc9ef2d98b",
+      "import_status": "imported"
+    },
+    {
+      "table": "certificates",
+      "rows": 5,
+      "source_semantic_fingerprint_sha256": "53b5a9f575c1fd437d93b61979c162ba42d2bcbb1b2399b13dd72d717693876d",
+      "target_semantic_fingerprint_sha256": "53b5a9f575c1fd437d93b61979c162ba42d2bcbb1b2399b13dd72d717693876d",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "362433ff73e3421519cc9fb4ad1cb4b027ef2d4e81a861ee6224616ffc8ce093",
+      "import_status": "imported"
+    },
+    {
+      "table": "certification_settings",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "1dae3e9532d03172469b9ae834fc74b16d8646d4643d86494c19c15acd45df97",
+      "target_semantic_fingerprint_sha256": "1dae3e9532d03172469b9ae834fc74b16d8646d4643d86494c19c15acd45df97",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "8e61f478969457d5b0219630fcfeae50274ec706229b3b6ea1f85278e72f6c09",
+      "import_status": "imported"
+    },
+    {
+      "table": "challenge_participants",
+      "rows": 5,
+      "source_semantic_fingerprint_sha256": "7402b360674861d182a6018e1e80feba9f61d3fc12b2d9c354c5371f0ae90827",
+      "target_semantic_fingerprint_sha256": "7402b360674861d182a6018e1e80feba9f61d3fc12b2d9c354c5371f0ae90827",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "4b529419542dfab2cd83e34296c78330e4f826bf816c42eaa7cac5094ab2bb25",
+      "import_status": "imported"
+    },
+    {
+      "table": "challenges",
+      "rows": 3,
+      "source_semantic_fingerprint_sha256": "678b27ca4f439bd61d4c417bb6c60c170cd5c96563926161652918cd15c4d22c",
+      "target_semantic_fingerprint_sha256": "678b27ca4f439bd61d4c417bb6c60c170cd5c96563926161652918cd15c4d22c",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f66737b9a2018e128a22c986e97426f25ede305569cfb21ece71067be3857a99",
+      "import_status": "imported"
+    },
+    {
+      "table": "class_assignments",
+      "rows": 15,
+      "source_semantic_fingerprint_sha256": "412da2e4d15abf2c708bc2603ae7680889aea2fb24e0267e6ac8b3159e61439c",
+      "target_semantic_fingerprint_sha256": "412da2e4d15abf2c708bc2603ae7680889aea2fb24e0267e6ac8b3159e61439c",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "907d9c5757ed0d738dc4bcb3af1168eda840e16026dc1c2d2fc2171854140f14",
+      "import_status": "imported"
+    },
+    {
+      "table": "class_sessions",
+      "rows": 15,
+      "source_semantic_fingerprint_sha256": "8a73367a93b43e72fd913089fabbe98352446a23472ab3867bd25911143b7314",
+      "target_semantic_fingerprint_sha256": "8a73367a93b43e72fd913089fabbe98352446a23472ab3867bd25911143b7314",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2412dbb1b6e73aef7f4f7f8ce46ded40a483f611ab0ddc4abb7abb262b0a25ce",
+      "import_status": "imported"
+    },
+    {
+      "table": "communication_preferences",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "e6613f4ac0ef60415971c4b8cbffc07fb5dd0f99acfa998d42633ad655fc94f7",
+      "import_status": "imported"
+    },
+    {
+      "table": "communication_settings",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0c70912e189c119dd09c281384d4af380fddf360825a17e90d1286beb4358bc4",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_ai_drafts",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "cb9d84002575abdc4e01be6101ca07651df4ff060a4241a0e39faff7ae1b0ce7",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_assignments",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "e7a5f458aab2fc6c7db11da50f7e95662084559ee08418a19740444f3f689769",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_comments",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "97460747302b0aa713d74151ca2d6a09854f2f0e5b98c54fa68a16d607674174",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_item_tags",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "d4b23cf1c9217106cf74ac00454ad3272269eb9a5e42d9ba5458f17c14282062",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_item_usages",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f1b4cbea429d64ae15536b09c316bc3d4079c167ee78ae1fb3cefbd933bd7b24",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_items",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5ffc87443a4d50e4bc78c166ae77e95bad285c18e358dedf5852ce0e1f72333a",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_media",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "9d9cd029aaf01e7cedb4cc3f7838238c1e0e1178eb5d50da476b92d6ef5b85c0",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_metrics",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "10f5dda3fb5db66dff63e4ed20267526184f0502580fb152e565662ec09f0f39",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_overrides",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "1f0960be521ce76c7392d233f84dcbc337c4019162c1787f84d00e83c1e39107",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_prerequisites",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f25c6fa14a61eb732f173bbf0cddfa4579d167f4ca01f24f744fab483df0e139",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_quality_checks",
+      "rows": 40,
+      "source_semantic_fingerprint_sha256": "de1488cbb2d3d859fede6397eda30937bcdfe0daa5846d83fd1fead3bb9e84a0",
+      "target_semantic_fingerprint_sha256": "de1488cbb2d3d859fede6397eda30937bcdfe0daa5846d83fd1fead3bb9e84a0",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "949563ca22c32addcd3fdc93c6135bde57fb2b332f449690982a482b145f4c1c",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_releases",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f3b89011c4e008c0ba7e6feec0ddd2f76486e1bfcdcffbee2124d7d29e64680f",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_reviews",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "ecf4e8087f1bd2c4666035a0e1d12273921c1a37ae9b5efc528dbc1722211afc",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_settings",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0c70912e189c119dd09c281384d4af380fddf360825a17e90d1286beb4358bc4",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_tags",
+      "rows": 14,
+      "source_semantic_fingerprint_sha256": "f69abb4e05bb67b6c8119cae2ac8aa66af300334137610359320fa132ce7851b",
+      "target_semantic_fingerprint_sha256": "f69abb4e05bb67b6c8119cae2ac8aa66af300334137610359320fa132ce7851b",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c62f4abead3aa06650005d5c28cd3bae0e541a2247069b46391ce678f2e6fb9f",
+      "import_status": "imported"
+    },
+    {
+      "table": "content_versions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "3a2fb3289d04288fb1d2424ef2a73a0ad98ee919046ca2b653a943e45cb91315",
+      "import_status": "imported"
+    },
+    {
+      "table": "conversation_participants",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f59a510b2ab6f1b94f105821cf02d8c3249003713f7a38983660c43ff406a82a",
+      "import_status": "imported"
+    },
+    {
+      "table": "conversations",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "a696340de17bccebe78677ad1a199d8ba0682b57740788c53326fb629b4bb6e3",
+      "import_status": "imported"
+    },
+    {
+      "table": "course_assignments",
+      "rows": 20,
+      "source_semantic_fingerprint_sha256": "482330b760f2a9db98ffa9ca4ead39001170d2ffae81e025d93bba464cfe0c2f",
+      "target_semantic_fingerprint_sha256": "482330b760f2a9db98ffa9ca4ead39001170d2ffae81e025d93bba464cfe0c2f",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c9345b5e579e303671e2eec4a7e3274b0fc59c89de8f1bdd830db84ca0a4c8d2",
+      "import_status": "imported"
+    },
+    {
+      "table": "course_completion_records",
+      "rows": 2,
+      "source_semantic_fingerprint_sha256": "96cef6138b65d750cdc8fc3934c816244516209a42250ee854f3d945fc500bab",
+      "target_semantic_fingerprint_sha256": "96cef6138b65d750cdc8fc3934c816244516209a42250ee854f3d945fc500bab",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "9d920e1a0263a54c44dc2cdcce1414046d843aeceb0f14b07062289269fba341",
+      "import_status": "imported"
+    },
+    {
+      "table": "course_completion_rules",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "71c5f296f7928c424488db9bb55b2ec02e5855424114b7ec0d0b8b9cdd41b8b5",
+      "import_status": "imported"
+    },
+    {
+      "table": "course_versions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "014a2b287d2946eae77fb22a8ab5253196d423dce79ea934c5cda6f2b2f8d728",
+      "import_status": "imported"
+    },
+    {
+      "table": "courses",
+      "rows": 4,
+      "source_semantic_fingerprint_sha256": "a31a4a81f1f5b253a7fb823a64c59dc6feb8699b61131d5ce94f5ac6d37ae090",
+      "target_semantic_fingerprint_sha256": "a31a4a81f1f5b253a7fb823a64c59dc6feb8699b61131d5ce94f5ac6d37ae090",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "25c1ed7d21312690c4771adad439ea481a9e1c92f7ea0029fc50b55720c471d6",
+      "import_status": "imported"
+    },
+    {
+      "table": "curriculum_versions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "00c4428ce67b2a33ce027677c8b74bcb89822bb5c40ac12b27f95fb3645f3660",
+      "import_status": "imported"
+    },
+    {
+      "table": "curriculums",
+      "rows": 2,
+      "source_semantic_fingerprint_sha256": "2cb74119109877e2200b2dea14bceb1c2b2c091d5d4c517a041a0bce7d20cd6e",
+      "target_semantic_fingerprint_sha256": "2cb74119109877e2200b2dea14bceb1c2b2c091d5d4c517a041a0bce7d20cd6e",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "e521a8c5f476e1f2d1ae848d2daae006c40df3f69762169bc98121240eb35696",
+      "import_status": "imported"
+    },
+    {
+      "table": "daily_learning_plans",
+      "rows": 4,
+      "source_semantic_fingerprint_sha256": "36caa8dbebd6c3a75ba0e43b6878524f2a25ec93d63b3bdadb784a87985d9beb",
+      "target_semantic_fingerprint_sha256": "36caa8dbebd6c3a75ba0e43b6878524f2a25ec93d63b3bdadb784a87985d9beb",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "ff4deae035e254606bdb06c6f41a63f073f2b855dd7384f59fda0363f9ba8116",
+      "import_status": "imported"
+    },
+    {
+      "table": "delegations",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "51cfdccca24e181af0f957f9fa4f741cfd69b947e41efb9aa3a0972cebf4ef75",
+      "import_status": "imported"
+    },
+    {
+      "table": "departments",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "108b47326afbdd728ae3f6b97a81377939d2dd8efeb39cb281dd0dbde3f6df18",
+      "import_status": "imported"
+    },
+    {
+      "table": "external_data_import_batches",
+      "rows": 15,
+      "source_semantic_fingerprint_sha256": "d4d754cc4fe492a45c858510f382b0ac41a483a1c04c292059310e1edc0f9568",
+      "target_semantic_fingerprint_sha256": "d4d754cc4fe492a45c858510f382b0ac41a483a1c04c292059310e1edc0f9568",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2666101e2645de9170317c722d413bbf3f35f7f44915e11bc92d7c197197a900",
+      "import_status": "imported"
+    },
+    {
+      "table": "external_identity_links",
+      "rows": 14,
+      "source_semantic_fingerprint_sha256": "17b075fc702150110e3b320f9c6e9c0adfe2f2b7a0d7ad56515c15875f011aac",
+      "target_semantic_fingerprint_sha256": "17b075fc702150110e3b320f9c6e9c0adfe2f2b7a0d7ad56515c15875f011aac",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "66f11359663de39612ddf5efd1590cfdd2907846310082b7fe6a46fa312a45e8",
+      "import_status": "imported"
+    },
+    {
+      "table": "gamification_profiles",
+      "rows": 5,
+      "source_semantic_fingerprint_sha256": "237540062d7b53650048cd289e7f0e8272b858041ca2b20a1efecce0b9e2c452",
+      "target_semantic_fingerprint_sha256": "237540062d7b53650048cd289e7f0e8272b858041ca2b20a1efecce0b9e2c452",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "54a522f416fe996bb9c058c06ce57ea2049d1f81d22fa0dcee9b07e0c5bdf545",
+      "import_status": "imported"
+    },
+    {
+      "table": "gamification_settings",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "a9da2e18fe434c67bd9d643662df811ae97cc141404374f73ddfb52f3df6aeff",
+      "target_semantic_fingerprint_sha256": "a9da2e18fe434c67bd9d643662df811ae97cc141404374f73ddfb52f3df6aeff",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "05f7092c8ff85dc2380d64d4ee730ae11742dcd570474ac7b0006b00ed65434e",
+      "import_status": "imported"
+    },
+    {
+      "table": "grammar_content",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "bba8884f95e7614f3bf0ffd443f1254d3118027b708820ec31d9677c68d37457",
+      "target_semantic_fingerprint_sha256": "bba8884f95e7614f3bf0ffd443f1254d3118027b708820ec31d9677c68d37457",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "dd8e3f93074b1b3f3afec0a3d6a4911a7090619bdcfa02348249fff0235eeffb",
+      "import_status": "imported"
+    },
+    {
+      "table": "group_challenge_progress",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "e4096b004a6794bd8ba6b1578e128d79fe08e5ba9ef6ad78462c2d2cce9b055e",
+      "target_semantic_fingerprint_sha256": "e4096b004a6794bd8ba6b1578e128d79fe08e5ba9ef6ad78462c2d2cce9b055e",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2cc305cc1a3cc8c4fd2daa6766ebc2990fa3d7674373fda067459a1775f59bba",
+      "import_status": "imported"
+    },
+    {
+      "table": "group_challenges",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "f95e3c360d5ec1a0ca8331b09efe35cbbe50108edf5af22244714c38e3bf5815",
+      "target_semantic_fingerprint_sha256": "f95e3c360d5ec1a0ca8331b09efe35cbbe50108edf5af22244714c38e3bf5815",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "ba7b4300ffe44fe01bd00538fac88ab8f668d91fd4ebf91f72ff300d808f39b6",
+      "import_status": "imported"
+    },
+    {
+      "table": "import_batches",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0b5e85be18bac1d1e6aa66eb00985dab88ae07719cf739136dfd414a8c58737e",
+      "import_status": "imported"
+    },
+    {
+      "table": "integration_connections",
+      "rows": 13,
+      "source_semantic_fingerprint_sha256": "e52741c012932b14c4eb2d6bbb6dea0dfa32523be3cdb5791e09d6ee43e2a1d3",
+      "target_semantic_fingerprint_sha256": "e52741c012932b14c4eb2d6bbb6dea0dfa32523be3cdb5791e09d6ee43e2a1d3",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5452c3add84ab1b76e9aafa8f323f950d1eee6efb6ce6571d468b953fb403b3f",
+      "import_status": "imported"
+    },
+    {
+      "table": "integration_credentials",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "40f704980fa15a2af905335dacf8c7ab422480228f58aac70c2b9391603d3867",
+      "import_status": "imported"
+    },
+    {
+      "table": "integration_field_mappings",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "42c53e2dea73e39478e9e08e17857b3021f0fa96c84ce09f9a498fa35ba826ab",
+      "import_status": "imported"
+    },
+    {
+      "table": "integration_logs",
+      "rows": 17,
+      "source_semantic_fingerprint_sha256": "ced64aeb9515c4b4109bdc0c705712a20c6bfa0978440a7d745eb6d76f0cc7f7",
+      "target_semantic_fingerprint_sha256": "ced64aeb9515c4b4109bdc0c705712a20c6bfa0978440a7d745eb6d76f0cc7f7",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "6ee557fa45b7ab6aa830d46aaee48acf02ce63e15e76c323c55c6684ed63d918",
+      "import_status": "imported"
+    },
+    {
+      "table": "integration_sync_jobs",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "a8773780cb74444a3ceb0dbb9d6e6397afa031cc783b9974534f5d3c6281f27e",
+      "import_status": "imported"
+    },
+    {
+      "table": "knowledge_items",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "b560f2aac070e6f038f38591cb70d8fc7bcb7413c19258955d30ed99d898302c",
+      "target_semantic_fingerprint_sha256": "b560f2aac070e6f038f38591cb70d8fc7bcb7413c19258955d30ed99d898302c",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5fd8b9b20a6b5c1d220f27d8acfc0f753f5292effcc721baa47a07d7a3034cb2",
+      "import_status": "imported"
+    },
+    {
+      "table": "learning_events",
+      "rows": 32,
+      "source_semantic_fingerprint_sha256": "ff3bf13badc568dca1006c90fcb5a42b623de7f3a212260e38d7102e73d92822",
+      "target_semantic_fingerprint_sha256": "ff3bf13badc568dca1006c90fcb5a42b623de7f3a212260e38d7102e73d92822",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "82d0b5c5f1f26470d23d270b07d247dd22e1607faf8b1eed4cebe3d5a5eaefb7",
+      "import_status": "imported"
+    },
+    {
+      "table": "learning_goals",
+      "rows": 3,
+      "source_semantic_fingerprint_sha256": "52cea06163ae56fce76be20eaec584c657a8b716a7b94e535fb688dde013f835",
+      "target_semantic_fingerprint_sha256": "52cea06163ae56fce76be20eaec584c657a8b716a7b94e535fb688dde013f835",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "278ff4a7599f691ca7def8573437ced098fb1ae1be8705fc4324571970a56701",
+      "import_status": "imported"
+    },
+    {
+      "table": "learning_groups",
+      "rows": 5,
+      "source_semantic_fingerprint_sha256": "f2ca2a766a8e79e56fb5f1e6fa418ec5590253de14b795d28f5347b2b0ebec57",
+      "target_semantic_fingerprint_sha256": "f2ca2a766a8e79e56fb5f1e6fa418ec5590253de14b795d28f5347b2b0ebec57",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "50129c352f20c3245a37ab10ba2dbf61372d96a08ff56564d3bc2dac5434ed42",
+      "import_status": "imported"
+    },
+    {
+      "table": "learning_levels",
+      "rows": 12,
+      "source_semantic_fingerprint_sha256": "526d24e7e1957ea2224db979d1885fb53de62bc05d9a7b7f841aa3011ec6f41d",
+      "target_semantic_fingerprint_sha256": "526d24e7e1957ea2224db979d1885fb53de62bc05d9a7b7f841aa3011ec6f41d",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "ecaa5964f567d4dbe2411e08370016e2b4af3c94f36f3fe940cf5d8b12e6ef05",
+      "import_status": "imported"
+    },
+    {
+      "table": "learning_objectives",
+      "rows": 20,
+      "source_semantic_fingerprint_sha256": "172bf12c29ff8f289be06b0b6b32edb55eb74cd88b87bbb177ec70568ea99703",
+      "target_semantic_fingerprint_sha256": "172bf12c29ff8f289be06b0b6b32edb55eb74cd88b87bbb177ec70568ea99703",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "8be5304fef511e96c65e3214a506962df9b5bd750eda9d8683d3ae91602b3f49",
+      "import_status": "imported"
+    },
+    {
+      "table": "learning_recommendations",
+      "rows": 30,
+      "source_semantic_fingerprint_sha256": "9999b2aa20e163bb73b44a4d6d6334d98db5d84067081f72f2c03a6c8426017b",
+      "target_semantic_fingerprint_sha256": "9999b2aa20e163bb73b44a4d6d6334d98db5d84067081f72f2c03a6c8426017b",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f08be7355f9c3466945861f6eeb1c354a29337bdcc80590f28012832bd42eaa4",
+      "import_status": "imported"
+    },
+    {
+      "table": "learning_streaks",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "51771bdc783e6fef0a3c82fca3196d17b61772004a6fd59aaa1563e10dbd19af",
+      "target_semantic_fingerprint_sha256": "51771bdc783e6fef0a3c82fca3196d17b61772004a6fd59aaa1563e10dbd19af",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0c8ff3c881273d4af8bc6dc44711af2c8932a1c31c604d32c707334f216c9772",
+      "import_status": "imported"
+    },
+    {
+      "table": "lesson_content_blocks",
+      "rows": 156,
+      "source_semantic_fingerprint_sha256": "cd94b868607fbae44e578ebf42390c13c6a275910a51cda3f4c5c95360a29d1d",
+      "target_semantic_fingerprint_sha256": "cd94b868607fbae44e578ebf42390c13c6a275910a51cda3f4c5c95360a29d1d",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "62685fd9c614e323d01108576c8dc824be4515b28a449b3718cc9872862046a3",
+      "import_status": "imported"
+    },
+    {
+      "table": "lesson_drafts",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "9d344782018224c9ee2c09d48fdcbee59e154dade86b06c82714f440262d6642",
+      "import_status": "imported"
+    },
+    {
+      "table": "lessons",
+      "rows": 39,
+      "source_semantic_fingerprint_sha256": "d34389326a674425f4423bafb4c46247f954f4eb90a5b575862a2b1e911103a0",
+      "target_semantic_fingerprint_sha256": "d34389326a674425f4423bafb4c46247f954f4eb90a5b575862a2b1e911103a0",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "6c555f31947735cc06696aa8dd0817ed0a4c3d09b6d3907f5aca46574ac18b33",
+      "import_status": "imported"
+    },
+    {
+      "table": "level_access_policies",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f6aab90db046a15f5afdab773b1049610f43de12e4643ab98b48f14e878b0721",
+      "import_status": "imported"
+    },
+    {
+      "table": "levels",
+      "rows": 7,
+      "source_semantic_fingerprint_sha256": "01cfb324f07073902cf95a63644b45ef112825969bef0261eda66a6109d049bb",
+      "target_semantic_fingerprint_sha256": "01cfb324f07073902cf95a63644b45ef112825969bef0261eda66a6109d049bb",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "572519427ea15c61ec4ea3738868be6822038bb9fe460b2de8b0ed834189b4fa",
+      "import_status": "imported"
+    },
+    {
+      "table": "listening_assignments",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "186f966cfa6477928c54622e731612e79fe289d7fe4b7c85fd7cd7200a0a387f",
+      "import_status": "imported"
+    },
+    {
+      "table": "listening_attempts",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "934967629be14128bd7e215bab113a283684942a2ddb3ad3df6c4afd7dbf1c55",
+      "target_semantic_fingerprint_sha256": "934967629be14128bd7e215bab113a283684942a2ddb3ad3df6c4afd7dbf1c55",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "df7b41a411ff1ba348a3ae931ccbebd2c12e319511913d7ec56358da66053906",
+      "import_status": "imported"
+    },
+    {
+      "table": "listening_exercises",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "b9fb30363abda6ef0c491640f865e5b9486e9b30991975b2c19811765f9e9cf2",
+      "target_semantic_fingerprint_sha256": "b9fb30363abda6ef0c491640f865e5b9486e9b30991975b2c19811765f9e9cf2",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f75c94629a78323a898757d6e205c7065d38cfd3e4469cda25a5d4a3c0a695b9",
+      "import_status": "imported"
+    },
+    {
+      "table": "login_attempts",
+      "rows": 210,
+      "source_semantic_fingerprint_sha256": "1be3cfc9c002fe15373401bb5b681e7eb11c67b71c5c0181e65b1b50becf9ecb",
+      "target_semantic_fingerprint_sha256": "1be3cfc9c002fe15373401bb5b681e7eb11c67b71c5c0181e65b1b50becf9ecb",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "6a2c643301a889d38404164b914b4d36ad55ffcf37142bba8a2a4099361b71c2",
+      "import_status": "imported"
+    },
+    {
+      "table": "mascot_reaction_logs",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "ea5fa58a1d255c49b6a341ecc7aa52ba0f3553df007702cd9d30a7fe0b90bb1f",
+      "import_status": "imported"
+    },
+    {
+      "table": "message_attachments",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c4ae403abefb6cfd345112afca560bfd79dc0dc8e66532a2afe6f4ad4880b024",
+      "import_status": "imported"
+    },
+    {
+      "table": "message_revisions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "525ce5bdd906ad04ad830a1d38c91e6db287a76dc2cdb8bf9b4fad14dd2ecfcc",
+      "import_status": "imported"
+    },
+    {
+      "table": "messages",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0749d258d527a5389fa04094d1bb7194a14f881366ebbd6702e930a54f6c43da",
+      "import_status": "imported"
+    },
+    {
+      "table": "mfa_backup_codes",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0afdcb4447af4494e040a5d7e101d792ca54380b4d8cfc37854098330998b295",
+      "import_status": "imported"
+    },
+    {
+      "table": "mfa_challenges",
+      "rows": 11,
+      "source_semantic_fingerprint_sha256": "e983aad95686b8a09a76e1601d51dcb3e19bba837eac1ddd2c8cc254de8c6fe4",
+      "target_semantic_fingerprint_sha256": "e983aad95686b8a09a76e1601d51dcb3e19bba837eac1ddd2c8cc254de8c6fe4",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "235d6c95f5b98c41b08fc43985d187e1806f2030d2c6edb41aa177bff0cc3896",
+      "import_status": "imported"
+    },
+    {
+      "table": "mfa_methods",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "bfa84e59a9cbc0b328ea964e89f474e3cac333e82f28db954240e157ca2f682c",
+      "target_semantic_fingerprint_sha256": "bfa84e59a9cbc0b328ea964e89f474e3cac333e82f28db954240e157ca2f682c",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f468433fe36190e6425fd8a6122292ebd59c559c726a53fc679ae769c1b7337f",
+      "import_status": "imported"
+    },
+    {
+      "table": "milestones",
+      "rows": 4,
+      "source_semantic_fingerprint_sha256": "8c2482cd76342035e2a81a32c9380509948fc611d796ea0d7c34a2fefcff4717",
+      "target_semantic_fingerprint_sha256": "8c2482cd76342035e2a81a32c9380509948fc611d796ea0d7c34a2fefcff4717",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "72f5caa5c12635c51f08b10ea69a48883523b23603dc459ce4f50196ee8bce53",
+      "import_status": "imported"
+    },
+    {
+      "table": "modules",
+      "rows": 9,
+      "source_semantic_fingerprint_sha256": "a978330a17ba6a6dfcd7cc3fa2d8a35cb601f06cacd510374642051f1e860510",
+      "target_semantic_fingerprint_sha256": "a978330a17ba6a6dfcd7cc3fa2d8a35cb601f06cacd510374642051f1e860510",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "326f0c0759036b83fd6f8d2443648b35c988931cfdb5ce3b57ee28477d342e21",
+      "import_status": "imported"
+    },
+    {
+      "table": "notification_deliveries",
+      "rows": 258,
+      "source_semantic_fingerprint_sha256": "08d50c4ee8a51e187c23d4012adec8bd5484de360b4b76c586fdcc2c6cc0e1f6",
+      "target_semantic_fingerprint_sha256": "08d50c4ee8a51e187c23d4012adec8bd5484de360b4b76c586fdcc2c6cc0e1f6",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "63b71d4cf8350f2e092b9e5a976aa45a2a0cc1b81b735a67221dae66cd2415e1",
+      "import_status": "imported"
+    },
+    {
+      "table": "notification_preferences",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "1dab8586c55735ba2f8472394d0e2ba0b08e392df2b057202feddc9b5e6538be",
+      "import_status": "imported"
+    },
+    {
+      "table": "notification_rules",
+      "rows": 14,
+      "source_semantic_fingerprint_sha256": "deda206c52a6969fe4698f2b141658980c155b478e3fe1b79f5cd9ec01245923",
+      "target_semantic_fingerprint_sha256": "deda206c52a6969fe4698f2b141658980c155b478e3fe1b79f5cd9ec01245923",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "193b0947d1321fb04a3657d06240711e762789f33531d0efb5f26190458a8f60",
+      "import_status": "imported"
+    },
+    {
+      "table": "notification_template_versions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "7c5b298f669b93d198d4015a0f74098981126ad857ba046579cf67896b0c15fc",
+      "import_status": "imported"
+    },
+    {
+      "table": "notification_templates",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "1610da469163a95e410d26e4c6246299de98b3854b501d3298d05f9a03dbbff2",
+      "import_status": "imported"
+    },
+    {
+      "table": "notifications",
+      "rows": 318,
+      "source_semantic_fingerprint_sha256": "f659a9bc27574419c56e2a00cc2c40f1911467f2f910bf55faa4d0b0e9f0eba0",
+      "target_semantic_fingerprint_sha256": "f659a9bc27574419c56e2a00cc2c40f1911467f2f910bf55faa4d0b0e9f0eba0",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "ccc00416d33622c83b2aeae3358d121e9d5e3202c59009750bf48b3fc9679bb8",
+      "import_status": "imported"
+    },
+    {
+      "table": "organization_settings",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "861727ab32a5e527c23958a41d9744738fc2e8b14e63df34fb37600ead73b7db",
+      "target_semantic_fingerprint_sha256": "861727ab32a5e527c23958a41d9744738fc2e8b14e63df34fb37600ead73b7db",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0660d7352f3431d65a6889fdb697315b45a54e9165a9babb9e6ddf1a75bca095",
+      "import_status": "imported"
+    },
+    {
+      "table": "organizations",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "dc63f680b6083dad00a69e315ea28a3079eb0f06f80a8acc66c820cb3b817be0",
+      "target_semantic_fingerprint_sha256": "dc63f680b6083dad00a69e315ea28a3079eb0f06f80a8acc66c820cb3b817be0",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "633ed4e1370494f882fe9ffba5d9cee16ceb2646602fb63d2f9f3b8a16a4cadc",
+      "import_status": "imported"
+    },
+    {
+      "table": "password_history",
+      "rows": 5,
+      "source_semantic_fingerprint_sha256": "2b22657204c8a01fdcd769f54d467d1e9846731f193e634b76f02fa0662ad749",
+      "target_semantic_fingerprint_sha256": "2b22657204c8a01fdcd769f54d467d1e9846731f193e634b76f02fa0662ad749",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "48ad895a84b124333a25ce80049cd2d0567f1e4b867a3eb32e5e66f2682c7459",
+      "import_status": "imported"
+    },
+    {
+      "table": "permissions",
+      "rows": 49,
+      "source_semantic_fingerprint_sha256": "82bc3e884c7e68041684d1dc3e680f736c5d9ea182a0506b3765c671b9c1f5a4",
+      "target_semantic_fingerprint_sha256": "82bc3e884c7e68041684d1dc3e680f736c5d9ea182a0506b3765c671b9c1f5a4",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "6a9161f12d5eb165147823fbd644da192bdfc24ed1a9a80f30ca7311aed1c043",
+      "import_status": "imported"
+    },
+    {
+      "table": "placement_results",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "14e86812d53e9fe0d27d28dcbd0fcf0ee2690fb3b77db9ad72dfacd01f47c61b",
+      "target_semantic_fingerprint_sha256": "14e86812d53e9fe0d27d28dcbd0fcf0ee2690fb3b77db9ad72dfacd01f47c61b",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2dbe36b806da5af2f876bfaecedad056bd5aec02aa4e5f1c4bb003dc4f967d83",
+      "import_status": "imported"
+    },
+    {
+      "table": "push_subscriptions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0a718ccb34db2a9479ac6b35807b148ddad2b0516cfa5972f7451d20fa1ecdba",
+      "import_status": "imported"
+    },
+    {
+      "table": "question_bank_meta",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "b3f4eaa935dc2478297bab62c348db59d21bef6b475700a411d07d64c27b00fd",
+      "import_status": "imported"
+    },
+    {
+      "table": "question_options",
+      "rows": 97,
+      "source_semantic_fingerprint_sha256": "3990bf3213ef1e0f6c18c96e167eb2b563a371779e7bdac8a0b250a85f774307",
+      "target_semantic_fingerprint_sha256": "3990bf3213ef1e0f6c18c96e167eb2b563a371779e7bdac8a0b250a85f774307",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "07ec9e1821d7310fb0137f115065f4ed7a94d4c719157ee43478a0ffc0b9ccb4",
+      "import_status": "imported"
+    },
+    {
+      "table": "question_versions",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "49f3199546a1eb004981a59c647bd9e251fb2990c4722b6bd52336aa674b8e90",
+      "target_semantic_fingerprint_sha256": "49f3199546a1eb004981a59c647bd9e251fb2990c4722b6bd52336aa674b8e90",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "17b703549226d0bac28eb9e32dbec0f5a76aed7d82065be986bce46d6cbcfe8b",
+      "import_status": "imported"
+    },
+    {
+      "table": "questions",
+      "rows": 57,
+      "source_semantic_fingerprint_sha256": "6af10662229514b29c44be8e4453bc82d270ed686a911bf6e909540823479924",
+      "target_semantic_fingerprint_sha256": "6af10662229514b29c44be8e4453bc82d270ed686a911bf6e909540823479924",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "7d506bf911cfc994492c3143ba8f412418b1a1c89706b67aa491f0756b88c09a",
+      "import_status": "imported"
+    },
+    {
+      "table": "recurrence_rules",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "0a8e95dd7d84da1227a28fedb4a36be1bbf9f9ebc8251924df263e312d90f9ac",
+      "target_semantic_fingerprint_sha256": "0a8e95dd7d84da1227a28fedb4a36be1bbf9f9ebc8251924df263e312d90f9ac",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f8b93c0b4db803d606af12e7555671dd0df5077de37a3ae37cf30309b7ce9ca0",
+      "import_status": "imported"
+    },
+    {
+      "table": "requirement_overrides",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "820e8d1bfaf149ea6212739da807ff2faeb4dd1b0884e5d31e7493b6a7693712",
+      "import_status": "imported"
+    },
+    {
+      "table": "review_schedules",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "f02f0ff83abecf7eef0b3abad891558133c003f20fdf539ebfa1332a572be379",
+      "target_semantic_fingerprint_sha256": "f02f0ff83abecf7eef0b3abad891558133c003f20fdf539ebfa1332a572be379",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "67964e3c2982316b7781fb02c1729b6dafd9acc498c93fea78e1bb31d6b4efbf",
+      "import_status": "imported"
+    },
+    {
+      "table": "role_permissions",
+      "rows": 161,
+      "source_semantic_fingerprint_sha256": "4b97b1e0623313b9f44b6b0f6a8bedf0f262f9509e9cd6085d0f964d55d7a2c6",
+      "target_semantic_fingerprint_sha256": "4b97b1e0623313b9f44b6b0f6a8bedf0f262f9509e9cd6085d0f964d55d7a2c6",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "ed78c45a8f2d928aa71357eb48cbd15caac0deb10d7c4efe6f62451cea3c72c7",
+      "import_status": "imported"
+    },
+    {
+      "table": "roles",
+      "rows": 8,
+      "source_semantic_fingerprint_sha256": "1a41f5a4903b0e6b0204978506e31b86495779e86d80244154c460c13429fab7",
+      "target_semantic_fingerprint_sha256": "1a41f5a4903b0e6b0204978506e31b86495779e86d80244154c460c13429fab7",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "1c1e29296eaff88721ea170c6cb1d435a333117e4c8b6f558ea0551f5acbee54",
+      "import_status": "imported"
+    },
+    {
+      "table": "rubric_versions",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "5592f181b11f5d80a7e4f6b95c6c8ae3d9d1505485dc51fe43aab79250aa94e6",
+      "target_semantic_fingerprint_sha256": "5592f181b11f5d80a7e4f6b95c6c8ae3d9d1505485dc51fe43aab79250aa94e6",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "3c8e9b23fd6ed3088e1f76493ddb08c151ff4ea037a944c0910b061c6568ffe2",
+      "import_status": "imported"
+    },
+    {
+      "table": "rubrics",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "12244ae4556094d0638c6f6ea41c6ba876f938aba475829d3a7a986860a0e622",
+      "target_semantic_fingerprint_sha256": "12244ae4556094d0638c6f6ea41c6ba876f938aba475829d3a7a986860a0e622",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "e8b614e5ad7d44371131910fe20c51302c817506fcc7bd81d46bbf6c228c6f63",
+      "import_status": "imported"
+    },
+    {
+      "table": "scheduled_notices",
+      "rows": 47,
+      "source_semantic_fingerprint_sha256": "db12ee5f8ab17d3461bb8407bf73b29fbf35311311fbd2fdc70b78505e64d134",
+      "target_semantic_fingerprint_sha256": "db12ee5f8ab17d3461bb8407bf73b29fbf35311311fbd2fdc70b78505e64d134",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "7ce0ee5a49bdd599dcb627aaeb48fdbe50c3863daa189b4ea8ce837caefc0996",
+      "import_status": "imported"
+    },
+    {
+      "table": "skill_mappings",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "1664624a3b183f2299ff72103616d06ac97a0fccea117c39c139c148f0d240a7",
+      "import_status": "imported"
+    },
+    {
+      "table": "skills",
+      "rows": 19,
+      "source_semantic_fingerprint_sha256": "a604eed272902b2d3a338fd492b20441afcec8d116ad7be0791d4f014774a3d8",
+      "target_semantic_fingerprint_sha256": "a604eed272902b2d3a338fd492b20441afcec8d116ad7be0791d4f014774a3d8",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2a7693cbc50c0413ff8bfce29062e53c3d121a97e470b487616f5d962e82f006",
+      "import_status": "imported"
+    },
+    {
+      "table": "speaking_assignments",
+      "rows": 3,
+      "source_semantic_fingerprint_sha256": "365f32a42965bfa397d8ecb02c056265862243288e73bbcdcbb6f146ea6a6687",
+      "target_semantic_fingerprint_sha256": "365f32a42965bfa397d8ecb02c056265862243288e73bbcdcbb6f146ea6a6687",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f8a1c52c7983ad5195af1c78e903d348a388b039abe93b6089e4e1e3f4fc1d09",
+      "import_status": "imported"
+    },
+    {
+      "table": "speaking_submissions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "daf35e3c9bdf18065066fb912b22e4087aaffb674e9f2c00007d7bff436dc3d7",
+      "import_status": "imported"
+    },
+    {
+      "table": "speech_attempts",
+      "rows": 3,
+      "source_semantic_fingerprint_sha256": "5762964f5fddafc6c3e88164d1889460d3bb6313bc57478608f1395b99e570b0",
+      "target_semantic_fingerprint_sha256": "5762964f5fddafc6c3e88164d1889460d3bb6313bc57478608f1395b99e570b0",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "9db3dd1c8ab6c988ebd3c767be8965d66a03074d49d07d5388e53adb85f6a245",
+      "import_status": "imported"
+    },
+    {
+      "table": "speech_recognition_requests",
+      "rows": 12,
+      "source_semantic_fingerprint_sha256": "54a89e4e9288ad585650fc5afb7a66750b70b9eed9751870410f01de42bebab2",
+      "target_semantic_fingerprint_sha256": "54a89e4e9288ad585650fc5afb7a66750b70b9eed9751870410f01de42bebab2",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "3c3d143a25d2f0173ecbe0b6544036b758dd5d2d69070410b2999867d2706c80",
+      "import_status": "imported"
+    },
+    {
+      "table": "streak_freezes",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "bcff1d74162fefd7a59fbf48eed1ef17a83ab3e4542d866cd5bc71d077e1ccb3",
+      "target_semantic_fingerprint_sha256": "bcff1d74162fefd7a59fbf48eed1ef17a83ab3e4542d866cd5bc71d077e1ccb3",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "71528c314c8733c48375e6d48b6afa4024902a04be9467dc4c74e534d29f4816",
+      "import_status": "imported"
+    },
+    {
+      "table": "student_badges",
+      "rows": 3,
+      "source_semantic_fingerprint_sha256": "316a02e1b7c72d3a9bdbd26c676bd4499e886d0630c4c4b518d1e40d45c5011a",
+      "target_semantic_fingerprint_sha256": "316a02e1b7c72d3a9bdbd26c676bd4499e886d0630c4c4b518d1e40d45c5011a",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "046d1d7a775f5d18d513045e15ac65656a9153f28f89b8741442f3779f0f585a",
+      "import_status": "imported"
+    },
+    {
+      "table": "student_course_assignments",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "76debc77d9fb293fdb1a1022e52e2305a9fb42e68cada6970433928fb2b47766",
+      "import_status": "imported"
+    },
+    {
+      "table": "student_knowledge_states",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "27b2ff2f2b173ed3f9ab25e7196cd2840c7674e300fcc0a731ebfd1a225dc6fb",
+      "target_semantic_fingerprint_sha256": "27b2ff2f2b173ed3f9ab25e7196cd2840c7674e300fcc0a731ebfd1a225dc6fb",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "42765c10de1954999f34be5d0fafc7acb2369932ca8bb94895857dd0c91529b2",
+      "import_status": "imported"
+    },
+    {
+      "table": "student_learning_preferences",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "caeb3c5ef7024558564630c8423f56f912816f17ae49a90e5a1bf9d0743928bb",
+      "target_semantic_fingerprint_sha256": "caeb3c5ef7024558564630c8423f56f912816f17ae49a90e5a1bf9d0743928bb",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "fd186098426ef14326f8ed75a5ed2c60365e624cc106040b85f27f4ccee111ec",
+      "import_status": "imported"
+    },
+    {
+      "table": "student_learning_profiles",
+      "rows": 77,
+      "source_semantic_fingerprint_sha256": "1aa5e4655bc6914d6946153e7974fc57879baf14f8641f667461aa19cdacfc5a",
+      "target_semantic_fingerprint_sha256": "1aa5e4655bc6914d6946153e7974fc57879baf14f8641f667461aa19cdacfc5a",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "663a9dd596b678aa8adb8aca3fceaa91f63082795b99c2fa12e4e9d324d5756b",
+      "import_status": "imported"
+    },
+    {
+      "table": "student_lesson_progress",
+      "rows": 5,
+      "source_semantic_fingerprint_sha256": "25bce3e4ae0332424397e972f7fd0eb933f74cda61f3cd5c95d0cafd9f6492f6",
+      "target_semantic_fingerprint_sha256": "25bce3e4ae0332424397e972f7fd0eb933f74cda61f3cd5c95d0cafd9f6492f6",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "b01aeb5d98bfd0aec48e01b571da8a058da014b21c28ca4ebad584a504440028",
+      "import_status": "imported"
+    },
+    {
+      "table": "student_milestones",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c7e475f1288abc03fede120828fda03b57de29422028e30ef449941d40ab2290",
+      "import_status": "imported"
+    },
+    {
+      "table": "student_skill_states",
+      "rows": 7,
+      "source_semantic_fingerprint_sha256": "499edec9701749f7cee299f2f296e9d43a39e021817b7ffb3004cbad578989c9",
+      "target_semantic_fingerprint_sha256": "499edec9701749f7cee299f2f296e9d43a39e021817b7ffb3004cbad578989c9",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "e2c6b27ff4bb958423a381744315faf3c45414ae3e819d966849945ef460bc68",
+      "import_status": "imported"
+    },
+    {
+      "table": "student_voice_preferences",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "a773811ca19923a35d3b6732c37e42d7e06a573bf3482398e185e39e7d6bb5cd",
+      "import_status": "imported"
+    },
+    {
+      "table": "support_access_sessions",
+      "rows": 12,
+      "source_semantic_fingerprint_sha256": "a83bf88b6d30dc04816e11aa5ca4ea79e6e8c60a0981f038ca0b96d08ebcfea8",
+      "target_semantic_fingerprint_sha256": "a83bf88b6d30dc04816e11aa5ca4ea79e6e8c60a0981f038ca0b96d08ebcfea8",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "973d572ff801d775016cb55cd0331414857eb3b19bb1c796bcf851fb363f29f9",
+      "import_status": "imported"
+    },
+    {
+      "table": "teacher_approvals",
+      "rows": 2,
+      "source_semantic_fingerprint_sha256": "ab670c1476204bd9f98108c64f31da522544717ca52aecd6857f4eca2756c44f",
+      "target_semantic_fingerprint_sha256": "ab670c1476204bd9f98108c64f31da522544717ca52aecd6857f4eca2756c44f",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f0268f9ba7b4d8cd070c378e8787d94b578f10ba7a68eb96949412bf60e38789",
+      "import_status": "imported"
+    },
+    {
+      "table": "teacher_group_assignments",
+      "rows": 2,
+      "source_semantic_fingerprint_sha256": "c02d56b76e7ba660521ae3079fa58cf853b0b53b54977dbe4a37c73b01e90b76",
+      "target_semantic_fingerprint_sha256": "c02d56b76e7ba660521ae3079fa58cf853b0b53b54977dbe4a37c73b01e90b76",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "abf07ca4efc835c23e6bad69b97318ce7a03b67ad7ce5967a82d7a812873a410",
+      "import_status": "imported"
+    },
+    {
+      "table": "teacher_learning_overrides",
+      "rows": 3,
+      "source_semantic_fingerprint_sha256": "c9808a4983c7db8667cc86e04aaac40501a20d2b80460bd3b44427204dbe302e",
+      "target_semantic_fingerprint_sha256": "c9808a4983c7db8667cc86e04aaac40501a20d2b80460bd3b44427204dbe302e",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "6aaa4fa000b17594e2d7d2b4537492235e397b3fea17496576cee31c4937dc8d",
+      "import_status": "imported"
+    },
+    {
+      "table": "teacher_notes",
+      "rows": 7,
+      "source_semantic_fingerprint_sha256": "62b65fcc33fd59dbec69d2db1d7987e1f8f9909a07e1f06acd9106900a6a5efc",
+      "target_semantic_fingerprint_sha256": "62b65fcc33fd59dbec69d2db1d7987e1f8f9909a07e1f06acd9106900a6a5efc",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "36afdbc201d1f20f9eb839ba5fc86e918456d2b64d7b2fa3de252c70b446c428",
+      "import_status": "imported"
+    },
+    {
+      "table": "teacher_student_assignments",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "521b71957fa7abc0614e93806201cd1cda7c942fa02b5edb5c626f4c986130a8",
+      "import_status": "imported"
+    },
+    {
+      "table": "teaching_plans",
+      "rows": 8,
+      "source_semantic_fingerprint_sha256": "a35c1f3b5b3ecb0dcda32b744f574f62ad8e8d42ae048b64f2ebbf9b4d99b42c",
+      "target_semantic_fingerprint_sha256": "a35c1f3b5b3ecb0dcda32b744f574f62ad8e8d42ae048b64f2ebbf9b4d99b42c",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5f7ee37f49f62ad060ed325c55f5dab1c51f51ca2a05a0fa9bae8e91bb762449",
+      "import_status": "imported"
+    },
+    {
+      "table": "teams",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "97cf7705d6386ba8bf39954629a5fcfdc4562241ad32e6440390e5365080fe99",
+      "import_status": "imported"
+    },
+    {
+      "table": "temporary_permissions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "d3826cad758ea10587df6c3756eb8dc2a6fb96dc1197f3765c609dc2efe577ef",
+      "import_status": "imported"
+    },
+    {
+      "table": "transcripts",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "f0c3bd8d7c9eb826ff311e4907570d56de8ca93639519feb567769c1dba30d1a",
+      "import_status": "imported"
+    },
+    {
+      "table": "tts_requests",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "43dc39666fd3c442077947393b3b05b419758bfdb7ad4c3c24b943c8d46da843",
+      "import_status": "imported"
+    },
+    {
+      "table": "units",
+      "rows": 1,
+      "source_semantic_fingerprint_sha256": "e7926161f61856cc7bcbc0fa2a66aa1a18f577062aa2053bf29ca94287195d44",
+      "target_semantic_fingerprint_sha256": "e7926161f61856cc7bcbc0fa2a66aa1a18f577062aa2053bf29ca94287195d44",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "825bdb14e5e4ca978d1c1928c78fb124d0982dd859250a8d861dcbded9c18960",
+      "import_status": "imported"
+    },
+    {
+      "table": "user_departments",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "326f76fca345f5bb65c89eb039a762d6483793fb423fe604e61a8d61a4b7ec41",
+      "import_status": "imported"
+    },
+    {
+      "table": "user_groups",
+      "rows": 11,
+      "source_semantic_fingerprint_sha256": "8624d46f20f5cd597f3ae525eda109097aa04205be892457fb483ace11c79cb5",
+      "target_semantic_fingerprint_sha256": "8624d46f20f5cd597f3ae525eda109097aa04205be892457fb483ace11c79cb5",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "fe8617235982bf140830f759a5b027171226f10dcc58f516fb1a0f6135f65f49",
+      "import_status": "imported"
+    },
+    {
+      "table": "user_invitations",
+      "rows": 23,
+      "source_semantic_fingerprint_sha256": "efc9359d3a7099cb38620ac96baf444b73f1b12ecfcb1e022a9699f1842bc5d1",
+      "target_semantic_fingerprint_sha256": "efc9359d3a7099cb38620ac96baf444b73f1b12ecfcb1e022a9699f1842bc5d1",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "4ac0efd9b14eb15357033e8b1eafceaee5d72de3cf4f13928cf25069e53f6c2f",
+      "import_status": "imported"
+    },
+    {
+      "table": "user_organizations",
+      "rows": 87,
+      "source_semantic_fingerprint_sha256": "ff6f64b9ce283ae8da310fc15218d315b990753b0dee65f4dc5ec4f674f2fece",
+      "target_semantic_fingerprint_sha256": "ff6f64b9ce283ae8da310fc15218d315b990753b0dee65f4dc5ec4f674f2fece",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0901d67df1a3035903d0d1b37c8d19c1d12ec3c3e7e927a005b27adaf0a9e8ec",
+      "import_status": "imported"
+    },
+    {
+      "table": "user_profiles",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2af6af85441df627017187e0d5f7ad114ac48e2a18591c4a9dab51142129836a",
+      "import_status": "imported"
+    },
+    {
+      "table": "user_roles",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "a45d1010e33cf5792fc7c1131446c9079fb829b96e43e08d5fc18e88d06c2abd",
+      "target_semantic_fingerprint_sha256": "a45d1010e33cf5792fc7c1131446c9079fb829b96e43e08d5fc18e88d06c2abd",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "e44edd9b5c156e420c696cc57f191a5310a461d0c83d0c8fa3f633d410d1becd",
+      "import_status": "imported"
+    },
+    {
+      "table": "user_sessions",
+      "rows": 165,
+      "source_semantic_fingerprint_sha256": "086f55ea4d4985900af75b33a57f23fb2966228ce0dfd1d24f99ef52150f4f5d",
+      "target_semantic_fingerprint_sha256": "086f55ea4d4985900af75b33a57f23fb2966228ce0dfd1d24f99ef52150f4f5d",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "a8c12cf8867e53c004e7067068c204f4048881aa4503ae5c55bc14bd6fc78094",
+      "import_status": "imported"
+    },
+    {
+      "table": "users",
+      "rows": 87,
+      "source_semantic_fingerprint_sha256": "3c5425a061e46e1d742c8615683939c10ef44a55303091b5e6db58fd53fddf26",
+      "target_semantic_fingerprint_sha256": "3c5425a061e46e1d742c8615683939c10ef44a55303091b5e6db58fd53fddf26",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "6a7a60e60832727d34f45c3a9decc2177faa4eab7c16df46084dc62d3e17b753",
+      "import_status": "imported"
+    },
+    {
+      "table": "vocabulary",
+      "rows": 118,
+      "source_semantic_fingerprint_sha256": "773ae410721d863dd191035df97a41445a87071d50d9874b06ecbdc4ae4f319e",
+      "target_semantic_fingerprint_sha256": "773ae410721d863dd191035df97a41445a87071d50d9874b06ecbdc4ae4f319e",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "a23d8891d93a61e9f5417e8633b03e4dd9dbc967a830c6fba079b9efc4415804",
+      "import_status": "imported"
+    },
+    {
+      "table": "vocabulary_review",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2927f62e718c4bb599c4d6f4c114d4a7b01c9b5dc29aea98d855d5435965eab9",
+      "import_status": "imported"
+    },
+    {
+      "table": "voice_consents",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "17b1e055e28917cb74ad4e83fba4655324f85bf05e76821e3af46cc708584a03",
+      "import_status": "imported"
+    },
+    {
+      "table": "voice_messages",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "dcf27c440fb01ad3ea40a80cb7df6b80260ee51cb9235827c699c20650fda401",
+      "target_semantic_fingerprint_sha256": "dcf27c440fb01ad3ea40a80cb7df6b80260ee51cb9235827c699c20650fda401",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "4344db3e8865381884af0aedc8488d926d195d38c36018f2746227840e6e598d",
+      "import_status": "imported"
+    },
+    {
+      "table": "voice_sessions",
+      "rows": 6,
+      "source_semantic_fingerprint_sha256": "be34725415adb4bf9412533eec4d75beb2b0f102f030a6171ea5b650d1a10ff9",
+      "target_semantic_fingerprint_sha256": "be34725415adb4bf9412533eec4d75beb2b0f102f030a6171ea5b650d1a10ff9",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "c27aefdb22bb948684fc7d58475dfab9a112b048a4db7439037e7826d616a584",
+      "import_status": "imported"
+    },
+    {
+      "table": "voice_settings",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "0c70912e189c119dd09c281384d4af380fddf360825a17e90d1286beb4358bc4",
+      "import_status": "imported"
+    },
+    {
+      "table": "webhook_deliveries",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "eb78583abbbd51f4cd65d7aa87a4d1171b41af2fd4a81df421e153d49154c541",
+      "import_status": "imported"
+    },
+    {
+      "table": "webhook_inbound_receipts",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "7beddae6838334d9c4369f4cb4e827745deebe6a9a9dc15301692f23298ffab0",
+      "import_status": "imported"
+    },
+    {
+      "table": "webhook_subscriptions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5f5c70abb2bd308194b0339a98b80b3cb1b1ab68ee6d7eb024d9b026b94ffd88",
+      "import_status": "imported"
+    },
+    {
+      "table": "weekly_learning_plans",
+      "rows": 2,
+      "source_semantic_fingerprint_sha256": "e761511a49c45f4a9abfa51d027ee5d8953a7259264759331be8b3cdf514a19f",
+      "target_semantic_fingerprint_sha256": "e761511a49c45f4a9abfa51d027ee5d8953a7259264759331be8b3cdf514a19f",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "e64e760b1336b5f836193c102c6038d850a7f0e743b36dfdc5074ed1ee2a9f40",
+      "import_status": "imported"
+    },
+    {
+      "table": "workflow_approvals",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "bc6b488ad62906b2714ba12c03b5486700363df8d1fe4dba3eb3ca46e24100cc",
+      "import_status": "imported"
+    },
+    {
+      "table": "workflow_events",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "555a5a688afbd2ac40f21096bae11610f23341aeabf1f66be095aac5cfe6f935",
+      "import_status": "imported"
+    },
+    {
+      "table": "workflow_idempotency_records",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "5f5cc94160661563d5b98d788dfb5c832539089f063da20cb3560a2332fa21da",
+      "import_status": "imported"
+    },
+    {
+      "table": "workflow_run_steps",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "2403824251a8a1cfffb953cdcdbee90e08d420ec5169384c07e04520e4073f2f",
+      "import_status": "imported"
+    },
+    {
+      "table": "workflow_runs",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "fda856c7f3c54bb72e3ccf0746b9b1e832b2ef3b29af2b12e04ac68a05683e10",
+      "import_status": "imported"
+    },
+    {
+      "table": "workflow_versions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "a8759a37297de792fae9cd5ca2f34dd835f68f84c2a531166072540b130c2187",
+      "import_status": "imported"
+    },
+    {
+      "table": "workflows",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "75b2312040e7d5896eea9956d3da42f029bd9740221a429d4a09eed3323bcdcf",
+      "import_status": "imported"
+    },
+    {
+      "table": "writing_submissions",
+      "rows": 0,
+      "source_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "target_semantic_fingerprint_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "80ea480c8b3b5348b4de8ca0d791ae8bf6c1baa0551aadaead1a1f8bad1e72f1",
+      "import_status": "imported"
+    },
+    {
+      "table": "xp_transactions",
+      "rows": 23,
+      "source_semantic_fingerprint_sha256": "08e19c8d4bf0c6f770be6104b02a468de5c82cce021b4e5f313813e72bd43972",
+      "target_semantic_fingerprint_sha256": "08e19c8d4bf0c6f770be6104b02a468de5c82cce021b4e5f313813e72bd43972",
+      "semantic_match": true,
+      "importer_fingerprint_sha256": "083f06240ddd16f5a184a38bd9a3c715c1dc82a1e839662aad5c467a571fb6b8",
+      "import_status": "imported"
+    }
+  ],
+  "reports": [
+    {
+      "file": "PHASE_28_3_SOURCE_INVENTORY.md",
+      "sha256": "fe64b612a5741017bc9d57018c3cda941ab70f6a78e178928ee17eed3c6166fc",
+      "bytes": 7420
+    },
+    {
+      "file": "PHASE_28_3_TARGET_INVENTORY.md",
+      "sha256": "be92c74a6643088e3e056a99bb8bf27caa612d56bf5734f38be1b24934afc2ab",
+      "bytes": 7521
+    },
+    {
+      "file": "PHASE_28_3_SCHEMA_MAPPING.md",
+      "sha256": "30f03443228a7a1e105d154519a15666b0e59c3354026446a678895e57f38998",
+      "bytes": 1787
+    },
+    {
+      "file": "PHASE_28_3_MIGRATION_EXECUTION.md",
+      "sha256": "885a474436625783b4199f6e25d137c9b16fcdc8c757aec4389dad5995cfbde0",
+      "bytes": 1878
+    },
+    {
+      "file": "PHASE_28_3_ROW_COUNTS.md",
+      "sha256": "9945d240b140eb8dd8106cac037de50d51c1f80808bf1c482de219e26e3d9a88",
+      "bytes": 703
+    },
+    {
+      "file": "PHASE_28_3_CONTENT_FINGERPRINTS.md",
+      "sha256": "3df2559656705268f7c2429982889d0689b15eef69909e25ff23db4fd8f95f36",
+      "bytes": 37686
+    },
+    {
+      "file": "PHASE_28_3_INTEGRITY_REPORT.md",
+      "sha256": "e76cf2c656d57896fddb7cf54058ea73fa08b7c795d7a02f9bef87a32378f0f1",
+      "bytes": 793
+    },
+    {
+      "file": "PHASE_28_3_FOREIGN_KEY_REPORT.md",
+      "sha256": "de79399c7d6431bf98a84d5567e740b24c875e363b4b42b5af34906d0abe4ccb",
+      "bytes": 463
+    },
+    {
+      "file": "PHASE_28_3_UNIQUE_INDEX_REPORT.md",
+      "sha256": "514cd60017230ff8bb8a3640ae6974bf924d9ed692aa4b8f56919cc8afd30da3",
+      "bytes": 512
+    },
+    {
+      "file": "PHASE_28_3_SEQUENCE_REPORT.md",
+      "sha256": "a647ce004261b918406e254a867cb0e2a621ccf9befa9159072126ce3d9182e4",
+      "bytes": 610
+    },
+    {
+      "file": "PHASE_28_3_JSON_VALIDATION.md",
+      "sha256": "0b95816315ce5bf38b17861bf4b3dea0d13d6e606b626a86bf83ea77c744f5c3",
+      "bytes": 796
+    },
+    {
+      "file": "PHASE_28_3_APPLICATION_VALIDATION.md",
+      "sha256": "9e8a19bf399f3b6f8129f98c1bb4e0d04731eb4c679e2de47d9d126f60b4fcd1",
+      "bytes": 1294
+    },
+    {
+      "file": "PHASE_28_3_AUTHORIZATION_REPORT.md",
+      "sha256": "92117c02211a3e9836be40da344a349bd27114ee20ee9f3420c8e63f2fecb6ea",
+      "bytes": 876
+    },
+    {
+      "file": "PHASE_28_3_WORKFLOW_REPORT.md",
+      "sha256": "d84212d36eb3895eef6576c40797a5bd68ad29f06eef2dfe415312ff5d95b634",
+      "bytes": 813
+    },
+    {
+      "file": "PHASE_28_3_TRANSACTION_REPORT.md",
+      "sha256": "541ff21fe280cfbd1d0063cc2f94c8e38e92b2130a7c3874013726f56e018463",
+      "bytes": 734
+    },
+    {
+      "file": "PHASE_28_3_CONSTRAINT_BEHAVIOR.md",
+      "sha256": "6f5b4d2a79e7824393dac54ca92f3886582940ec154c14766858948282c6e71d",
+      "bytes": 620
+    },
+    {
+      "file": "PHASE_28_3_PERFORMANCE_REPORT.md",
+      "sha256": "af60bd6877fe0cc91c2173239ce67c0526676ee2344ee4aade3dd43fa47b6ace",
+      "bytes": 1101
+    },
+    {
+      "file": "PHASE_28_3_FAILURE_RECOVERY.md",
+      "sha256": "ac05c569ab83a5555721d14bfc62b8e96eabb62144633c570464812a44d6504b",
+      "bytes": 1737
+    },
+    {
+      "file": "PHASE_28_3_POSTGRES_BACKUP_RESTORE.md",
+      "sha256": "8fdbe3d0522e671886a216708c1cd359c1cc1a3eaaae0e22711c251f135d81a2",
+      "bytes": 959
+    },
+    {
+      "file": "PHASE_28_3_SOURCE_PRESERVATION_AND_QA.md",
+      "sha256": "c7e914db97d65419f99b8d303373cd18be74250cf9cbc9b9f1845585f1bf5cf2",
+      "bytes": 2082
+    },
+    {
+      "file": "PHASE_28_3_FINAL_REPORT.md",
+      "sha256": "5c66048b58fc30f3f46af7d1cdd7196873abe7e796838cb67c8ca6dbdbca8a0e",
+      "bytes": 2722
+    }
+  ]
+}

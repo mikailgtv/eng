@@ -1,0 +1,13 @@
+{
+  "archive": "PROJECT_LEO_PHASE_A_2026-11-04_v1.zip",
+  "archive_bytes": 509792,
+  "archive_sha256": "e814de446f2c64c032554235c40b7c9e6e04ef82167e7713e80e83bf3cb6acc5",
+  "members": 82,
+  "zip_crc": "PASS",
+  "zip_member_bytes_match_workspace": "PASS",
+  "required_master_files": 9,
+  "knowledge_base_chapters": 26,
+  "phase": "A only",
+  "next_phase": "B, not started",
+  "app_or_dependency_or_db_changes": false
+}

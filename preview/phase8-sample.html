@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EnglishBridge — Speaking and Listening sample</title>
+  <style>
+    :root {
+      --background: #f4f7f8;
+      --surface: #ffffff;
+      --border: #e3e8ee;
+      --foreground: #1f2937;
+      --muted: #627084;
+      --primary: #18685c;
+      --primary-hover: #12564c;
+      --primary-subtle: #e7f5f2;
+      --danger: #bd2c2c;
+      --danger-subtle: #fdecec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--foreground);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    }
+    .banner {
+      background: #123f39;
+      color: #f4fffc;
+      padding: 14px 18px;
+    }
+    .banner strong { display: block; font-size: 15px; }
+    .banner span { display: block; margin-top: 2px; color: #d5ebe6; font-size: 13px; }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px 14px 40px;
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 860px) {
+      .wrap { grid-template-columns: 390px 1fr; align-items: start; }
+    }
+    .phone {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(31, 41, 55, 0.06);
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+    .brand { font-weight: 700; letter-spacing: -0.02em; }
+    .brand small { display: block; color: var(--muted); font-weight: 500; font-size: 11px; }
+    .nav {
+      display: flex;
+      gap: 6px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }
+    .nav button, .modes button, .row button, .speed button, .listen-actions button {
+      font: inherit;
+      cursor: pointer;
+    }
+    .nav button {
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      border-radius: 999px;
+      min-height: 36px;
+      padding: 0 10px;
+      white-space: nowrap;
+    }
+    .nav button[aria-selected="true"] {
+      background: var(--primary-subtle);
+      color: var(--primary);
+      border-color: #c9e6e0;
+      font-weight: 650;
+    }
+    .screen { padding: 16px; }
+    .kicker {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 4px 0 0; font-size: 26px; letter-spacing: -0.03em; }
+    .note { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+    .modes, .row, .listen-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .modes button, .speed button {
+      min-height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 0 14px;
+    }
+    .modes button[aria-pressed="true"] {
+      background: var(--foreground);
+      color: #fff;
+      border-color: var(--foreground);
+    }
+    label.field { display: block; margin-top: 12px; color: var(--muted); font-size: 13px; }
+    select, input[type="text"] {
+      display: block;
+      width: 100%;
+      margin-top: 4px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0 10px;
+      font: inherit;
+      color: var(--foreground);
+      background: #fff;
+    }
+    .card {
+      margin-top: 14px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      background: #fff;
+    }
+    .state {
+      margin: 0;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .prompt { margin: 8px 0 0; font-size: 20px; line-height: 1.35; }
+    .heard, .feedback { margin: 10px 0 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .btn {
+      min-height: 48px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font: inherit;
+      font-weight: 650;
+      cursor: pointer;
+    }
+    .btn.primary { background: var(--primary); color: #fff; }
+    .btn.primary:hover { background: var(--primary-hover); }
+    .btn.secondary { background: #fff; color: var(--foreground); border-color: var(--border); }
+    .btn.tall { min-height: 56px; }
+    .typebox { display: flex; gap: 8px; margin-top: 10px; }
+    .typebox input { margin: 0; }
+    .alert {
+      margin-top: 12px;
+      border: 1px solid #f0c2c2;
+      background: var(--danger-subtle);
+      color: var(--danger);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+    .help { margin: 8px 0 0; color: var(--muted); }
+    .hidden { display: none; }
+    .side h2 { margin: 0 0 8px; font-size: 18px; }
+    .side p { margin: 0 0 10px; color: var(--muted); }
+    .side ul { margin: 0; padding-left: 18px; color: var(--foreground); }
+    .side li { margin: 6px 0; }
+    .pill {
+      display: inline-block;
+      background: var(--primary-subtle);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    fieldset {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin: 12px 0 0;
+      padding: 10px 12px 12px;
+    }
+    legend { padding: 0 4px; font-weight: 650; }
+    .choice { display: flex; align-items: center; gap: 8px; min-height: 44px; }
+    .result {
+      margin-top: 12px;
+      background: var(--primary-subtle);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <strong>نمونهٔ نمایشی — فایل HTML</strong>
+    <span>این صفحهٔ زندهٔ سرور نیست. ظاهر دانش‌آموز برای Speaking و Listening است. نمرهٔ تلفظ ندارد و فایل صوتی ساختگی ندارد.</span>
+  </div>
+  <div class="wrap">
+    <section class="phone" aria-label="Student sample">
+      <div class="topbar">
+        <div class="brand">EnglishBridge<small>James Carter · Pre-A1</small></div>
+        <span class="pill">Practice</span>
+      </div>
+      <div class="nav" role="tablist">
+        <button type="button" role="tab" aria-selected="true" data-tab="speaking">Speaking</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="listening">Listening</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="history">History</button>
+      </div>
+
+      <div class="screen" id="speaking">
+        <p class="kicker">Speaking lab</p>
+        <h1>Listen. Speak. Try again.</h1>
+        <p class="note">This stores the words recognized, not a recording. It is practice, not a grade.</p>
+        <div class="modes" role="group" aria-label="Mode">
+          <button type="button" aria-pressed="true" data-kind="Speak">Speak</button>
+          <button type="button" aria-pressed="false" data-kind="Repeat a word">Repeat a word</button>
+          <button type="button" aria-pressed="false" data-kind="Shadow">Shadow</button>
+          <button type="button" aria-pressed="false" data-kind="Talk with tutor">Talk with tutor</button>
+        </div>
+        <label class="field">Topic
+          <select id="topic">
+            <option>Greetings</option>
+            <option>Introducing yourself</option>
+            <option>Job</option>
+            <option>Basic workplace words</option>
+            <option>Asking for help</option>
+            <option>Basic safety words</option>
+          </select>
+        </label>
+        <div class="speed" role="group" aria-label="Speed">
+          <button type="button" aria-pressed="true" data-speed="0.75">0.75x</button>
+          <button type="button" aria-pressed="false" data-speed="1">1.0x</button>
+          <button type="button" aria-pressed="false" data-speed="1.25">1.25x</button>
+        </div>
+        <section class="card" aria-live="polite">
+          <p class="state" id="state">Ready</p>
+          <p class="prompt" id="prompt">Hello. What is your name?</p>
+          <p class="heard hidden" id="heard"></p>
+          <p class="feedback hidden" id="feedback"></p>
+          <button type="button" class="hidden" id="transcript-toggle" style="margin-top:8px;background:none;border:0;text-decoration:underline;padding:0;">Show transcript</button>
+          <p class="hidden" id="shadow-transcript">Good morning. How are you?</p>
+        </section>
+        <p class="alert hidden" id="error" role="alert"></p>
+        <div class="grid">
+          <button class="btn primary tall" type="button" id="start">Start speaking</button>
+          <button class="btn secondary tall" type="button" id="hear">Hear</button>
+          <button class="btn secondary" type="button" id="again">Try again</button>
+          <button class="btn secondary" type="button" id="help">Show help</button>
+        </div>
+        <p class="help hidden" id="help-text">Press Start speaking, or type the sentence. Then press Try again.</p>
+        <form class="typebox" id="type-form">
+          <label class="sr" for="typed" style="position:absolute;left:-999px;">Type your answer</label>
+          <input id="typed" type="text" placeholder="Type your answer" />
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+      </div>
+
+      <div class="screen hidden" id="listening">
+        <p class="kicker">Listening lab</p>
+        <h1>Listen first.</h1>
+        <p class="note">The transcript stays hidden until you ask for it. This is practice, not an exam. No audio file is attached.</p>
+        <label class="field">Practice
+          <select>
+            <option>PRE_A1 · Greetings · Hello at the station</option>
+          </select>
+        </label>
+        <div class="listen-actions">
+          <button class="btn primary" type="button" id="play">Play</button>
+          <button class="btn secondary" type="button" id="replay">Replay</button>
+          <button class="btn secondary" type="button" id="slow">Slow</button>
+          <button class="btn secondary" type="button" id="show-script">Show transcript</button>
+          <button class="btn secondary" type="button" id="show-fa">Show translation</button>
+        </div>
+        <p class="note" id="audio-note">Browser voice is used when this page is opened in a normal browser. In this preview, the sentence is shown if audio cannot play.</p>
+        <p class="card hidden" id="script">Hello. My name is Sam. I work at a fire station.</p>
+        <p class="note hidden" id="fa">Bonjour. Je m'appelle Sam. Je travaille dans une caserne.</p>
+        <form id="listen-form">
+          <fieldset>
+            <legend>What is his name?</legend>
+            <label class="choice"><input type="radio" name="q1" value="Sam" /> Sam</label>
+            <label class="choice"><input type="radio" name="q1" value="Ali" /> Ali</label>
+            <label class="choice"><input type="radio" name="q1" value="Sara" /> Sara</label>
+          </fieldset>
+          <fieldset>
+            <legend>He works at a fire station.</legend>
+            <label class="choice"><input type="radio" name="q2" value="True" /> True</label>
+            <label class="choice"><input type="radio" name="q2" value="False" /> False</label>
+          </fieldset>
+          <button class="btn primary" type="submit" style="margin-top:12px;">Check</button>
+        </form>
+        <p class="result hidden" id="listen-result"></p>
+      </div>
+
+      <div class="screen hidden" id="history">
+        <p class="kicker">Speaking history</p>
+        <h1>Your sessions</h1>
+        <p class="note">Counts only. No pronunciation score. Recordings are not stored.</p>
+        <article class="card">
+          <strong>Greetings</strong>
+          <p class="note">Today · Speak · Pre-A1 · 2 turns · 1 understood · Active</p>
+          <button class="btn secondary" type="button">Delete text</button>
+        </article>
+        <article class="card">
+          <strong>Basic safety words</strong>
+          <p class="note">Yesterday · Repeat a word · Pre-A1 · 1 turn · 1 understood · Completed</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="side">
+      <h2>چه چیزی را نشان می‌دهد</h2>
+      <p>همان جریان دانش‌آموز در فاز ۸، به صورت یک فایل HTML مستقل تا در پیش‌نمایش باز شود.</p>
+      <ul>
+        <li>دکمه‌های بزرگ: Listen، Speak، Try again، Next.</li>
+        <li>حالت میکروفون: Ready، Listening، Processing، Finished، Error.</li>
+        <li>اگر صدا نباشد، جمله نوشته می‌شود. آدرس فایل صوتی جعلی ساخته نمی‌شود.</li>
+        <li>تطابق متن است، نه نمرهٔ تلفظ.</li>
+        <li>بین Speaking، Listening و History جابه‌جا شوید.</li>
+      </ul>
+    </aside>
+  </div>
+  <script>
+    const prompts = {
+      Greetings: "Hello. What is your name?",
+      "Introducing yourself": "What is your name?",
+      Job: "What is your job?",
+      "Basic workplace words": "Say: I am a firefighter.",
+      "Asking for help": "Say: Can you help me?",
+      "Basic safety words": "Say: Stop."
+    };
+    const tabs = document.querySelectorAll("[data-tab]");
+    tabs.forEach((tab) => tab.addEventListener("click", () => {
+      tabs.forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
+      ["speaking", "listening", "history"].forEach((id) => {
+        document.getElementById(id).classList.toggle("hidden", id !== tab.dataset.tab);
+      });
+    }));
+
+    const topic = document.getElementById("topic");
+    const prompt = document.getElementById("prompt");
+    const state = document.getElementById("state");
+    const heard = document.getElementById("heard");
+    const feedback = document.getElementById("feedback");
+    const error = document.getElementById("error");
+    let kind = "Speak";
+    topic.addEventListener("change", () => {
+      prompt.textContent = kind === "Repeat a word" ? "Say this word: hello" : (prompts[topic.value] || prompts.Greetings);
+    });
+    document.querySelectorAll("[data-kind]").forEach((button) => button.addEventListener("click", () => {
+      document.querySelectorAll("[data-kind]").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+      kind = button.dataset.kind;
+      state.textContent = "Ready";
+      error.classList.add("hidden");
+      if (kind === "Shadow") {
+        prompt.textContent = "Listen, then repeat. The words stay hidden.";
+        document.getElementById("transcript-toggle").classList.remove("hidden");
+      } else if (kind === "Repeat a word") {
+        prompt.textContent = "Say this word: hello";
+        document.getElementById("transcript-toggle").classList.add("hidden");
+      } else if (kind === "Talk with tutor") {
+        prompt.textContent = "Hello. What is your name?";
+        document.getElementById("transcript-toggle").classList.add("hidden");
+      } else {
+        prompt.textContent = prompts[topic.value];
+        document.getElementById("transcript-toggle").classList.add("hidden");
+      }
+    }));
+    document.getElementById("transcript-toggle").addEventListener("click", () => {
+      const line = document.getElementById("shadow-transcript");
+      const open = line.classList.toggle("hidden");
+      document.getElementById("transcript-toggle").textContent = open ? "Show transcript" : "Hide transcript";
+    });
+    document.querySelectorAll("[data-speed]").forEach((button) => button.addEventListener("click", () => {
+      document.querySelectorAll("[data-speed]").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+    }));
+    document.getElementById("help").addEventListener("click", () => {
+      document.getElementById("help-text").classList.toggle("hidden");
+    });
+    function showAnswer(text) {
+      const target = (prompts[topic.value] || "").replace(/^Say:\s*/i, "").replace(/[?.!]/g, "").trim().toLowerCase();
+      const given = text.replace(/[?.!]/g, "").trim().toLowerCase();
+      const understood = given && target && (given === target || target.includes(given) && given.length > 2);
+      heard.textContent = "Your answer: “" + text + "”";
+      heard.classList.remove("hidden");
+      feedback.textContent = understood
+        ? "Good. I understood that sentence. This is not a pronunciation score."
+        : "I heard something different. Try the sentence again, or type it.";
+      feedback.classList.remove("hidden");
+      state.textContent = "Finished";
+    }
+    document.getElementById("start").addEventListener("click", () => {
+      state.textContent = "Listening";
+      error.classList.add("hidden");
+      window.setTimeout(() => {
+        state.textContent = "Error";
+        error.textContent = "Voice recognition is unavailable in this preview. You can type your answer instead.";
+        error.classList.remove("hidden");
+      }, 700);
+    });
+    document.getElementById("hear").addEventListener("click", () => {
+      const text = kind === "Shadow" ? "Good morning. How are you?" : prompt.textContent.replace(/^Say this word:\s*/i, "").replace(/^Say:\s*/i, "");
+      if (!window.speechSynthesis) {
+        error.textContent = "Audio is unavailable. Read the sentence below.";
+        error.classList.remove("hidden");
+        return;
+      }
+      const utter = new SpeechSynthesisUtterance(text);
+      const speed = document.querySelector("[data-speed][aria-pressed='true']");
+      utter.rate = Number(speed ? speed.dataset.speed : "0.75");
+      utter.lang = "en-US";
+      speechSynthesis.cancel();
+      speechSynthesis.speak(utter);
+    });
+    document.getElementById("again").addEventListener("click", () => {
+      const typed = document.getElementById("typed").value.trim();
+      if (!typed) {
+        state.textContent = "Ready";
+        heard.classList.add("hidden");
+        feedback.classList.add("hidden");
+        return;
+      }
+      showAnswer(typed);
+    });
+    document.getElementById("type-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const typed = document.getElementById("typed").value.trim();
+      if (!typed) return;
+      state.textContent = "Processing";
+      showAnswer(typed);
+    });
+
+    function showScript(note) {
+      document.getElementById("script").classList.remove("hidden");
+      document.getElementById("audio-note").textContent = note;
+    }
+    document.getElementById("play").addEventListener("click", () => showScript("Audio is unavailable in this preview. Read the sentence below."));
+    document.getElementById("replay").addEventListener("click", () => showScript("Replay uses the same sentence. No audio file is stored."));
+    document.getElementById("slow").addEventListener("click", () => showScript("Slow is 0.75x when the browser can speak. Here, read the sentence slowly."));
+    document.getElementById("show-script").addEventListener("click", () => {
+      const line = document.getElementById("script");
+      const hidden = line.classList.toggle("hidden");
+      document.getElementById("show-script").textContent = hidden ? "Show transcript" : "Hide transcript";
+    });
+    document.getElementById("show-fa").addEventListener("click", () => {
+      const line = document.getElementById("fa");
+      const hidden = line.classList.toggle("hidden");
+      document.getElementById("show-fa").textContent = hidden ? "Show translation" : "Hide translation";
+    });
+    document.getElementById("listen-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const q1 = new FormData(event.currentTarget).get("q1");
+      const q2 = new FormData(event.currentTarget).get("q2");
+      const correct = (q1 === "Sam" ? 1 : 0) + (q2 === "True" ? 1 : 0);
+      const result = document.getElementById("listen-result");
+      result.classList.remove("hidden");
+      result.textContent = "Listening practice. This is not an exam grade. " + correct + " of 2 correct. He says: My name is Sam.";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "archive": "PROJECT_LEO_PHASE_B_2026-11-04_v1.zip",
+  "bytes": 16357390,
+  "sha256": "81820725c4ce526465df41fb3bdc36d6d688834040fee2240a27134e4a1dd350",
+  "file_count": 309,
+  "crc_valid": true,
+  "all_members_match_current_files": true,
+  "required_deliverables": 13,
+  "prototype": "PROJECT_LEO_PHASE_B_2026-11-04_v1/prototype/LEO_DESIGN_PROTOTYPE_FINAL.html",
+  "verdict": "PARTIAL",
+  "C_started": false,
+  "original_database_sha256": "68a00e5137b951098fe250d86b7203fa140035063d427f33a4a16987ef302813",
+  "original_lock_sha256": "035df9a385770ec2fa4494ccb531b507a0cef01e3710d5babd20bc5b66a76b48"
+}

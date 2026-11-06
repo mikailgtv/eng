@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "EnglishBridge – آفلاین",
+    "slug": "englishlearning-offline",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "englishbridge",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/mascot.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFF8E7"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.englishbridge.offline"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFF8E7"
+      },
+      "package": "com.englishbridge.offline",
+      "versionCode": 1,
+      "permissions": ["RECORD_AUDIO"],
+      "blockedPermissions": ["android.permission.INTERNET", "android.permission.ACCESS_NETWORK_STATE"]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/mascot.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": true
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow EnglishBridge to use microphone for pronunciation practice (offline, audio never leaves device)"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  }
+}

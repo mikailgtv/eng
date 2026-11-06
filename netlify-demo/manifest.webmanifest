@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "EnglishBridge LMS — QA Demo",
+  "short_name": "EnglishBridge",
+  "description": "Offline-capable interactive sample LMS. Uses fictional, local-only data.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f6fa",
+  "theme_color": "#102b52",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

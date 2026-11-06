@@ -1,0 +1,75 @@
+[
+  {
+    "path": "EnglishBridge_Netlify_Demo.zip",
+    "sha256": "1c15e085028c4f3d03c398c569e695ffc0f9c4b92707bf4889d557474bf8dfe8",
+    "entries": 6,
+    "code_entries": 2,
+    "unsafe_paths": 0,
+    "protected_members": 0,
+    "crc_valid": true,
+    "manifests": [],
+    "note": "Inspected without extraction; not executed, not declared release-ready"
+  },
+  {
+    "path": "EnglishLearning-Offline-Doctor-Fix-v1.zip",
+    "sha256": "1003a5fd931ebf9f6cc292906a49cf60432faa517e87a880b14e9411baa64379",
+    "entries": 3,
+    "code_entries": 1,
+    "unsafe_paths": 0,
+    "protected_members": 0,
+    "crc_valid": true,
+    "manifests": [],
+    "note": "Inspected without extraction; not executed, not declared release-ready"
+  },
+  {
+    "path": "EnglishLearning-Offline-Source.zip",
+    "sha256": "8fb885dd42f689433364213494f5fdd78b72ff1843b5a7364722e152cd751fe9",
+    "entries": 36,
+    "code_entries": 9,
+    "unsafe_paths": 0,
+    "protected_members": 0,
+    "crc_valid": true,
+    "manifests": [
+      {
+        "entry": "EnglishLearning-Offline/package.json",
+        "name": "englishlearning-offline",
+        "version": "1.0.0",
+        "next": null,
+        "expo": "~51.0.28",
+        "react_native": "0.74.5"
+      }
+    ],
+    "note": "Inspected without extraction; not executed, not declared release-ready"
+  },
+  {
+    "path": "PHASE_26_COMPLETE_REPORT.zip",
+    "sha256": "c5f3c07318425222918b3cbfd398046fb72a77ff9d553adfd4845c71389fc05f",
+    "entries": 1,
+    "code_entries": 0,
+    "unsafe_paths": 0,
+    "protected_members": 0,
+    "crc_valid": true,
+    "manifests": [],
+    "note": "Inspected without extraction; not executed, not declared release-ready"
+  },
+  {
+    "path": "englishbridge-lms-github.zip",
+    "sha256": "a2fe46f24adbcc6448c3100903c655514d368d1289a1b01e1f6b2ec21a5ba149",
+    "entries": 1212,
+    "code_entries": 727,
+    "unsafe_paths": 0,
+    "protected_members": 17,
+    "crc_valid": true,
+    "manifests": [
+      {
+        "entry": "englishbridge-lms/package.json",
+        "name": "englishbridge-lms",
+        "version": "0.1.0",
+        "next": "15.5.27",
+        "expo": null,
+        "react_native": null
+      }
+    ],
+    "note": "Inspected without extraction; not executed, not declared release-ready"
+  }
+]

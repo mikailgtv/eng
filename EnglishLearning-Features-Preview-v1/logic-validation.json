@@ -1,0 +1,18 @@
+{
+  "scope": "Preview JavaScript logic with a simulated DOM, not a browser or media decoder",
+  "checks": [
+    "Initial lesson, lesson list, vocabulary count, numeral formatting and player elements",
+    "Selection and render of all 25 source lessons",
+    "Persian search, empty result handling and search reset",
+    "Status tab and keyboard tab navigation",
+    "Other-player pause and error-message event logic"
+  ],
+  "result": "PASS",
+  "notTested": [
+    "Browser rendering or visual layout",
+    "Actual audio playback or audibility",
+    "Native Android functionality",
+    "SQLite persistence",
+    "APK build"
+  ]
+}

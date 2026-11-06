@@ -1,0 +1,419 @@
+{
+  "project": "Project Leo",
+  "phase": "A only",
+  "date": "2026-11-04",
+  "kind": "Documentation/inventory/architecture; not an application release",
+  "files": [
+    {
+      "path": "ANIMATION_ROADMAP.md",
+      "bytes": 4756,
+      "sha256": "04d9a61578aa47dbf8956e54396eee7139931ad311e068e90dda0484541811cd"
+    },
+    {
+      "path": "CURRICULUM_MASTER_MAP.md",
+      "bytes": 7855,
+      "sha256": "9dfddd0c4ca07767a366bffcf5c225e6ee0904d1602dc5295ef73abfa8950751"
+    },
+    {
+      "path": "DESIGN_DIRECTION.md",
+      "bytes": 5376,
+      "sha256": "1d9b04b5624c8755a158d808017acbc4e5b81f8e3a4d5a75c626d5447565815a"
+    },
+    {
+      "path": "ENTERPRISE_FEATURE_MAP.md",
+      "bytes": 7030,
+      "sha256": "4c114810520e4c2ae1bac77d4217ca1adece9fab15582fc712fd74e403f2428b"
+    },
+    {
+      "path": "MASTER_PHASE_ROADMAP.md",
+      "bytes": 8244,
+      "sha256": "505203bbe7cd50cf8e542b0379f04c9622d14473d2acbf909b1a426554facab3"
+    },
+    {
+      "path": "PRODUCT_VISION.md",
+      "bytes": 4692,
+      "sha256": "8c75d7d050fbc5033259d91ec1482bac698d5b1197f7b43e8ea08719bba8cff7"
+    },
+    {
+      "path": "PROJECT_DECISION_LOG.md",
+      "bytes": 7259,
+      "sha256": "85ff2a1bb4a0640b11552da367d527a60d07201563ede491d00026bfada2d2fd"
+    },
+    {
+      "path": "PROJECT_MASTER_ARCHITECTURE.md",
+      "bytes": 15899,
+      "sha256": "19f726abee31786f3c87f09ec71e2ee0aef6db11019ae9f71363fc7059771522"
+    },
+    {
+      "path": "PROJECT_MASTER_INVENTORY.md",
+      "bytes": 24164,
+      "sha256": "0f6a59226989eade490fe4b0ecf7015983dcec6262a779304f5f9829f8aa596f"
+    },
+    {
+      "path": "README_FA.md",
+      "bytes": 3405,
+      "sha256": "32d8e461260ce3638d5d13f42a8a64a852809b927ed8e93c428d5de823306735"
+    },
+    {
+      "path": "assets/README.md",
+      "bytes": 835,
+      "sha256": "3fd8d6ce9e6a842b24d407990795781c45c4f359c966276e97bb27c53cbb0448"
+    },
+    {
+      "path": "assets/manifests/ASSET_MANIFEST.csv",
+      "bytes": 72709,
+      "sha256": "ec62ad366fff0368150d658454096cbecfda857a807fb7b2d7e61af707a33efe"
+    },
+    {
+      "path": "audio/AUDIO_SPEECH_ARCHITECTURE.md",
+      "bytes": 1390,
+      "sha256": "a9ce5c90082e0759942320aa31799e37a05dfd1782c897736f06b243fee372e6"
+    },
+    {
+      "path": "curriculum/CURRICULUM_MASTER_MAP.md",
+      "bytes": 868,
+      "sha256": "9855dc9a1ff6b8d66623afbff6e8a4ebeed03cffe073f209e4326161e3874dd9"
+    },
+    {
+      "path": "curriculum/PEDAGOGY_FRAMEWORK.md",
+      "bytes": 861,
+      "sha256": "8078cfcd894327fe4eb96b2f8d3870ff375c90494715f3c2ecf53999a134f2d3"
+    },
+    {
+      "path": "design/ANIMATION_SPECIFICATION.md",
+      "bytes": 931,
+      "sha256": "c3018a622e62d42a603300f59fb3bedfa50b76e9f7823970b21d034418d9a03d"
+    },
+    {
+      "path": "design/DESIGN_SYSTEM.md",
+      "bytes": 935,
+      "sha256": "b771a87144ba009dd2bf9678afadb5089f7329b84e268998819e281d9c5e9df3"
+    },
+    {
+      "path": "design/LEO_CHARACTER_BIBLE.md",
+      "bytes": 4500,
+      "sha256": "f4db148eb0292bae0593cf045d042a4e5cc6b1d09659a25b72ca8badf65fd68e"
+    },
+    {
+      "path": "design/references/README.md",
+      "bytes": 912,
+      "sha256": "174ad095b9de54c7ef61b69da17ab2df45d72643e3126d0c40ebc6e0f6556a6e"
+    },
+    {
+      "path": "docs/00_EXECUTIVE_OVERVIEW.md",
+      "bytes": 1743,
+      "sha256": "2974ff6ceb299e2bf359d4d70a231942a4ea5677b1ffb9e2c27a0f2a9aee1ef9"
+    },
+    {
+      "path": "docs/01_PRODUCT_REQUIREMENTS.md",
+      "bytes": 2011,
+      "sha256": "15b86d53be4b28c07980ef83c526a182e609c3029edc221315db3d005e0f825b"
+    },
+    {
+      "path": "docs/02_MASTER_ARCHITECTURE.md",
+      "bytes": 1607,
+      "sha256": "ff02af6b1c7d739790def13106937f8345634975fc4ba1f51bedb2a49d4a4e44"
+    },
+    {
+      "path": "docs/03_DESIGN_SYSTEM.md",
+      "bytes": 2358,
+      "sha256": "c39b04204f3e5e59759fc83441c1138a8cce0aa4c28bc400e3e049bb4de9233e"
+    },
+    {
+      "path": "docs/04_CHARACTER_BIBLE.md",
+      "bytes": 1336,
+      "sha256": "499dbd4cc42bb96b3609a62ae7f8d980ac56be78cc642471fb473a7307158fd3"
+    },
+    {
+      "path": "docs/05_ANIMATION_SYSTEM.md",
+      "bytes": 1487,
+      "sha256": "7c3d78b279d8a339913efa16c743ae1fe6a246cbc4e1c9a39c5bc72e240b5ca1"
+    },
+    {
+      "path": "docs/06_PEDAGOGY_FRAMEWORK.md",
+      "bytes": 2029,
+      "sha256": "b939fd33782a07df800e71c04d3aa51c48dd75489be115a85650f70825a13f72"
+    },
+    {
+      "path": "docs/07_CURRICULUM_MAP.md",
+      "bytes": 1441,
+      "sha256": "27d94b6848eed5fe99bf31c496bfc407fa143ea417347917eb9b7ff7bb56e33c"
+    },
+    {
+      "path": "docs/08_CONTENT_SCHEMA.md",
+      "bytes": 2828,
+      "sha256": "970f92d46c89116c3655fde56a586dd1fe4727ea2e474d5683dc3a4fef00ef78"
+    },
+    {
+      "path": "docs/09_EXERCISE_ENGINE.md",
+      "bytes": 4915,
+      "sha256": "a4e11289b88ebb52ded3b0708dd50421f8938ae5fc2d29184212b30fd7e4175f"
+    },
+    {
+      "path": "docs/10_AUDIO_SPEECH.md",
+      "bytes": 1946,
+      "sha256": "0f81703a2ba8d1676337e7fce724d92fe9aefc92116b425cd59e21778d53d7d6"
+    },
+    {
+      "path": "docs/11_OFFLINE_DATABASE.md",
+      "bytes": 2834,
+      "sha256": "fdaaada6d5e2ef9c7652d1733fc4298f75b9eb2af70dd9304b6ce9371028936f"
+    },
+    {
+      "path": "docs/12_GAMIFICATION.md",
+      "bytes": 1857,
+      "sha256": "af38493182fd460ecaa9c8370c33e59307579ef39dab6d0d4cb53d28467120f5"
+    },
+    {
+      "path": "docs/13_TEACHER_WORKSPACE.md",
+      "bytes": 1592,
+      "sha256": "675e83d81b563ca49374cc4d79b64bf4976307d9810be2e7f4fbe2c6a230d6b2"
+    },
+    {
+      "path": "docs/14_ENTERPRISE_ARCHITECTURE.md",
+      "bytes": 1707,
+      "sha256": "a8229cf9204ca806f52ac946dcf1b84a14ea5dc5f64fbdd6efca517a34cc5243"
+    },
+    {
+      "path": "docs/15_ANDROID_BUILD.md",
+      "bytes": 2198,
+      "sha256": "6c5df6cf88c8b16b7923fe38e080f293ea04776db37615b57d52b171937d0354"
+    },
+    {
+      "path": "docs/16_WINDOWS_ROADMAP.md",
+      "bytes": 1837,
+      "sha256": "4b35312e1fe48e72671fca366942a8c718e64c46c4396365fd772755efef51a4"
+    },
+    {
+      "path": "docs/17_ACCESSIBILITY.md",
+      "bytes": 1735,
+      "sha256": "bbe492e46655667d793a591176d6986997fd3fd53378aac471a3c7e1edbd4f37"
+    },
+    {
+      "path": "docs/18_SECURITY_PRIVACY.md",
+      "bytes": 2457,
+      "sha256": "dd8752efb35d999c366ec6d050e258e20c9323819388ef4c887f9b0233b88854"
+    },
+    {
+      "path": "docs/19_PERFORMANCE_BUDGET.md",
+      "bytes": 2284,
+      "sha256": "e220dfed2e6789feef79c2a4d71d44ce8b292155a9043aa819e742edbadb99b3"
+    },
+    {
+      "path": "docs/20_RELEASE_MANAGEMENT.md",
+      "bytes": 1606,
+      "sha256": "b697dc9455ca6cfc674f1da0d80af27917765f438d57a6b6dfe2495a949fb2f6"
+    },
+    {
+      "path": "docs/21_CONTENT_QA.md",
+      "bytes": 1889,
+      "sha256": "9fc42b0cf7272020fd083ca455b2103611b05789ee2602be2525a69c1f0367c2"
+    },
+    {
+      "path": "docs/22_ASSET_MANIFEST.md",
+      "bytes": 1710,
+      "sha256": "b59bf9ea8e4c59c9024a7f292d88f14cfa04088a524ebd956dc17452d1fdac4b"
+    },
+    {
+      "path": "docs/23_KNOWN_LIMITATIONS.md",
+      "bytes": 1778,
+      "sha256": "4e7c7def310057a401d7c20b5139301d453c3cfe75d02263e40fea94ee373034"
+    },
+    {
+      "path": "docs/24_PHASE_ROADMAP.md",
+      "bytes": 1351,
+      "sha256": "f828fd9f26421946a7a70b51fb7e0d24aa1f2e5a0e3eebabf375e3cd383ad508"
+    },
+    {
+      "path": "docs/25_DECISION_LOG.md",
+      "bytes": 1413,
+      "sha256": "41ffe2bc911be1f4375a41c7886270181113ac17009312e91cd203d03253baff"
+    },
+    {
+      "path": "evidence/ARCHIVE_TRIAGE.json",
+      "bytes": 1851,
+      "sha256": "aa1b7d60478192dd2ca4c1801b31e303b1daf77d8521ed3b6ce58c4df7902be0"
+    },
+    {
+      "path": "evidence/BASELINE_DISCOVERY.json",
+      "bytes": 158863,
+      "sha256": "788c0fd09275e1687edb6ab898cc580e9fea60315a80821a4d3219cc0d0085fb"
+    },
+    {
+      "path": "evidence/CURRICULUM_CENSUS.json",
+      "bytes": 2195,
+      "sha256": "1fc0631d8d224057277121b8b9c7367a34ee47c415a6bd85bd2a9bebf32ea8a6"
+    },
+    {
+      "path": "evidence/ENVIRONMENT_AND_USER_EVIDENCE.json",
+      "bytes": 949,
+      "sha256": "c826d9bf246fceda68aadb9f3440cb3b2637dbd7055d868271826d39acf4903d"
+    },
+    {
+      "path": "evidence/INSPECTION_SCOPE.md",
+      "bytes": 4273,
+      "sha256": "f3ee8188659d709a68f1c90871a7d46e194d70cb9adb6c0cb377476f8b1c6341"
+    },
+    {
+      "path": "evidence/PHASE_A_VALIDATION.json",
+      "bytes": 1795,
+      "sha256": "00f1480e0e3b4aed08ea9b648038713e43037fe07016700d3a03d00a8873d70b"
+    },
+    {
+      "path": "evidence/PRIVATE_BACKUP_PROTECTION.json",
+      "bytes": 294,
+      "sha256": "79824f1f78e1e8a42d2ddc60a0d62c77207cf811231594baab555904022465f4"
+    },
+    {
+      "path": "evidence/SCHEMA_TABLE_COMPARISON.json",
+      "bytes": 208,
+      "sha256": "c9855aa1df14a4a98fec0b18879e15acc4667723d586a7da51779dd90aec63c9"
+    },
+    {
+      "path": "evidence/SQLITE_PRESERVATION.json",
+      "bytes": 298449,
+      "sha256": "d7eca935729422f7eec9d1feaa854b88ac6dbc3865fb8e5a274fba28832c399d"
+    },
+    {
+      "path": "inventory/ARCHIVE_REGISTER.json",
+      "bytes": 2257,
+      "sha256": "6ca4f50ea74429190c8593bfe720960a0ab8af96ca99daed691754572e837a59"
+    },
+    {
+      "path": "inventory/ASSET_REGISTER.csv",
+      "bytes": 72709,
+      "sha256": "ec62ad366fff0368150d658454096cbecfda857a807fb7b2d7e61af707a33efe"
+    },
+    {
+      "path": "inventory/FEATURE_STATUS_MATRIX.csv",
+      "bytes": 10557,
+      "sha256": "eec7a1233e8f82d07fd887a08c9afd256482399246679aab712ca531faf87915"
+    },
+    {
+      "path": "inventory/FILE_INVENTORY.csv",
+      "bytes": 240884,
+      "sha256": "30b26f0a17cdbc16d8ab4e91b8191d55e77dea035cb0367dfba501364cac8a60"
+    },
+    {
+      "path": "inventory/KNOWN_ISSUES.csv",
+      "bytes": 6277,
+      "sha256": "23cb00fa6dbdee56d1ff5e97438b4c1637dbf3b9002c7d488eac3d6aaaa3e820"
+    },
+    {
+      "path": "inventory/LESSON_INVENTORY.csv",
+      "bytes": 4832,
+      "sha256": "110223a1dae8ddfeaf59ea8d8d2eabecc19cfd52a0b815f5ddcedf2466766e53"
+    },
+    {
+      "path": "inventory/REPORT_REGISTER.csv",
+      "bytes": 192924,
+      "sha256": "c75f51c96e95f653edfee41da1ce4265a547a9dc14dfc97f05a71a74f5f02306"
+    },
+    {
+      "path": "inventory/ROUTE_INVENTORY.csv",
+      "bytes": 49908,
+      "sha256": "f585564e8f4d1e52953a2963465c4b5deb32c7e6a4226c5c89944bdf0ac0fbab"
+    },
+    {
+      "path": "inventory/SCHEMA_INVENTORY.json",
+      "bytes": 870608,
+      "sha256": "a455a332a1992e9467f2eb9aabd86a61f455fc3f06347c8d8c8a41ad2fb5eb3b"
+    },
+    {
+      "path": "inventory/SOURCE_INDEX.csv",
+      "bytes": 141294,
+      "sha256": "cc45633814fa32a5e31da92910d30dae8233acdb2232b5c047600eb348d2fc22"
+    },
+    {
+      "path": "planning/ASSET_PRODUCTION_PLAN.md",
+      "bytes": 3609,
+      "sha256": "e00688fbc3946c59dd237688c3c5db3c152c8f3356e28a302b7b29bf81a1bf22"
+    },
+    {
+      "path": "planning/IMPLEMENTATION_STRUCTURE.md",
+      "bytes": 1587,
+      "sha256": "b65e9b905af4c004c98830186d33f91ac5d41ca1fe212bc558ae728c404f38a5"
+    },
+    {
+      "path": "planning/PRESERVATION_POLICY.md",
+      "bytes": 2141,
+      "sha256": "af3d4ce6419843b75b53905a9fa28e59dad822e33189d29dd6dd36ac96bdad4a"
+    },
+    {
+      "path": "planning/REFERENCES.md",
+      "bytes": 1750,
+      "sha256": "4b3ab0df9989b6117daf559d20d9b0cb7c7054fa5672dee774f8017fb00daac0"
+    },
+    {
+      "path": "planning/REQUIREMENTS_TRACEABILITY.csv",
+      "bytes": 1995,
+      "sha256": "85a90cf030e39c3569821a5f44984c9d4fee3614da2dadc07153285dfbd9cd46"
+    },
+    {
+      "path": "planning/REUSE_MAP.md",
+      "bytes": 4033,
+      "sha256": "5af75dbb00d2e87a4d9442690fffc860e8d07c214690d0a98b398036aff97a59"
+    },
+    {
+      "path": "planning/SCREEN_PLAN.md",
+      "bytes": 2589,
+      "sha256": "0ed9784e681aa4a32c97aff563024e5693fb68f889d1057cd978053cdacb4602"
+    },
+    {
+      "path": "planning/UNAVAILABLE_ARTIFACTS.md",
+      "bytes": 1947,
+      "sha256": "a615985220be2402d6dfd95a5def7592f236e0f0c6e72553ff6f10efc73caf17"
+    },
+    {
+      "path": "planning/VALIDATION_PLAN.md",
+      "bytes": 1899,
+      "sha256": "e923df9114282c4995807ead4c596077d3d19af7285fd261bafd89c24c16025a"
+    },
+    {
+      "path": "product/GAMIFICATION_SPEC.md",
+      "bytes": 1062,
+      "sha256": "d881a9a1dc5a93a40226f558d7f8c5d255217b687874285d8d73c6fc5da7ecf1"
+    },
+    {
+      "path": "tools/README.md",
+      "bytes": 2147,
+      "sha256": "8fa4b476e8b4702fde7f476f4290d00d137a381f8f9b664b64c0137410f81329"
+    },
+    {
+      "path": "tools/curriculum_census.py",
+      "bytes": 6196,
+      "sha256": "209ce12e976f2d7f41b968eb62e72a0b75499f096129324f798613818f762335"
+    },
+    {
+      "path": "tools/discover_workspace.py",
+      "bytes": 11343,
+      "sha256": "509114d238ff4e2f8459d4d941ceaebae14550ea3ae57b7b355ba3bb504752ab"
+    },
+    {
+      "path": "tools/documentation_data.py",
+      "bytes": 22868,
+      "sha256": "30d0ce5607d48fd7913a051db949322333ffa571b7cf4d76c9d43f8a93539323"
+    },
+    {
+      "path": "tools/read_source_safely.py",
+      "bytes": 1252,
+      "sha256": "e931d4691173d2599b776c5d8d0a98a8737f2ac8d7d4f28f1129684730454e8e"
+    },
+    {
+      "path": "tools/write_core_documents.py",
+      "bytes": 77711,
+      "sha256": "619c347d2da8f65c71daaf4fd5bce22df6edabdddf3d5e0ae52dd1bd8ec1823a"
+    },
+    {
+      "path": "tools/write_knowledge_base.py",
+      "bytes": 71588,
+      "sha256": "d47e5c7499b1aa171b4d1e58764d96dbaaed7b3ab38d620871373c7104c8c29b"
+    }
+  ],
+  "manifest_note": "This manifest does not hash itself. Archive checksum is supplied separately.",
+  "private_database_backup_included": false,
+  "original_application_source_included": false,
+  "credentials_included": false,
+  "application_build_performed": false,
+  "phase_b_or_later_started": false
+}

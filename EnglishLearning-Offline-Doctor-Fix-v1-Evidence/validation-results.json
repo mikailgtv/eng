@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-04",
+  "environment": "Isolated disposable Linux filesystem fixtures; Node v20.20.2",
+  "checks": [
+    {
+      "check": "JavaScript syntax under local Node",
+      "result": "PASS"
+    },
+    {
+      "check": "PNG integrity, 1024x1024 size, and helper checksum",
+      "result": "PASS"
+    },
+    {
+      "check": "Only two icon fields change; other config values and all other project files preserved; byte-exact sibling backups",
+      "result": "PASS"
+    },
+    {
+      "check": "Repeat execution is content-idempotent and does not overwrite earlier backups",
+      "result": "PASS"
+    },
+    {
+      "check": "Fail safely without project changes: missing-icon",
+      "result": "PASS"
+    },
+    {
+      "check": "Fail safely without project changes: modified-icon",
+      "result": "PASS"
+    },
+    {
+      "check": "Fail safely without project changes: unsupported-sdk",
+      "result": "PASS"
+    },
+    {
+      "check": "Fail safely without project changes: wrong-project",
+      "result": "PASS"
+    },
+    {
+      "check": "Fail safely without project changes: dynamic-config",
+      "result": "PASS"
+    },
+    {
+      "check": "Fail safely without project changes: invalid-lock-no-content-leak",
+      "result": "PASS"
+    },
+    {
+      "check": "Fail safely without project changes: preserve-custom-icon",
+      "result": "PASS"
+    },
+    {
+      "check": "Fail safely without project changes: missing-lock",
+      "result": "PASS"
+    },
+    {
+      "check": "Fail safely without project changes: reject-symlink-config",
+      "result": "PASS"
+    }
+  ],
+  "original_project_files": "Unchanged (preparation hashes rechecked)",
+  "database_access": "None",
+  "dependency_installation": "None",
+  "not_tested": [
+    "Windows CMD / Node 24 execution",
+    "Real Expo CLI / expo-doctor execution on this package",
+    "Native dependency installation or TypeScript installation",
+    "EAS account linking or cloud build",
+    "Android APK compilation, installation, or offline app runtime",
+    "Security vulnerability remediation"
+  ]
+}

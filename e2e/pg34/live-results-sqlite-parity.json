@@ -1,0 +1,406 @@
+{
+  "base": "http://127.0.0.1:4036",
+  "ranAt": "2026-10-25T12:17:41.664Z",
+  "results": [
+    {
+      "id": "L01",
+      "title": "admin A lists users in own tenant",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L01b",
+      "title": "admin A user list stays inside tenant A",
+      "expected": "no tenant-B users",
+      "actual": "clean",
+      "pass": true,
+      "note": "vs=0"
+    },
+    {
+      "id": "L02",
+      "title": "admin A reads own student profile",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L03",
+      "title": "teacher A reads student in assigned group",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L04",
+      "title": "admin A reads own organization list",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L05",
+      "title": "teacher A downloads own tenant media",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L06",
+      "title": "student A downloads own message attachment",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L07",
+      "title": "admin A views backup status",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L08",
+      "title": "student A records progress on OWN lesson",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L09",
+      "title": "teacher A saves attendance on OWN session",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L10",
+      "title": "teacher A publishes OWN homework",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L11",
+      "title": "teacher A opens OWN exam builder",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L12",
+      "title": "admin A renames OWN class",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L13",
+      "title": "admin A edits OWN learner",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L14",
+      "title": "admin A exports OWN course",
+      "expected": "200/201",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "L15",
+      "title": "SUPER_ADMIN may cross tenants (explicit exception)",
+      "expected": "200",
+      "actual": 200,
+      "pass": true,
+      "note": ""
+    },
+    {
+      "id": "D01",
+      "title": "admin A reads tenant-B student profile (user IDOR)",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"User not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"24748704-36be-4ac3-bb13-95975a216c89\"}"
+    },
+    {
+      "id": "D02",
+      "title": "teacher A reads tenant-B student profile",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"User not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"934a9c7f-186b-4a2f-8f8c-b9f9f500fa63\"}"
+    },
+    {
+      "id": "D03",
+      "title": "admin A reads tenant-B admin profile",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"User not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"1b9718a3-a5d3-4f64-8c4b-fc43423e4837\"}"
+    },
+    {
+      "id": "D04",
+      "title": "teacher A reads unassigned tenant-B teacher",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"User not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"af6fb61a-c86c-4897-b556-cc55dea7c277\"}"
+    },
+    {
+      "id": "D05",
+      "title": "organization list does not expose tenant B",
+      "expected": "only tenant A",
+      "actual": "count=1",
+      "pass": true,
+      "note": "[\"cmvnsl5oi001dqt6ht9sevv7m\"]"
+    },
+    {
+      "id": "D06",
+      "title": "admin A patches tenant-B organization",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"6c91a2"
+    },
+    {
+      "id": "D07",
+      "title": "admin A patches tenant-B class (group)",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"Not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"f0c9d6cf-06aa-416b-9e94-abfd7c1799ad\"}"
+    },
+    {
+      "id": "D08",
+      "title": "teacher A patches tenant-B class",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"621845"
+    },
+    {
+      "id": "D09",
+      "title": "teacher A opens tenant-B exam builder",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"Assessment not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"7b7ea179-e1c4-4410-90e4-68e02776ca7"
+    },
+    {
+      "id": "D10",
+      "title": "admin A opens tenant-B exam builder",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"Assessment not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"fe3b98ca-0546-465b-bd66-3d6930b6bbd"
+    },
+    {
+      "id": "D11",
+      "title": "teacher A publishes tenant-B homework",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"Group not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"83dfcb8a-37a1-4f60-b91b-4981c195ddb2\"}"
+    },
+    {
+      "id": "D12",
+      "title": "teacher A writes attendance into tenant-B session",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"Group not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"c886b2be-74dd-48fa-8abb-cef10153e3e2\"}"
+    },
+    {
+      "id": "D13",
+      "title": "teacher A exports tenant-B course",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"Course not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"71379981-5015-42de-ad3e-1d23bfd617a1\"}"
+    },
+    {
+      "id": "D14",
+      "title": "admin A exports tenant-B course",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"Not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"fe45c73c-b0fa-45f7-8b56-59fa36696e5a\"}"
+    },
+    {
+      "id": "D15",
+      "title": "student A records progress on tenant-B lesson",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"Lesson not found or not available for your account.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"91778"
+    },
+    {
+      "id": "D16",
+      "title": "teacher A downloads tenant-B private media",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"File not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"12876af6-7ef6-4107-b622-807e0cb27bb0\"}"
+    },
+    {
+      "id": "D17",
+      "title": "admin A downloads tenant-B private media",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"File not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"98a089e3-ea26-49b8-89b0-bd9867743cda\"}"
+    },
+    {
+      "id": "D18",
+      "title": "student A downloads tenant-B message attachment",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"File not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"bf8e04cc-fe08-4b88-8d87-47feb2b4121f\"}"
+    },
+    {
+      "id": "D19",
+      "title": "teacher A downloads tenant-B message attachment",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"File not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"34c172ec-a370-460f-af78-0ff09e5994dd\"}"
+    },
+    {
+      "id": "D20",
+      "title": "student A self-promotes to ADMIN via PATCH /users",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"3f8d68"
+    },
+    {
+      "id": "D21",
+      "title": "teacher A assigns itself SUPER_ADMIN",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"f7bc68"
+    },
+    {
+      "id": "D22",
+      "title": "admin A grants SUPER_ADMIN to tenant-B user",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"Only SUPER_ADMIN can assign SUPER_ADMIN role.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"fa4716d1-80"
+    },
+    {
+      "id": "D23",
+      "title": "student A grants itself a temporary permission",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"3320ee"
+    },
+    {
+      "id": "D24",
+      "title": "teacher A creates a database backup",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"00838c"
+    },
+    {
+      "id": "D25",
+      "title": "student A creates a database backup",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"bcae38"
+    },
+    {
+      "id": "D26",
+      "title": "teacher A lists backup artifacts",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"24df84"
+    },
+    {
+      "id": "D27",
+      "title": "teacher A starts a restore drill",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"355d7d"
+    },
+    {
+      "id": "D28",
+      "title": "admin A bulk-suspends tenant-B users",
+      "expected": "401/403/404",
+      "actual": 404,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"One or more selected users were not found.\",\"errorCode\":\"HTTP_404\",\"requestId\":\"3dbfdb12-047a-"
+    },
+    {
+      "id": "D29",
+      "title": "admin A creates a user with spoofed tenant-B org id",
+      "expected": "refused, or created in tenant A",
+      "actual": "201 org=A",
+      "pass": true,
+      "note": "body={\"success\":true,\"data\":{\"user\":{\"id\":\"cmvnsmg7u00k3yo7sct9h32m2\",\"employeeCode\":\"E2E_SPOOF\",\"firstName\":\"E2E\",\"lastName\":\"Spoof\",\"username\":"
+    },
+    {
+      "id": "D30",
+      "title": "teacher A reads tenant-B roles matrix",
+      "expected": "401/403/404",
+      "actual": 403,
+      "pass": true,
+      "note": "body={\"success\":false,\"error\":\"You do not have permission to perform this action.\",\"errorCode\":\"HTTP_403\",\"requestId\":\"ac19f9"
+    },
+    {
+      "id": "D31",
+      "title": "unauthenticated user list",
+      "expected": "401/403/404",
+      "actual": 401,
+      "pass": true,
+      "note": "body={\"error\":\"You need to sign in to continue.\"}"
+    },
+    {
+      "id": "D32",
+      "title": "unauthenticated private media download",
+      "expected": "401/403/404",
+      "actual": 401,
+      "pass": true,
+      "note": "body={\"error\":\"You need to sign in to continue.\"}"
+    },
+    {
+      "id": "D33",
+      "title": "unauthenticated tenant-B attachment",
+      "expected": "401/403/404",
+      "actual": 401,
+      "pass": true,
+      "note": "body={\"error\":\"You need to sign in to continue.\"}"
+    },
+    {
+      "id": "D34",
+      "title": "unauthenticated backup list",
+      "expected": "401/403/404",
+      "actual": 401,
+      "pass": true,
+      "note": "body={\"error\":\"You need to sign in to continue.\"}"
+    }
+  ]
+}

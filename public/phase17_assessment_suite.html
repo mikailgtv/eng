@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>EnglishBridge — Phase 17 Advanced Assessment Intelligence Console</title>
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --primary-subtle: #eff6ff;
+      --foreground: #0f172a;
+      --background: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --muted: #64748b;
+      --emerald: #059669;
+      --emerald-subtle: #ecfdf5;
+      --amber: #d97706;
+      --amber-subtle: #fffbeb;
+      --rose: #e11d48;
+      --rose-subtle: #fff1f2;
+      --indigo: #4f46e5;
+      --indigo-subtle: #eef2ff;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--background);
+      color: var(--foreground);
+      line-height: 1.5;
+      padding-bottom: 90px;
+    }
+
+    header.app-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.75rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+    }
+
+    .badge-phase {
+      font-size: 0.75rem;
+      background: var(--primary-subtle);
+      color: var(--primary);
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      border: 1px solid rgba(29,78,216,0.25);
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 0.4rem;
+      background: #f1f5f9;
+      padding: 0.25rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      max-width: 100%;
+      scrollbar-width: thin;
+    }
+
+    .nav-tab {
+      border: none;
+      background: transparent;
+      padding: 0.5rem 0.85rem;
+      border-radius: 0.375rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--muted);
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .nav-tab.active {
+      background: var(--surface);
+      color: var(--foreground);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    main.container {
+      max-width: 1100px;
+      margin: 1.25rem auto;
+      padding: 0 1rem;
+    }
+
+    .panel {
+      display: none;
+    }
+    .panel.active {
+      display: block;
+      animation: fadeIn 0.18s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-desc {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      padding: 0.6rem 1rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      min-height: 44px;
+      transition: all 0.15s;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary { background: #f1f5f9; color: var(--foreground); border-color: var(--border); }
+    .btn-secondary:hover { background: #e2e8f0; }
+    .btn-outline { background: transparent; border-color: var(--border); color: var(--foreground); }
+    .btn-outline:hover { background: #f8fafc; }
+    .btn-sm { min-height: 36px; padding: 0.35rem 0.65rem; font-size: 0.75rem; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 680px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+    .grid-3 { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 680px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    @media (min-width: 768px) { .grid-4 { grid-template-columns: repeat(4, 1fr); } }
+
+    .form-group { margin-bottom: 1rem; }
+    label { display: block; font-size: 0.8125rem; font-weight: 600; color: var(--foreground); margin-bottom: 0.35rem; }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      background: var(--surface);
+      font-family: inherit;
+      font-size: 0.875rem;
+      color: var(--foreground);
+      min-height: 44px;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(29,78,216,0.15);
+    }
+
+    .alert {
+      padding: 0.85rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.8125rem;
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+    .alert-info { background: var(--primary-subtle); color: #1e40af; border: 1px solid #bfdbfe; }
+    .alert-warning { background: var(--amber-subtle); color: #92400e; border: 1px solid #fde68a; }
+    .alert-success { background: var(--emerald-subtle); color: #065f46; border: 1px solid #a7f3d0; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .tag-blue { background: #dbeafe; color: #1d4ed8; }
+    .tag-green { background: #dcfce7; color: #15803d; }
+    .tag-amber { background: #fef3c7; color: #b45309; }
+    .tag-rose { background: #ffe4e6; color: #be123c; }
+
+    /* Rubric Matrix */
+    .rubric-grid {
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      margin: 1rem 0;
+    }
+    .rubric-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+    @media (min-width: 640px) {
+      .rubric-row { grid-template-columns: 160px 1fr; }
+    }
+    .rubric-row:last-child { border-bottom: none; }
+    .rubric-header {
+      background: #f1f5f9;
+      padding: 0.85rem;
+      font-weight: 600;
+      font-size: 0.8125rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .rubric-levels {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.4rem;
+      padding: 0.5rem;
+      background: var(--surface);
+    }
+    .rubric-opt {
+      border: 1px solid var(--border);
+      border-radius: 0.375rem;
+      padding: 0.6rem;
+      cursor: pointer;
+      font-size: 0.75rem;
+      transition: all 0.15s;
+    }
+    .rubric-opt:hover { border-color: var(--primary); }
+    .rubric-opt.selected {
+      background: var(--primary-subtle);
+      border-color: var(--primary);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Fixed Bottom Nav for Mobile (Phase 16) */
+    .mobile-dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-around;
+      padding: 0.35rem 0.2rem;
+      z-index: 60;
+      overflow-x: auto;
+    }
+    .dock-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      gap: 2px;
+      min-height: 48px;
+      min-width: 60px;
+    }
+    .dock-btn.active { color: var(--primary); }
+    .dock-btn svg { width: 18px; height: 18px; }
+
+    /* Question navigator */
+    .q-nav {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .q-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 0.375rem;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 0.8125rem;
+      cursor: pointer;
+    }
+    .q-btn.active { border-color: var(--primary); background: var(--primary); color: #fff; }
+    .q-btn.answered { border-color: #cbd5e1; background: #f1f5f9; }
+
+    /* Audio simulator controls */
+    .audio-player-mock {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.9rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header class="app-header">
+    <div class="brand">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>
+      <span>EnglishBridge</span>
+      <span class="badge-phase">Phase 17 Assessment Intelligence</span>
+    </div>
+    <nav class="nav-tabs" id="roleTabs">
+      <button class="nav-tab active" onclick="switchTab('blueprint')">1. Blueprint & Variants</button>
+      <button class="nav-tab" onclick="switchTab('runner')">2. Exam Room & Snapshot</button>
+      <button class="nav-tab" onclick="switchTab('adaptive')">3. Adaptive Diagnostic</button>
+      <button class="nav-tab" onclick="switchTab('writing')">4. Writing & Speaking</button>
+      <button class="nav-tab" onclick="switchTab('rubrics')">5. Review Center & Rubrics</button>
+      <button class="nav-tab" onclick="switchTab('quality')">6. Quality & Item Analytics</button>
+      <button class="nav-tab" onclick="switchTab('policies')">7. Accommodations & Retakes</button>
+      <button class="nav-tab" onclick="switchTab('reports')">8. Assessment BI Reports</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- ==================== TAB 1: BLUEPRINT BUILDER & VARIANTS ==================== -->
+    <section id="panel-blueprint" class="panel active">
+      <div class="card">
+        <h2 class="card-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          1. Assessment Blueprint Builder & Variant Generator
+        </h2>
+        <p class="card-desc">Instructors define structured blueprints ensuring balanced skill coverage and difficulty distributions. The feasibility engine tests against the live approved question bank before publishing.</p>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label>Assessment Title</label>
+            <input type="text" id="bpTitle" value="Pre-A1 Vocational Safety Final Assessment">
+          </div>
+          <div class="form-group">
+            <label>Strict Assessment Type Separation</label>
+            <select id="bpType">
+              <option value="FINAL" selected>Official Final Assessment (Summative)</option>
+              <option value="EXAM">Official Course Exam (High-Stakes)</option>
+              <option value="DIAGNOSTIC">Diagnostic Test (Formative - Feeds Phase 9)</option>
+              <option value="PLACEMENT">Placement Test (Pathway Determination Only)</option>
+              <option value="QUIZ">Lesson Quiz (Short Formative)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="form-group">
+            <label>Target Question Count</label>
+            <input type="number" id="bpCount" value="20" min="5" max="100">
+          </div>
+          <div class="form-group">
+            <label>Passing Requirement (%)</label>
+            <input type="number" id="bpPass" value="70" min="50" max="100">
+          </div>
+          <div class="form-group">
+            <label>Duration Limit (Minutes)</label>
+            <input type="number" id="bpDuration" value="45" min="5" max="180">
+          </div>
+        </div>
+
+        <!-- Distribution Blueprint -->
+        <div class="card" style="background:#f8fafc; border-style:dashed;">
+          <h3 style="font-size:0.875rem; font-weight:700; margin-bottom:0.5rem;">Target Skill Allocations (Sum = 100%)</h3>
+          <div class="grid-3" style="font-size:0.8125rem;">
+            <div>Vocabulary: <strong>30%</strong> (6 items)</div>
+            <div>Grammar: <strong>25%</strong> (5 items)</div>
+            <div>Listening: <strong>20%</strong> (4 items)</div>
+            <div>Reading: <strong>15%</strong> (3 items)</div>
+            <div>Writing: <strong>5%</strong> (1 item)</div>
+            <div>Speaking: <strong>5%</strong> (1 item)</div>
+          </div>
+          <h3 style="font-size:0.875rem; font-weight:700; margin-top:0.75rem; margin-bottom:0.5rem;">Difficulty Mix</h3>
+          <div class="grid-3" style="font-size:0.8125rem;">
+            <div>Easy: <strong>60%</strong> (12 items)</div>
+            <div>Medium: <strong>30%</strong> (6 items)</div>
+            <div>Hard: <strong>10%</strong> (2 items)</div>
+          </div>
+        </div>
+
+        <div class="form-group" style="display:flex; align-items:center; gap:0.5rem;">
+          <input type="checkbox" id="bpSecure" checked style="width:18px; height:18px; min-height:18px;">
+          <label for="bpSecure" style="margin-bottom:0; cursor:pointer;">
+            Enable Secure Exam Mode (Track tab switches & blur events as non-prejudicial review signals)
+          </label>
+        </div>
+
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button class="btn btn-primary" onclick="testBlueprintFeasibility()">Validate Bank Feasibility</button>
+          <button class="btn btn-secondary" onclick="generateRandomVariants()">Generate Balanced Variants (A / B / C)</button>
+        </div>
+
+        <div id="blueprintResults" style="margin-top:1rem;"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 2: EXAM ROOM & SNAPSHOT IMMUTABILITY ==================== -->
+    <section id="panel-runner" class="panel">
+      <div class="card" style="border-left: 4px solid var(--primary);">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+          <div>
+            <span class="tag tag-blue">Exam in progress</span>
+            <span class="tag tag-amber" id="runnerSignalBadge" style="display:none;">Signal Logged: Focus Lost</span>
+            <h2 style="font-size:1.15rem; font-weight:700; margin-top:0.25rem;">Pre-A1 Vocational Safety Final Assessment</h2>
+            <p style="font-size:0.75rem; color:var(--muted);">Immutable Attempt Snapshot #ATT-9102 · Question edits in bank will NOT alter this sitting</p>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:0.75rem; font-weight:600; color:var(--muted);">Server UTC Countdown</div>
+            <div id="runnerTimer" style="font-size:1.3rem; font-weight:700; color:var(--primary); font-variant-numeric:tabular-nums;">44:38</div>
+          </div>
+        </div>
+
+        <!-- Question Navigator (44px touch targets) -->
+        <div class="q-nav" id="examNavButtons">
+          <button class="q-btn active" onclick="showExamItem(1)">1</button>
+          <button class="q-btn answered" onclick="showExamItem(2)">2</button>
+          <button class="q-btn" onclick="showExamItem(3)">3</button>
+          <button class="q-btn" onclick="showExamItem(4)">4</button>
+          <button class="q-btn" onclick="showExamItem(5)">5</button>
+        </div>
+
+        <div id="examItemArea" style="padding:1rem 0; border-top:1px solid var(--border);">
+          <!-- Dynamic item injected by script -->
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1rem;">
+          <button class="btn btn-outline" onclick="prevExamItem()">Previous</button>
+          <div style="display:flex; gap:0.5rem;">
+            <button class="btn btn-secondary" onclick="nextExamItem()">Next</button>
+            <button class="btn btn-primary" onclick="submitExamAttempt()">Submit Official Attempt</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 3: ADAPTIVE DIAGNOSTIC ASSESSMENT ==================== -->
+    <section id="panel-adaptive" class="panel">
+      <div class="card">
+        <h2 class="card-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          3. Adaptive Diagnostic Engine (Item-by-Item Pacing)
+        </h2>
+        <p class="card-desc">The diagnostic engine dynamically selects the next item within controlled pool boundaries. Responses do NOT create official grades—they provide descriptive insights to the Phase 9 adaptive engine.</p>
+
+        <div class="card" style="background:#f8fafc;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+            <div>
+              <span class="tag tag-blue">Adaptive Diagnostic Sitting</span>
+              <strong style="margin-left:0.5rem;">Diagnostic Step <span id="adaptStep">1</span> of 5</strong>
+            </div>
+            <span style="font-size:0.75rem; color:var(--muted);">Boundary: Approved Pre-A1 Pool Only</span>
+          </div>
+
+          <div id="adaptQuestionBox">
+            <p style="font-size:1rem; font-weight:600; margin-bottom:0.75rem;" id="adaptPrompt">
+              Item 1 (Difficulty: MEDIUM): "Select the word for the protective equipment worn on hands:"
+            </p>
+            <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1rem;">
+              <label style="display:flex; align-items:center; gap:0.6rem; padding:0.75rem; border:1px solid var(--border); border-radius:0.5rem; cursor:pointer;">
+                <input type="radio" name="adaptAns" value="correct"> <span>A) Safety Gloves (Correct)</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:0.6rem; padding:0.75rem; border:1px solid var(--border); border-radius:0.5rem; cursor:pointer;">
+                <input type="radio" name="adaptAns" value="wrong"> <span>B) High-visibility Boots</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="submitAdaptiveAnswer()">Record Answer & Trigger Next Item</button>
+
+          <div id="adaptAuditLog" style="margin-top:1rem; font-size:0.75rem; color:var(--muted); border-top:1px solid var(--border); padding-top:0.75rem;">
+            <strong>Engine Selection Audit History:</strong>
+            <ul id="adaptHistoryList" style="margin-top:0.35rem; padding-left:1.2rem;">
+              <li>Step 1 initialized at Medium difficulty baseline.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 4: WRITING & SPEAKING SUBMISSIONS ==================== -->
+    <section id="panel-writing" class="panel">
+      <div class="card">
+        <h2 class="card-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          4. Authentic Writing & Speaking Assessment Submissions
+        </h2>
+        <p class="card-desc">Production tasks with real-time word counting, draft saving, and audio capture. Machine transcripts are explicitly labeled and kept distinct from teacher rubric grading.</p>
+
+        <div class="grid-2">
+          <!-- Writing Submission Area -->
+          <div class="card" style="background:#f8fafc;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <h3 style="font-size:0.95rem; font-weight:700;">Workplace Writing Task</h3>
+              <span class="tag tag-amber">Draft Auto-saving</span>
+            </div>
+            <p style="font-size:0.8125rem; color:var(--foreground); margin-bottom:0.5rem;">
+              <strong>Prompt:</strong> Write a short report describing the tools you used during your shift and if any repairs are required.
+            </p>
+
+            <textarea id="studentWritingInput" rows="6" oninput="handleWritingInput(this)" placeholder="Type your response here...">During my morning shift I used the hydraulic pump and safety hose. Both tools operated normally with stable pressure. No repairs are required today.</textarea>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.5rem; font-size:0.75rem; color:var(--muted);">
+              <span id="writingCountDisplay">Word count: 26 words (Target: 25–50 words)</span>
+              <span>✓ Auto-saved to server attempt</span>
+            </div>
+          </div>
+
+          <!-- Speaking Submission Area -->
+          <div class="card" style="background:#f8fafc;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <h3 style="font-size:0.95rem; font-weight:700;">Speaking Prompt & Oral Lab</h3>
+              <span class="tag tag-blue">Voice Input</span>
+            </div>
+            <p style="font-size:0.8125rem; color:var(--foreground); margin-bottom:0.5rem;">
+              <strong>Spoken Task:</strong> State your full name, badge number, and read the emergency evacuation notice aloud.
+            </p>
+
+            <div class="audio-player-mock">
+              <button class="btn btn-sm btn-secondary" onclick="toggleAudioMock()">▶ Play Recorded Audio</button>
+              <span style="font-size:0.75rem; color:var(--muted);">Duration: 0:18 · Audio file stored safely</span>
+            </div>
+
+            <div class="form-group">
+              <label>Speech Recognition Transcript (Advisory Machine Data):</label>
+              <textarea rows="3" readonly style="background:#f1f5f9; font-size:0.8125rem;">"My name is James Carter, badge number 402. In case of emergency, proceed calmly to exit gate B."</textarea>
+              <p style="font-size:0.6875rem; color:var(--muted); margin-top:0.25rem;">
+                * System rule: Automated speech recognition is never used as an official pronunciation score. Evaluation is performed by the instructor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 5: REVIEW CENTER & RUBRICS ==================== -->
+    <section id="panel-rubrics" class="panel">
+      <div class="card">
+        <h2 class="card-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+          5. Assessment Review Center & Rubric Engine
+        </h2>
+        <p class="card-desc">Instructors evaluate submissions using immutable multi-dimensional rubrics. Workflow: SUBMITTED &rarr; UNDER REVIEW &rarr; FINALIZED.</p>
+
+        <div class="card" style="background:#f8fafc;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+            <div>
+              <span class="tag tag-amber">Under Review</span>
+              <strong style="margin-left:0.5rem;">Submission: James Carter (Writing Task #4)</strong>
+            </div>
+            <span style="font-size:0.75rem; color:var(--muted);">Rubric Version #1 (Locked on sitting creation)</span>
+          </div>
+
+          <!-- Multi-Criteria Rubric Grid -->
+          <div class="rubric-grid">
+            <!-- Criterion 1 -->
+            <div class="rubric-row">
+              <div class="rubric-header">
+                Task Completion (40%)
+                <span style="font-size:0.7rem; color:var(--muted); font-weight:normal;">Addresses prompt guidelines</span>
+              </div>
+              <div class="rubric-levels">
+                <div class="rubric-opt" onclick="pickRubricCell(this, 1, 1)">1 pt: Incomplete</div>
+                <div class="rubric-opt" onclick="pickRubricCell(this, 1, 2)">2 pts: Partial</div>
+                <div class="rubric-opt selected" onclick="pickRubricCell(this, 1, 3)">3 pts: Fully addressed</div>
+              </div>
+            </div>
+            <!-- Criterion 2 -->
+            <div class="rubric-row">
+              <div class="rubric-header">
+                Vocab & Terminology (30%)
+                <span style="font-size:0.7rem; color:var(--muted); font-weight:normal;">Appropriate workplace terms</span>
+              </div>
+              <div class="rubric-levels">
+                <div class="rubric-opt" onclick="pickRubricCell(this, 2, 1)">1 pt: Non-specific</div>
+                <div class="rubric-opt selected" onclick="pickRubricCell(this, 2, 2)">2 pts: Basic vocational</div>
+                <div class="rubric-opt" onclick="pickRubricCell(this, 2, 3)">3 pts: Rich & accurate</div>
+              </div>
+            </div>
+            <!-- Criterion 3 -->
+            <div class="rubric-row">
+              <div class="rubric-header">
+                Grammar & Clarity (30%)
+                <span style="font-size:0.7rem; color:var(--muted); font-weight:normal;">Sentence structure & punctuation</span>
+              </div>
+              <div class="rubric-levels">
+                <div class="rubric-opt" onclick="pickRubricCell(this, 3, 1)">1 pt: Frequent errors</div>
+                <div class="rubric-opt selected" onclick="pickRubricCell(this, 3, 2)">2 pts: Controlled basic</div>
+                <div class="rubric-opt" onclick="pickRubricCell(this, 3, 3)">3 pts: Error-free</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label>Teacher Official Feedback</label>
+              <textarea rows="3">Clear and concise summary of shift inspection. Accurate terminology regarding hydraulic tools.</textarea>
+            </div>
+            <div>
+              <label>AI Draft Assistance (Advisory Only)</label>
+              <div style="background:#f1f5f9; border-radius:0.5rem; padding:0.75rem; font-size:0.75rem; color:var(--muted);">
+                <strong>AI Reviewer Suggestion:</strong> Submission fulfills task length (26 words). Correct use of past tense ('operated', 'used').
+                <div style="margin-top:0.35rem; color:var(--amber); font-weight:600;">
+                  * Constraint: AI cannot publish grades or issue final scores without human sign-off.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end; gap:0.5rem; margin-top:0.5rem;">
+            <button class="btn btn-outline" onclick="alert('Score correction draft saved.')">Save Draft</button>
+            <button class="btn btn-primary" onclick="alert('Official Grade Finalized! Weighted Rubric Score: 80% (2.4/3.0). Record locked.')">
+              Finalize Official Score
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 6: QUESTION QUALITY & ITEM ANALYTICS ==================== -->
+    <section id="panel-quality" class="panel">
+      <div class="card">
+        <h2 class="card-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          6. Automated Question Quality Engine & Item Analytics
+        </h2>
+        <p class="card-desc">Statistical indicators with honest sample size thresholds. Questions are flagged for teacher review, never silently deleted or modified.</p>
+
+        <div class="grid-2">
+          <!-- Quality Check Card -->
+          <div class="card" style="background:#f8fafc;">
+            <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Automated Quality Verification</h3>
+            <p style="font-size:0.75rem; color:var(--muted); margin-bottom:0.75rem;">Inspecting Bank Question #QB-1044: "Fire Hose Pressure"</p>
+
+            <div style="display:flex; flex-direction:column; gap:0.4rem; font-size:0.8125rem;">
+              <div style="color:var(--emerald);">✓ Single correct answer verified (Option A)</div>
+              <div style="color:var(--emerald);">✓ Media audio verified (200 OK - 320ms latency)</div>
+              <div style="color:var(--emerald);">✓ Option length balanced (3–5 words per option)</div>
+              <div style="color:var(--amber);">⚠ Similarity Warning: 84% overlap with item #QB-0982</div>
+            </div>
+            <p style="font-size:0.75rem; color:var(--muted); margin-top:0.75rem;">
+              * Status: Flagged for teacher review. The question remains in the bank until a human editor decides.
+            </p>
+          </div>
+
+          <!-- Item Analytics Card -->
+          <div class="card" style="background:#f8fafc;">
+            <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Empirical Item Analytics</h3>
+            <p style="font-size:0.75rem; color:var(--muted); margin-bottom:0.5rem;">Sample Size: <strong>148 student attempts</strong> (Valid: N &ge; 30)</p>
+
+            <div style="font-size:0.8125rem; space-y-1;">
+              <div>Difficulty Index (P): <strong>0.76</strong> (Easy-Medium)</div>
+              <div>Point-Biserial Discrimination: <strong>0.38</strong> (High discrimination)</div>
+              <div>Omission Rate: <strong>0.8%</strong></div>
+            </div>
+
+            <h4 style="font-size:0.8125rem; font-weight:700; margin-top:0.75rem; margin-bottom:0.35rem;">Distractor Performance:</h4>
+            <div style="font-size:0.75rem;">
+              <div style="display:flex; justify-content:space-between;"><span>Option A (Correct):</span> <strong>76% (112 sittings)</strong></div>
+              <div style="display:flex; justify-content:space-between;"><span>Option B (Distractor 1):</span> <strong>19% (28 sittings)</strong></div>
+              <div style="display:flex; justify-content:space-between;"><span>Option C (Distractor 2):</span> <strong style="color:var(--amber);">5% (8 sittings - Non-functioning)</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert alert-info">
+          <div>
+            <strong>Transparent Analysis Rule:</strong> If total attempts are under 30, statistical measurements display <em>"Insufficient data for reliable analysis"</em>. The system never generates fake student statistics.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 7: ACCOMMODATIONS & RETAKE POLICIES ==================== -->
+    <section id="panel-policies" class="panel">
+      <div class="card">
+        <h2 class="card-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          7. Assessment Accommodations & Retake Policies
+        </h2>
+        <p class="card-desc">Audited accommodation configurations automatically extend server timers without exposing sensitive health notes. Retake policies define attempt eligibility without overwriting history.</p>
+
+        <div class="grid-2">
+          <!-- Accommodations Card -->
+          <div class="card" style="background:#f8fafc;">
+            <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Configure Student Accommodation</h3>
+            <p style="font-size:0.75rem; color:var(--muted); margin-bottom:0.75rem;">Student: James Carter · Role-permission controlled</p>
+
+            <div class="form-group">
+              <label>Extra Time Allowance (Minutes)</label>
+              <input type="number" id="accExtraTime" value="15" min="0" max="120">
+            </div>
+
+            <div class="form-group" style="display:flex; align-items:center; gap:0.5rem;">
+              <input type="checkbox" id="accLargeText" checked style="width:18px; height:18px; min-height:18px;">
+              <label for="accLargeText" style="margin-bottom:0; cursor:pointer;">Larger text presentation format</label>
+            </div>
+
+            <div class="form-group">
+              <label>Audio Replay Policy</label>
+              <select id="accAudio">
+                <option value="standard">Standard (1 replay)</option>
+                <option value="extended" selected>Extended (3 replays)</option>
+                <option value="unlimited">Unlimited practice replays</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary" onclick="alert('Accommodation granted and logged in audit trail! Server deadline automatically extended.')">
+              Save Audited Accommodation
+            </button>
+          </div>
+
+          <!-- Retake Policy Card -->
+          <div class="card" style="background:#f8fafc;">
+            <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Assessment Retake Policy</h3>
+            <p style="font-size:0.75rem; color:var(--muted); margin-bottom:0.75rem;">Assessment: Pre-A1 Final Vocational Exam</p>
+
+            <div class="form-group">
+              <label>Retake Allowance Mode</label>
+              <select id="retakeMode">
+                <option value="NONE">No retakes permitted</option>
+                <option value="ONE" selected>One retake permitted</option>
+                <option value="WAIT">Retake permitted after 7-day wait</option>
+                <option value="REMEDIAL">Retake permitted after remedial lessons</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Official Score Rule</label>
+              <select id="retakeScoreRule">
+                <option value="LATEST">Latest score counts</option>
+                <option value="HIGHEST" selected>Highest score counts</option>
+                <option value="TEACHER_APPROVED">Teacher-approved score counts</option>
+              </select>
+            </div>
+
+            <div class="alert alert-warning" style="font-size:0.75rem; margin-bottom:0.75rem;">
+              Historical attempts are permanently preserved. Retakes create append-only rows.
+            </div>
+
+            <button class="btn btn-primary" onclick="alert('Retake policy updated! Stored with assessment rule.')">
+              Save Retake Policy
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 8: ADVANCED ASSESSMENT BI REPORTS ==================== -->
+    <section id="panel-reports" class="panel">
+      <div class="card">
+        <h2 class="card-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          8. Advanced Assessment BI & Integrity Reporting
+        </h2>
+        <p class="card-desc">Institutional analytics reporting pass rates, attempt volumes, and integrity signals across courses, shifts, and departments. No public student rankings or leaderboards.</p>
+
+        <div class="grid-4" style="margin-bottom:1rem;">
+          <div class="card" style="background:#f8fafc; padding:0.75rem;">
+            <span style="font-size:0.75rem; color:var(--muted);">Total Completed Attempts</span>
+            <div style="font-size:1.4rem; font-weight:700; color:var(--primary);">328</div>
+          </div>
+          <div class="card" style="background:#f8fafc; padding:0.75rem;">
+            <span style="font-size:0.75rem; color:var(--muted);">Official Pass Rate</span>
+            <div style="font-size:1.4rem; font-weight:700; color:var(--emerald);">82.4%</div>
+          </div>
+          <div class="card" style="background:#f8fafc; padding:0.75rem;">
+            <span style="font-size:0.75rem; color:var(--muted);">Pending Teacher Reviews</span>
+            <div style="font-size:1.4rem; font-weight:700; color:var(--amber);">14</div>
+          </div>
+          <div class="card" style="background:#f8fafc; padding:0.75rem;">
+            <span style="font-size:0.75rem; color:var(--muted);">Integrity Signals Logged</span>
+            <div style="font-size:1.4rem; font-weight:700; color:var(--rose);">9</div>
+          </div>
+        </div>
+
+        <div class="card" style="background:#f8fafc;">
+          <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Reproducible Report Snapshot</h3>
+          <p style="font-size:0.75rem; color:var(--muted); margin-bottom:0.75rem;">Snapshot ID: #REP-2026-10-Q3 · Data Source: `assessment_attempts`</p>
+
+          <div style="overflow-x:auto;">
+            <table style="width:100%; border-collapse:collapse; font-size:0.8125rem;">
+              <thead>
+                <tr style="border-bottom:1px solid var(--border); text-align:left; color:var(--muted);">
+                  <th style="padding:0.5rem;">Assessment Type</th>
+                  <th style="padding:0.5rem;">Completed Sittings</th>
+                  <th style="padding:0.5rem;">Passed (%)</th>
+                  <th style="padding:0.5rem;">Avg Time Spent</th>
+                  <th style="padding:0.5rem;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:0.5rem; font-weight:600;">Official Exam (FINAL)</td>
+                  <td style="padding:0.5rem;">142</td>
+                  <td style="padding:0.5rem; color:var(--emerald);">81.7%</td>
+                  <td style="padding:0.5rem;">38 min</td>
+                  <td style="padding:0.5rem;"><span class="tag tag-green">Official Scored</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border);">
+                  <td style="padding:0.5rem; font-weight:600;">Formative Quizzes (QUIZ)</td>
+                  <td style="padding:0.5rem;">114</td>
+                  <td style="padding:0.5rem; color:var(--emerald);">88.5%</td>
+                  <td style="padding:0.5rem;">12 min</td>
+                  <td style="padding:0.5rem;"><span class="tag tag-blue">Formative Check</span></td>
+                </tr>
+                <tr>
+                  <td style="padding:0.5rem; font-weight:600;">Diagnostic Tests (DIAGNOSTIC)</td>
+                  <td style="padding:0.5rem;">72</td>
+                  <td style="padding:0.5rem;">N/A (Skill Profile)</td>
+                  <td style="padding:0.5rem;">24 min</td>
+                  <td style="padding:0.5rem;"><span class="tag tag-amber">Adaptive Feeder</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end; gap:0.5rem; margin-top:1rem;">
+            <button class="btn btn-secondary" onclick="alert('Snapshot exported to CSV according to Phase 13 specifications.')">
+              Export Audit CSV
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobile Bottom Dock (Phase 16 Responsive Requirement) -->
+  <nav class="mobile-dock">
+    <button class="dock-btn active" onclick="switchTab('blueprint')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+      <span>Blueprint</span>
+    </button>
+    <button class="dock-btn" onclick="switchTab('runner')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      <span>Runner</span>
+    </button>
+    <button class="dock-btn" onclick="switchTab('adaptive')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+      <span>Adaptive</span>
+    </button>
+    <button class="dock-btn" onclick="switchTab('rubrics')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+      <span>Rubrics</span>
+    </button>
+    <button class="dock-btn" onclick="switchTab('quality')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <span>Quality</span>
+    </button>
+    <button class="dock-btn" onclick="switchTab('reports')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+      <span>Reports</span>
+    </button>
+  </nav>
+
+  <script>
+    // Tab Controller
+    function switchTab(tabId) {
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      const target = document.getElementById('panel-' + tabId);
+      if (target) target.classList.add('active');
+
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.dock-btn').forEach(d => d.classList.remove('active'));
+
+      const tabMap = {
+        blueprint: 0, runner: 1, adaptive: 2, writing: 3,
+        rubrics: 4, quality: 5, policies: 6, reports: 7
+      };
+      const dockMap = {
+        blueprint: 0, runner: 1, adaptive: 2, rubrics: 3, quality: 4, reports: 5
+      };
+
+      const tabs = document.querySelectorAll('.nav-tab');
+      if (tabs[tabMap[tabId]]) tabs[tabMap[tabId]].classList.add('active');
+
+      const docks = document.querySelectorAll('.dock-btn');
+      if (docks[dockMap[tabId]]) docks[dockMap[tabId]].classList.add('active');
+    }
+
+    // 1. Blueprint Validation
+    function testBlueprintFeasibility() {
+      const el = document.getElementById('blueprintResults');
+      el.innerHTML = `
+        <div class="alert alert-success">
+          <div>
+            <strong>✓ Blueprint Fully Achievable!</strong> Live question bank contains <strong>54 approved published items</strong> satisfying Pre-A1 vocational skills (Target: 20 items).
+            <div style="font-size:0.75rem; margin-top:0.25rem;">
+              Pools: Vocabulary (18/6) · Grammar (14/5) · Listening (10/4) · Reading (6/3) · Writing (3/1) · Speaking (3/1).
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Blueprint Variant Generator
+    function generateRandomVariants() {
+      const el = document.getElementById('blueprintResults');
+      el.innerHTML = `
+        <div class="card" style="background:#f1f5f9; margin-top:0.5rem;">
+          <h4 style="font-size:0.875rem; font-weight:700;">Generated Randomized Variants (Target Difficulty Index: 1.50 &plusmn; 0.15)</h4>
+          <ul style="font-size:0.8125rem; margin-top:0.4rem; padding-left:1.2rem; line-height:1.6;">
+            <li><strong>Variant A</strong>: 20 Items · Difficulty Index: <strong>1.50</strong> · Exact match to blueprint sections.</li>
+            <li><strong>Variant B</strong>: 20 Items · Difficulty Index: <strong>1.55</strong> · Difficulty tolerance +0.05.</li>
+            <li><strong>Variant C</strong>: 20 Items · Difficulty Index: <strong>1.48</strong> · Difficulty tolerance -0.02.</li>
+          </ul>
+          <p style="font-size:0.75rem; color:var(--muted); margin-top:0.4rem;">
+            * Each variant is pinned to an immutable snapshot when assigned to an exam attempt.
+          </p>
+        </div>
+      `;
+    }
+
+    // 2. Exam Room Dynamic Questions
+    let currentExamQ = 1;
+    const examQuestions = [
+      {
+        num: 1, skill: "Vocabulary", points: 1,
+        text: "Select the correct workplace safety item: 'The firefighter checked the water pressure in the _______.'",
+        options: ["A) fire hose", "B) office desk", "C) computer monitor"], correct: 0
+      },
+      {
+        num: 2, skill: "Grammar", points: 1,
+        text: "Choose the correct verb form: 'All tools _______ in cabinet B.'",
+        options: ["A) are kept", "B) is keep", "C) keeping"], correct: 0
+      },
+      {
+        num: 3, skill: "Listening", points: 2,
+        hasAudio: true,
+        text: "Listen to the emergency broadcast and identify the meeting point:",
+        options: ["A) Assembly Gate North", "B) Main Cafeteria", "C) Basement Entrance"], correct: 0
+      },
+      {
+        num: 4, skill: "Writing", points: 5, isWriting: true,
+        text: "Describe your safety checklist before operating heavy machinery during your shift."
+      },
+      {
+        num: 5, skill: "Speaking", points: 5, isSpeaking: true,
+        text: "Record your voice stating today's date, work shift, and safety clearance code."
+      }
+    ];
+
+    function showExamItem(n) {
+      currentExamQ = n;
+      document.querySelectorAll('.q-btn').forEach((b, i) => {
+        if (i + 1 === n) b.classList.add('active');
+        else b.classList.remove('active');
+      });
+
+      const q = examQuestions[n - 1];
+      const area = document.getElementById('examItemArea');
+
+      if (q.isWriting) {
+        area.innerHTML = `
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+            <span style="font-weight:700; font-size:0.875rem;">Question ${q.num} of 5 (${q.skill} · ${q.points} Points)</span>
+            <span style="font-size:0.75rem; color:var(--muted);" id="itemSyncTag">✓ Auto-saved</span>
+          </div>
+          <p style="font-size:1rem; font-weight:500; margin-bottom:0.75rem;">${q.text}</p>
+          <textarea rows="5" oninput="handleRunnerWriting(this)" placeholder="Type your written answer...">I inspect the oil level, brake pads, and warning beacon before activating the engine.</textarea>
+          <div style="font-size:0.75rem; color:var(--muted); margin-top:0.4rem;">
+            * Evaluated later by teacher using official rubric. Does not count into automatic score.
+          </div>
+        `;
+      } else if (q.isSpeaking) {
+        area.innerHTML = `
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+            <span style="font-weight:700; font-size:0.875rem;">Question ${q.num} of 5 (${q.skill} · ${q.points} Points)</span>
+            <span style="font-size:0.75rem; color:var(--muted);">✓ Ready to record</span>
+          </div>
+          <p style="font-size:1rem; font-weight:500; margin-bottom:0.75rem;">${q.text}</p>
+          <div style="background:#f8fafc; border:1px solid var(--border); border-radius:0.5rem; padding:1rem; text-align:center;">
+            <button class="btn btn-secondary" onclick="alert('Microphone recorded audio (0:15). Machine transcript generated.')">
+              🎤 Record Spoken Answer (15 sec)
+            </button>
+            <p style="font-size:0.75rem; color:var(--muted); margin-top:0.5rem;">Microphone permission granted. Transcript saved for teacher rubric evaluation.</p>
+          </div>
+        `;
+      } else {
+        area.innerHTML = `
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+            <span style="font-weight:700; font-size:0.875rem;">Question ${q.num} of 5 (${q.skill} · ${q.points} Point)</span>
+            <span style="font-size:0.75rem; color:var(--muted);" id="itemSyncTag">✓ Saved</span>
+          </div>
+          ${q.hasAudio ? `
+            <div class="audio-player-mock">
+              <button class="btn btn-sm btn-secondary" onclick="alert('Audio playing at 1.0x normal speed')">▶ Play Listening Clip (0:12)</button>
+              <button class="btn btn-sm btn-outline" onclick="alert('Audio playing at 0.75x slow speed')">🐢 Slow (0.75x)</button>
+            </div>
+          ` : ''}
+          <p style="font-size:1rem; font-weight:500; margin-bottom:0.75rem;">${q.text}</p>
+          <div style="display:flex; flex-direction:column; gap:0.5rem;">
+            ${q.options.map((opt, i) => `
+              <label style="display:flex; align-items:center; gap:0.6rem; padding:0.75rem; border:1px solid var(--border); border-radius:0.5rem; cursor:pointer;">
+                <input type="radio" name="opt_q${q.num}" onchange="markItemAnswered(${q.num})">
+                <span>${opt}</span>
+              </label>
+            `).join('')}
+          </div>
+        `;
+      }
+    }
+
+    function markItemAnswered(num) {
+      const btn = document.querySelectorAll('.q-btn')[num - 1];
+      if (btn) btn.classList.add('answered');
+      const tag = document.getElementById('itemSyncTag');
+      if (tag) {
+        tag.innerText = '⟳ Syncing...';
+        setTimeout(() => { tag.innerText = '✓ Saved to server'; }, 300);
+      }
+    }
+
+    function handleRunnerWriting(el) {
+      markItemAnswered(4);
+    }
+
+    function nextExamItem() {
+      if (currentExamQ < 5) showExamItem(currentExamQ + 1);
+    }
+    function prevExamItem() {
+      if (currentExamQ > 1) showExamItem(currentExamQ - 1);
+    }
+
+    function submitExamAttempt() {
+      if (confirm('Submit your examination? The server will immediately grade auto-evaluable items and enqueue production questions for teacher review.')) {
+        alert('Attempt submitted! Score: 100% on auto-graded questions (4/4 pts). Writing & Speaking submitted to Teacher Review Center.');
+      }
+    }
+
+    // 3. Adaptive Diagnostic Engine
+    let adaptIndex = 1;
+    function submitAdaptiveAnswer() {
+      adaptIndex++;
+      const stepSpan = document.getElementById('adaptStep');
+      const promptEl = document.getElementById('adaptPrompt');
+      const histList = document.getElementById('adaptHistoryList');
+
+      if (adaptIndex === 2) {
+        stepSpan.innerText = '2';
+        promptEl.innerText = 'Item 2 (Difficulty: HARD - Stepped up due to correct answer): "Identify the advanced pre-ignition diagnostic indicator:"';
+        histList.innerHTML += '<li>Step 1 answered correctly &rarr; Engine branched to HARD question within approved Pre-A1 bank.</li>';
+      } else if (adaptIndex === 3) {
+        stepSpan.innerText = '3';
+        promptEl.innerText = 'Item 3 (Difficulty: MEDIUM - Stepped down due to incorrect answer): "What is the primary function of an exhaust valve?"';
+        histList.innerHTML += '<li>Step 2 answered incorrectly &rarr; Engine branched to MEDIUM prerequisite question.</li>';
+      } else {
+        alert('Diagnostic assessment complete! Profile generated and transmitted to Phase 9 Adaptive Learning Engine without altering course grades.');
+        adaptIndex = 1;
+        stepSpan.innerText = '1';
+        promptEl.innerText = 'Item 1 (Difficulty: MEDIUM): "Select the word for the protective equipment worn on hands:"';
+        histList.innerHTML = '<li>Step 1 initialized at Medium difficulty baseline.</li>';
+      }
+    }
+
+    // 4. Writing & Word Counting
+    function handleWritingInput(el) {
+      const words = el.value.trim() ? el.value.trim().split(/\s+/).length : 0;
+      document.getElementById('writingCountDisplay').innerText = `Word count: ${words} words (Target: 25–50 words)`;
+    }
+
+    function toggleAudioMock() {
+      alert('Playing simulated student oral response recording (Duration: 18s, sample rate: 44.1kHz).');
+    }
+
+    // 5. Rubric Evaluation
+    function pickRubricCell(el, row, level) {
+      const parent = el.parentElement;
+      parent.querySelectorAll('.rubric-opt').forEach(cell => cell.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+
+    // Initialize Question 1
+    showExamItem(1);
+
+    // Non-prejudicial Integrity Monitoring (Blur/Focus)
+    window.addEventListener('blur', () => {
+      const badge = document.getElementById('runnerSignalBadge');
+      if (badge) {
+        badge.style.display = 'inline-block';
+        console.log('[Phase 17 Assessment Integrity Signal]: Window blur logged as non-prejudicial review signal.');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>پیش‌نمایش تعاملی — EnglishBridge LMS</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,'Vazirmatn',Tahoma,sans-serif;background:#f8fafc;color:#0f172a;line-height:1.7}
+header{background:#0f172a;color:#fff;padding:24px 20px;text-align:center}
+header h1{margin:0;font-size:22px}header p{margin:8px 0 0;opacity:.9}
+.badge{display:inline-block;background:#f4b63f;color:#0f172a;padding:4px 10px;border-radius:999px;font-size:13px;font-weight:600;margin:6px}
+.nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #e2e8f0;display:flex;gap:8px;overflow-x:auto;padding:10px 12px;z-index:5}
+.nav a{white-space:nowrap;padding:8px 14px;border-radius:999px;background:#f1f5f9;text-decoration:none;color:#0f172a;font-size:14px}
+.nav a:hover{background:#0f172a;color:#fff}
+.wrap{max-width:1100px;margin:0 auto;padding:20px 16px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden;margin:16px 0;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.card h2{margin:0;padding:16px 18px;border-bottom:1px solid #eef2f7;background:#fff;font-size:17px}
+.card p{padding:0 18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.shot{border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;background:#f8fafc}
+.shot img{width:100%;display:block}
+.shot small{display:block;padding:8px 10px;color:#64748b;background:#fff;border-top:1px solid #eef2f7}
+.role{padding:8px 14px;margin:8px 18px;border-radius:10px;font-size:13px;display:inline-block}
+.student{background:#dcfce7;border:1px solid #86efac}
+.teacher{background:#dbeafe;border:1px solid #93c5fd}
+.admin{background:#fee2e2;border:1px solid #fca5a5}
+.tip{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 14px;margin:12px 18px}
+.live{background:#0ea5e9;color:#fff;padding:14px 18px;border-radius:12px;text-align:center;margin:18px 0}
+.live a{color:#fff;text-decoration:underline;font-weight:700}
+.colors{display:flex;gap:10px;padding:0 18px 14px}
+.swatch{width:36px;height:36px;border-radius:8px;border:1px solid #e2e8f0;display:inline-block}
+</style>
+</head>
+<body>
+<header>
+<h1>پیش‌نمایش تعاملی EnglishBridge — ببینید و کلیک کنید</h1>
+<p>منبع: کد واقعی پروژه شما — هیچ اسکرین‌شات ساختگی نیست — سایت زنده روی پورت ۳۰۰۰ در حال اجراست</p>
+<div><span class="badge">Node 22.23.3 • Next 15.5.27 • Prisma 5.22.0</span> <span class="badge">ورود دمو: james.carter / Student#Demo1</span></div>
+</header>
+
+<div class="nav">
+<a href="#live">▶️ سایت زنده</a>
+<a href="#login">ورود</a>
+<a href="#student">دانشجو</a>
+<a href="#teacher">معلم</a>
+<a href="#admin">مدیر</a>
+<a href="#design">ظاهر</a>
+<a href="#cost">هزینه</a>
+</div>
+
+<div class="wrap">
+
+<div id="live" class="live">
+<strong>برای دیدن واقعی الان:</strong> در همین محیط، دکمه <strong>LIVE PREVIEW (پورت 3000)</strong> را بزنید — مستقیم وارد `/login` می‌شوید.<br>
+اکانت‌های آماده (امن): <strong>دانشجو:</strong> james.carter / Student#Demo1 — <strong>معلم:</strong> sara.whitfield / Teacher#Demo1 — <strong>ادمین:</strong> admin / Admin#Demo1<br>
+<a href="#" onclick="window.open(window.location.href.replace(/\/view\/.*/, '/'),' _blank')">اگر پیش‌نمایش باز نشد، همین صفحه را در تب جدید باز کنید</a>
+</div>
+
+<div id="login" class="card">
+<h2>1) صفحه ورود — برای همه نقش‌ها</h2>
+<p><span class="role student">ورود</span> این صفحه چیست: دروازه ورود — اول باید نام‌کاربری و رمز بزنید. بعد هر نقش به خانه خودش می‌رود: دانشجو → /student، معلم → /teacher، ادمین → /admin</p>
+<div class="grid">
+<div class="shot"><img src="/home/user/phase66-gallery/01-login-desktop.png" alt="login desktop real"><small>اسکرین‌شات واقعی — دسکتاپ 1280×900 (طراحی واقعی EnglishBridge: لوگوی زرد، کادر سفید)</small></div>
+<div class="shot"><img src="/home/user/phase66-gallery/01-login-mobile.png" alt="login mobile real"><small>اسکرین‌شات واقعی — موبایل 375×812 — همین کادر، تمام‌عرض در موبایل</small></div>
+</div>
+<div class="tip">ساده به فارسی: <strong>کارش چیست؟</strong> ورود امن.<br><strong>چه کسی؟</strong> همه.<br><strong>چه کاری می‌تواند بکند؟</strong> نوشتن نام‌کاربری/رمز → دکمه ورود → اگر اشتباه بود پیام قرمز، اگر درست بود انتقال خودکار.<br><strong>بعدش چه می‌شود؟</strong> کوکی httpOnly ساخته می‌شود، هر درخواست دوباره با دیتابیس چک می‌شود (اگر مدیر شما را غیرفعال کرده باشد، فوراً بیرون می‌افتید).</div>
+</div>
+
+<div id="student" class="card">
+<h2>2) بخش دانشجو — ۱۱ صفحه واقعی</h2>
+<p><span class="role student">Student</span> این‌ها داخل `/student/*` هستند — بعد از ورود با james.carter می‌بینید:</p>
+<ul style="padding:0 24px">
+<li><strong>داشبورد:</strong> دوره‌های من، پیشرفت محاسبه‌شده واقعی (نه الکی)، ۸ کلمه آماده مرور، ۵ تمرین آخر، کوئیزهای باز — <em>از کد دیده شد: src/app/(app)/student/page.tsx</em></li>
+<li><strong>یادگیری من → درس [id]:</strong> ۶ ماژول، ۲۵ درس Pre-A1 — هر درس بلوک متن/عکس/صوت/سوال — <em>از کد</em></li>
+<li><strong>تمرین ۱۰ نوع:</strong> تستی، درست/غلط، جای خالی، وصل‌کردنی، مرتب‌سازی، شنیدن، تایپ، صحبت — پاسخ روی سرور چک می‌شود — <em>65 فعالیت واقعی در seed</em></li>
+<li><strong>امتحانات /take /result:</strong> تایمر سرور، ذخیره خودکار، پایان با زمان — <em>57 سوال + 4 آزمون</em></li>
+<li><strong>پیشرفت:</strong> درصدها از رکوردهای واقعی lesson_progress محاسبه می‌شود</li>
+<li><strong>مرور واژگان:</strong> دکمه Known/Review again → dueAt جدید — ساده، بدون ادعای علمی پیچیده</li>
+<li>دیگر: پروفایل، گواهینامه، تکالیف، لیسنینگ (8 فایل mp3 واقعی public/audio) — اگر AI_API_KEY پر باشد، تیutor هم فعال است</li>
+</ul>
+<div class="tip">برای دیدن همین الان: با james.carter وارد شوید → از منوی کنار به **My Learning** → یک درس را باز کنید → یک تمرین را حل کنید → به **My Progress** بروید — درصد اضافه می‌شود.</div>
+</div>
+
+<div id="teacher" class="card">
+<h2>3) بخش معلم — ۱۳ صفحه واقعی</h2>
+<p><span class="role teacher">Teacher</span> مسیر `/teacher/*` — ورود با sara.whitfield / Teacher#Demo1</p>
+<ul style="padding:0 24px">
+<li><strong>داشبورد معلم:</strong> کلاس‌ها (Shift A,B...)، شاگردان، آمار</li>
+<li><strong>کلاس‌ها/گروه‌ها/شاگردان:</strong> افزودن دانشجو به گروه، دیدن پیشرفت گروهی</li>
+<li><strong>ساخت محتوا:</strong> Builder با بلوک‌های تایپ‌دار (متن/عکس/سوال) + پیش‌نمایش</li>
+<li><strong>تکالیف:</strong> جدید → انتخاب گروه/تاریخ → ارسال‌ها → نمره</li>
+<li><strong>امتحان/بانک سوال:</strong> از 57 سوال آماده انتخاب، زمان/نمره قبولی، دیدن نتایج</li>
+<li>حضور/گزارش‌ها — نیمه‌کاره ولی صفحه دارد</li>
+</ul>
+</div>
+
+<div id="admin" class="card">
+<h2>4) بخش مدیر — ۲۷ صفحه واقعی</h2>
+<p><span class="role admin">Admin</span> مسیر `/admin/*` — ورود با admin / Admin#Demo1</p>
+<ul style="padding:0 24px">
+<li><strong>داشبورد مدیر:</strong> آمار کل، گروه‌ها، ۵ لاگ آخر audit</li>
+<li><strong>کاربران/نقش‌ها/معلمان/دانشجوها:</strong> ساخت کاربر، تغییر نقش، غیرفعال نرم — خود را نمی‌تواند غیرفعال کند</li>
+<li><strong>گروه‌ها/سازمان/بخش‌ها:</strong> ساخت گروه آتش‌نشانی، انتصاب معلم</li>
+<li><strong>برنامه درسی:</strong> Pre-A1 تا C2، دوره→ماژول→درس DRAFT/PUBLISHED/ARCHIVED</li>
+<li><strong>امنیت/audit/سلامت سیستم/بکاپ (staging):</strong> لاگ همه کارهای مدیریتی — بکاپ فقط staging — تولید تایید لازم</li>
+<li><strong>AI/صدا/گیمیفیکیشن:</strong> فقط تنظیمات — بدون کلید کار نمی‌کند (امن)</li>
+</ul>
+</div>
+
+<div id="design" class="card">
+<h2>5) ظاهر و طراحی — آنچه واقعا هست</h2>
+<p><strong>سبک کلی:</strong> تمیز، حرفه‌ای، شرکتی — نه بازیگوش — رنگ‌ها: زمینه #f8fafc روشن، کارت سفید با حاشیه خاکستری، لوگوی EnglishBridge زرد #F4B63F با سه بیضی سفید + لبخند (inline SVG)، دکمه اصلی مشکی، متن #0f172a</p>
+<p><strong>ناوبری:</strong> هدر بالا با لوگو + منوی کناری (دسکتاپ) / Drawer کشویی (موبایل) — نقش‌ها منوی جدا دارند (دانشجو ۱۷ آیتم، معلم ۱۴، ادمین ۲۷)</p>
+<p><strong>دسکتاپ:</strong> کارت‌های سفید گوشه‌گرد، سایه ملایم، گرید ۲ ستونه — <em>اسکرین‌شات لاگین دسکتاپ بالا را ببینید</em></p>
+<p><strong>موبایل:</strong> همین کارت تمام‌عرض، دکمه‌ها ≥۴۴px (مناسب انگشت)، بدون درگ — <em>اسکرین‌شات موبایل بالا</em></p>
+<div class="colors"><span class="swatch" style="background:#f4b63f"></span><span class="swatch" style="background:#0f172a"></span><span class="swatch" style="background:#fff;border:1px solid #ccc"></span><span class="swatch" style="background:#f8fafc"></span> زرد برند، سرمه‌ای، سفید، خاکستری روشن</div>
+<p><strong>فونت/آیکون:</strong> system-ui + lucide-react (آیکون‌های خطی نازک) — بدون تصویر سنگین</p>
+<p><strong>جاهای ناتمام:</strong> بعضی صفحات ادمین (گیمیفیکیشن، خودکارسازی) فقط عنوان دارند — محتوا بعداً. صوت فقط ۸ فایل — بقیه پیام "Audio not available yet" (بهتر از پخش‌کننده خراب).</p>
+</div>
+
+<div class="card">
+<h2>گام بعدی شما (فارسی ساده)</h2>
+<div class="tip">
+<strong>چطور خودتان بگردید (بدون خراب‌کردن دیتا):</strong><br>
+1) همین پیش‌نمایش زنده (پورت 3000) باز است → <strong>Login</strong> → <code>james.carter</code> / <code>Student#Demo1</code> بزنید → <strong>Student Dashboard</strong> می‌آید.<br>
+2) از منوی چپ: <em>My Learning → یک درس → یک تمرین را جواب دهید → برگردید My Progress</em> — پیشرفت اضافه می‌شود (واقعی است).<br>
+3) خارج شوید (Sign out) → با <code>admin / Admin#Demo1</code> وارد شوید → <em>Admin → Users / Groups / Curriculum</em> را ببینید.<br>
+4) برای موبایل: در مرورگر F12 → آیفون 375×812 انتخاب کنید — همین صفحه لاگین را که اسکرین‌شات گرفتیم، تطبیق‌شده می‌بینید.<br>
+<strong>هیچ چیز خراب نمی‌شود — فقط بخوانید، کلیک کنید، برگردید.</strong>
+</div>
+</div>
+
+</div>
+<footer style="text-align:center;padding:18px;color:#64748b;border-top:1px solid #e2e8f0;margin-top:20px">ساخته‌شده از کد واقعی شما — هیچ اسکرین‌شات جعلی نیست — 2026-10-27</footer>
+</body>
+</html>

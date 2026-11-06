@@ -1,0 +1,335 @@
+{
+  "project": "Project Leo",
+  "phase": "B.1",
+  "date": "2026-11-05",
+  "decision": "PARTIAL — MORE VALIDATION REQUIRED",
+  "original_B_zip_available": false,
+  "original_B_zip_reconstructed": false,
+  "scope": "Validation report and actual bounded evidence, NOT a recovered or redesigned Phase B product",
+  "files": [
+    {
+      "path": "PHASE_B1_FINAL_REPORT_FA.md",
+      "bytes": 24185,
+      "sha256": "50ae5185361964b4f3aefc2253d38cd2ac3efa8e5515709f223f7a288be1ebfd"
+    },
+    {
+      "path": "README_FA.md",
+      "bytes": 2123,
+      "sha256": "5d3e722f847112c83bbee33f99834f69c8276bf9164ccdaff12739230c4f843e"
+    },
+    {
+      "path": "evidence/AUDIO_SOURCE_HEADER_PROBES.json",
+      "bytes": 4202,
+      "sha256": "9641fc199256db0342323fdd90b52d6af0d5cb5a094508da723f95ebf63f63aa"
+    },
+    {
+      "path": "evidence/B02_H04_CONTRACT_COMPARISON.json",
+      "bytes": 4581,
+      "sha256": "21a8a78f7c8f08e97f29e13eeda5d51906a553110a3a3d98bf82494ea626aee7"
+    },
+    {
+      "path": "evidence/B1_DECISION.json",
+      "bytes": 1112,
+      "sha256": "6ae76a176169794d71d8a6e5a37df4048b049b83ae32ff02bb53e3348889ea4b"
+    },
+    {
+      "path": "evidence/B1_OUTPUT_VALIDATION.json",
+      "bytes": 1211,
+      "sha256": "e6c65ebda0539c39b295d594a7ff524abaa903b2c17d023ddc58280addab9234"
+    },
+    {
+      "path": "evidence/COPY_COVERAGE_v2.json",
+      "bytes": 482,
+      "sha256": "d5b93288a42b72b0a902ce18d9c228f056e2b0d844467b5c7ec14e23af3a7385"
+    },
+    {
+      "path": "evidence/DECLARED_DUPLICATE_HASHES.json",
+      "bytes": 904,
+      "sha256": "0c09b10766741c7d18531fce8c9cb6b8e16bc0f9283f680da8dc1882e30b2766"
+    },
+    {
+      "path": "evidence/DESIGN_COPY_SUMMARY.json",
+      "bytes": 711,
+      "sha256": "b580de07cb3657130fe402a03680a06e62ded2f6600d37c1f2beff479d37109c"
+    },
+    {
+      "path": "evidence/ENVIRONMENT_CAPABILITIES.json",
+      "bytes": 690,
+      "sha256": "247db16993a3720c65ec57cb7729e874697748cb1fc67af274042439109c405a"
+    },
+    {
+      "path": "evidence/GRAMMAR_SOURCE_ITEMS.json",
+      "bytes": 2779,
+      "sha256": "0bbb2c14cddf48704c8c6b52c278aca8ee31271a7953a8ea00d1a58c9179c872"
+    },
+    {
+      "path": "evidence/ICON_PATH_DATA_CHECK.json",
+      "bytes": 6412,
+      "sha256": "63beadee3452c886526f9d582dd0af4d3b55378c61c5c5fbabf249355a8cd972"
+    },
+    {
+      "path": "evidence/INPUT_AVAILABILITY.json",
+      "bytes": 11136,
+      "sha256": "9fd4fd54e62229e39f86e9743bbc3f1a0243fd824b79c02c74d432bdba8f33c6"
+    },
+    {
+      "path": "evidence/JAVASCRIPT_SYNTAX_CHECK.json",
+      "bytes": 219,
+      "sha256": "a12b973f3bc6f244564c0d411c17f76e354a54f0c340afd0b4415076580ee0da"
+    },
+    {
+      "path": "evidence/LEO_TURNAROUND_REVIEW.json",
+      "bytes": 1310,
+      "sha256": "1a752c9d1e97bc4087a190fcbdfc71fc7e600948d9f7be5a1afd32cfdd1154a4"
+    },
+    {
+      "path": "evidence/PRESERVATION_AFTER_REVIEW.json",
+      "bytes": 565,
+      "sha256": "84e3e4a06744a1f01298823970211642986480912f73cfebd26587dac2f04b21"
+    },
+    {
+      "path": "evidence/PROTECTED_BASELINE_CURRENT.json",
+      "bytes": 260990,
+      "sha256": "5b50099f779a826f07e9ed6fa0304d7e0744dbc434dee94e06e9162852737009"
+    },
+    {
+      "path": "evidence/RETAINED_MARKUP_ORIGIN.json",
+      "bytes": 341,
+      "sha256": "330e3f8388e202e5110afe367a19aaf629a4aa977cb02b0b931d2325c04a6f06"
+    },
+    {
+      "path": "evidence/SOURCE_SHEET_COPIES.json",
+      "bytes": 656,
+      "sha256": "e798d5074bcad16ea07b112014b1f7523f531a33584fb5aad92fd3a36ed94638"
+    },
+    {
+      "path": "evidence/STATE_COPY_TEMPLATE_REVIEW.json",
+      "bytes": 11700,
+      "sha256": "dc3295b275a28009d44c28f69c80e8bed777d38552994040f2359f8b767aebcf"
+    },
+    {
+      "path": "evidence/STATIC_FINDING_CONFIRMATIONS.json",
+      "bytes": 510,
+      "sha256": "8b00026197a62c40b73695bb572e32e949a0f070cd2409b6e3eb17ce1dc0476e"
+    },
+    {
+      "path": "evidence/STATIC_SOURCE_EXCERPTS.json",
+      "bytes": 5131,
+      "sha256": "d08e27489a3b9590754d1aea61ad54999b15879ea7ae949fc9ff89b42e449e81"
+    },
+    {
+      "path": "evidence/STRUCTURAL_SUMMARY.json",
+      "bytes": 876,
+      "sha256": "c1cbf3e9eda8a53f0e80d4f633eb08a7d7c47af3f37f40556e86f2b3bb0cf35c"
+    },
+    {
+      "path": "evidence/SUPPLEMENTAL_FONT_SOURCE_REVIEW.json",
+      "bytes": 787,
+      "sha256": "a211368da9039297fc4b98bb48d6b16ca837ab902c504e2935fe2a3949454e39"
+    },
+    {
+      "path": "evidence/unchanged_source_sheets/LEO_CHARACTER_REFERENCE_v2.png",
+      "bytes": 251780,
+      "sha256": "026deb5bcadc088111d8b3c0572e891c58f04f57e62914f1b5f72d4c912381df"
+    },
+    {
+      "path": "evidence/unchanged_source_sheets/LEO_EXPRESSION_SHEET.png",
+      "bytes": 929863,
+      "sha256": "8f237a095def9065e63493d3bef665529b38033d53f17011c212d884bfa695a9"
+    },
+    {
+      "path": "evidence/verified_embedded_pngs/255a7a80dd854c6db7e24a0b2fdfb56d087e0f5be79297e7f881b5ab3352ea4f.png",
+      "bytes": 132097,
+      "sha256": "255a7a80dd854c6db7e24a0b2fdfb56d087e0f5be79297e7f881b5ab3352ea4f"
+    },
+    {
+      "path": "evidence/verified_embedded_pngs/559bf7d0f39a551507fcad68e18e586e1890321980b0b65fe1b3c357814f900c.png",
+      "bytes": 131978,
+      "sha256": "559bf7d0f39a551507fcad68e18e586e1890321980b0b65fe1b3c357814f900c"
+    },
+    {
+      "path": "evidence/verified_embedded_pngs/60f5fed804818f6713338fbf29cbbb0b42a319e7c2fe2cacb4ccd056ff847ac1.png",
+      "bytes": 129497,
+      "sha256": "60f5fed804818f6713338fbf29cbbb0b42a319e7c2fe2cacb4ccd056ff847ac1"
+    },
+    {
+      "path": "evidence/verified_embedded_pngs/675a065bf0371b61bfdd3ee5556857ac40bead724b99fb80f16a83d5015f7b1d.png",
+      "bytes": 126239,
+      "sha256": "675a065bf0371b61bfdd3ee5556857ac40bead724b99fb80f16a83d5015f7b1d"
+    },
+    {
+      "path": "evidence/verified_embedded_pngs/98c5c924e87398cd4b59b84f6adab979f52e7f0d46bc615a512d5fa2ff65a99a.png",
+      "bytes": 127058,
+      "sha256": "98c5c924e87398cd4b59b84f6adab979f52e7f0d46bc615a512d5fa2ff65a99a"
+    },
+    {
+      "path": "evidence/verified_embedded_pngs/f884ee27fa1ff7d9ce20420330295aadc2d4be521f7fa1444b21fd81f5e18826.png",
+      "bytes": 129013,
+      "sha256": "f884ee27fa1ff7d9ce20420330295aadc2d4be521f7fa1444b21fd81f5e18826"
+    },
+    {
+      "path": "registers/ASSET_VALIDATION.csv",
+      "bytes": 68727,
+      "sha256": "03eae12f791d4f737cc10ffcded5c14bac88ce5efd8626053d820daaf9451e03"
+    },
+    {
+      "path": "registers/AUDIO_TEXT_ALIGNMENT.csv",
+      "bytes": 2844,
+      "sha256": "71adcf83b154499472c60ab215087f7b8a58f635edfe3006c86875d62174767d"
+    },
+    {
+      "path": "registers/BROWSER_TEST_PLAN.csv",
+      "bytes": 3308,
+      "sha256": "cabdf79090b0867282b449fed971e91803c05f9c009150338b18a7f1943fbdc1"
+    },
+    {
+      "path": "registers/CONTRAST_RECOMPUTED_B1.csv",
+      "bytes": 5152,
+      "sha256": "610525c5b6cc9d1a0913e459aedbb488ff97561719b429e5ed99ed49f1d86c63"
+    },
+    {
+      "path": "registers/DELIVERY_FILE_CHECKS.csv",
+      "bytes": 74705,
+      "sha256": "f8d82acdc747b14e98974e70353b9303c69ebfc537863d2a62f58e13c56dc2dd"
+    },
+    {
+      "path": "registers/DOCUMENT_LANGUAGE_COVERAGE.csv",
+      "bytes": 4390,
+      "sha256": "f566fcdb98f972f8c9dde1a51f3f69efc02b921adf1ff7c52f93721a26a8514e"
+    },
+    {
+      "path": "registers/EDUCATIONAL_TEXT_CORPUS.csv",
+      "bytes": 146973,
+      "sha256": "1735a1e6dd070e9784fc0724350ee28f0e0e47aac9b79288f4348235ef61264f"
+    },
+    {
+      "path": "registers/EMBEDDED_ASSET_HASH_MATCHES.csv",
+      "bytes": 4202,
+      "sha256": "658838ccc77aff4ce6d6a9b245e322046c8263db177bc2f6fa2319a04756b6f5"
+    },
+    {
+      "path": "registers/IMAGE_BYTE_VALIDATION.csv",
+      "bytes": 4701,
+      "sha256": "3e7f459ec8c7f6e4662d28f61fbbd3cbf7d0d71947607092300119024c3530e3"
+    },
+    {
+      "path": "registers/INTERNAL_LINK_CHECKS.csv",
+      "bytes": 15980,
+      "sha256": "30cb5e8e994005f6a38dea9549de8a7fbb4769cd65a4aed848cfe3837a811a03"
+    },
+    {
+      "path": "registers/LANGUAGE_FINDINGS.csv",
+      "bytes": 9295,
+      "sha256": "b367adf8a0221ee3d34676cf9f48930cdca79a82243699d0b9988815a81c9d5c"
+    },
+    {
+      "path": "registers/LEO_16_STATE_REVIEW.csv",
+      "bytes": 6182,
+      "sha256": "665410ed674e2625c60151ff0b3ae097c5a7cb978b7637098b38ec33cf7372d1"
+    },
+    {
+      "path": "registers/LEO_PAIR_CHECKS.csv",
+      "bytes": 5280,
+      "sha256": "666ed682524585bd92a67994f935de48ff1b1f5f713aa6df2ff5a6062bbe09d6"
+    },
+    {
+      "path": "registers/LESSON_25_EDITORIAL_REVIEW.csv",
+      "bytes": 7129,
+      "sha256": "9e46f6d42103caea1d769f006ad6bf426937d536f36decfaeb069bb83e335444"
+    },
+    {
+      "path": "registers/MOBILE_ACCESSIBILITY_TEST_PLAN.csv",
+      "bytes": 1679,
+      "sha256": "5a8ea4efacfa4254a92550a1c2144939e77658c6e7970e50f36f24e30bc7f0ee"
+    },
+    {
+      "path": "registers/OPEN_ISSUES.csv",
+      "bytes": 9545,
+      "sha256": "febf7e999c520bc4cc92ba53b61edfebdc4fb45453d12f4bd22c8a38eb58f0ae"
+    },
+    {
+      "path": "registers/PERSIAN_COPY_CORPUS_v2.csv",
+      "bytes": 261152,
+      "sha256": "bb961e2b0b6746f0e2f7181ef6ce7ea391da2a376a0bb9cba03d5518b6846709"
+    },
+    {
+      "path": "registers/REQUIRED_13_FILES.csv",
+      "bytes": 622,
+      "sha256": "513a6a420bfab044072f7e2d875989e8e3f6f04a153cd069df304885f8be8a67"
+    },
+    {
+      "path": "registers/SCREEN_67_REVIEW.csv",
+      "bytes": 17257,
+      "sha256": "a129a54678ffe6e156194e5cb9c342a0f2b8bf98df25d50a31fc85560d23d78f"
+    },
+    {
+      "path": "registers/STATE_CONTRACT_CHECKS.csv",
+      "bytes": 181964,
+      "sha256": "b63ce1242a0b976da373d1de4c587eadeb25919302818af6d737d7e49e021a76"
+    },
+    {
+      "path": "registers/TEST_REGISTER_FINAL.csv",
+      "bytes": 7522,
+      "sha256": "fbedcf56e3be436b813f8bd50c63cd15019fb20e9255bcb9c9226a2cf4c75baa"
+    },
+    {
+      "path": "registers/VOCABULARY_100_REVIEW.csv",
+      "bytes": 19677,
+      "sha256": "d539874ab8b717c7acfe1fe1e12aa8e8ea3a65843cdead6f9c92e856d36883e0"
+    },
+    {
+      "path": "review/CURRICULUM_REVIEW_TEXT.md",
+      "bytes": 28313,
+      "sha256": "526a1956b1688e03e1a97c38826cf014507a666fc99039fc2b500c46e604332a"
+    },
+    {
+      "path": "review/EXTERNAL_REFERENCES.md",
+      "bytes": 2594,
+      "sha256": "941233fa51a18a1cda575260b76daeee274946f8d325050dd8bc2cf726ac58b0"
+    },
+    {
+      "path": "review/LANGUAGE_CONTENT_REVIEW_FA.md",
+      "bytes": 6172,
+      "sha256": "02907fef97ab19be90308df892be664b600ffbad78548c36d39d20c1e35d0333"
+    },
+    {
+      "path": "review/PERSIAN_COPY_REVIEW_v2.md",
+      "bytes": 91420,
+      "sha256": "637314a948c9207d59b3de1e49088a4ebba5f91415fa20ddfc739a5af1cca313"
+    },
+    {
+      "path": "tools/inspect_design_and_copy.py",
+      "bytes": 10855,
+      "sha256": "6ebcdf06aa97ae1145e979f897a0b5289d2224ccd3551be382fbc7466dea258b"
+    },
+    {
+      "path": "tools/inspect_remaining_package.py",
+      "bytes": 11710,
+      "sha256": "765dc40435ea09c38f56b2e021c1ab08757979c03241649ed8c99639e73988ae"
+    },
+    {
+      "path": "tools/record_editorial_and_character_review.py",
+      "bytes": 19253,
+      "sha256": "18ff91cce84e56e8e7bb22a4c03546059e23403db114a4fefec0b61e5360220e"
+    },
+    {
+      "path": "tools/refine_copy_corpus.py",
+      "bytes": 4732,
+      "sha256": "08278b2daa484561786b2146ba40275f30c70feb24e21581d51529f12805bde4"
+    },
+    {
+      "path": "tools/write_b1_report.py",
+      "bytes": 25572,
+      "sha256": "d2c8ce084a6fb95012006a60f001539fc2821bd2a104ae2153a19da2686cb740"
+    },
+    {
+      "path": "tools/write_validation_registers.py",
+      "bytes": 23319,
+      "sha256": "fb2830d1335b99927869eb2666a8bac01cd9fa8ebcef2395cf534e5ce5346f21"
+    }
+  ],
+  "private_data_or_credentials_included": false,
+  "application_changes": false,
+  "phase_C_started": false,
+  "manifest_note": "Manifest does not hash itself. Archive checksum is separate."
+}

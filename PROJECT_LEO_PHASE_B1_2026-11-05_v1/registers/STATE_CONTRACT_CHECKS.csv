@@ -1,0 +1,939 @@
+﻿screen_id,state,original_applicability,original_rationale,contract_json_csv_status,behavior_validation_status,note
+A01,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A01,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Error,False,N/A — خطای محلی مستقل تعریف نشده؛ خطای کلی پوسته در recovery عمومی مدیریت می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A02,Recovery,False,N/A — صفحهٔ ثابت وضعیت بازیابی مستقل ندارد؛ back/restart پوسته کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A03,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A04,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A05,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A06,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Error,False,N/A — خطای محلی مستقل تعریف نشده؛ خطای کلی پوسته در recovery عمومی مدیریت می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A07,Recovery,False,N/A — صفحهٔ ثابت وضعیت بازیابی مستقل ندارد؛ back/restart پوسته کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+A08,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B01,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B02,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B03,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B04,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B05,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B06,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Error,False,N/A — خطای محلی مستقل تعریف نشده؛ خطای کلی پوسته در recovery عمومی مدیریت می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+B07,Recovery,False,N/A — صفحهٔ ثابت وضعیت بازیابی مستقل ندارد؛ back/restart پوسته کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C01,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C02,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C03,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C04,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C05,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C06,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+C07,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D01,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D02,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D03,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D04,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D05,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D06,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+D07,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E01,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E02,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E03,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E04,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E05,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E06,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E07,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+E08,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F01,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F02,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F03,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F04,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F05,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F06,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+F07,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G01,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G02,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G03,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G04,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G05,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G06,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Selected,False,N/A — صفحهٔ read-only/آغازین، انتخاب domain مستقل ندارد؛ pressed/focus component جداست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+G07,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Disabled,False,N/A — این صفحه prereq/submit/permission gate ندارد؛ navigation بی‌دلیل غیرفعال نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H01,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H02,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H03,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H04,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H05,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Empty,False,N/A — صفحه محتوای ثابت/انتخاب‌های تعریف‌شده دارد و collection قابل خالی‌شدن ندارد.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Loading,False,N/A — عمل async وابسته به داده در این صفحه تعریف نشده؛ spinner تزئینی لازم نیست.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Permission Denied,False,N/A — این صفحه permission سخت‌افزار/فایل/سازمان درخواست نمی‌کند؛ permission بی‌مورد اضافه نشود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H06,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H07,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H08,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H09,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+H10,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I01,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I02,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Missing Content,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I03,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I04,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Success,False,N/A — موفقیت عملیاتی جداگانه‌ای وجود ندارد؛ حالت Available برای خواندن کافی است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Storage Full,False,N/A — این صفحه write/staging مستقلی ندارد؛ کمبود فضا در عمل نویسنده رسیدگی می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Save Failed,False,N/A — هیچ write مستقلی از این صفحه انجام نمی‌شود؛ read failure در Error است.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I05,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Initial,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Empty,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Loading,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Available,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Selected,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Disabled,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Success,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Error,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Offline,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Permission Denied,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Storage Full,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Missing Content,False,N/A — صفحه به محتوا/فایل آموزشی وابسته نیست؛ asset تزئینی با fallback مستقل جایگزین می‌شود.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Save Failed,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.
+I06,Recovery,True,قرارداد ویژهٔ این صفحه و flags تعریف‌شده.,PASS,NOT TESTED,N/A remains N/A; schema equality does not validate visual behavior.

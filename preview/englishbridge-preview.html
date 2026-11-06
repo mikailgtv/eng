@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EnglishBridge — visual preview</title>
+  <style>
+    :root {
+      --background: #f4f7f8;
+      --surface: #fff;
+      --border: #e3e8ee;
+      --foreground: #1f2937;
+      --muted: #627084;
+      --primary: #18685c;
+      --primary-hover: #12564c;
+      --primary-subtle: #e7f5f2;
+      --danger: #bd2c2c;
+      --danger-subtle: #fdecec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--foreground);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+    }
+    button, select, input { font: inherit; }
+    button { cursor: pointer; }
+    .banner {
+      background: #123f39;
+      color: #f4fffc;
+      padding: 14px 18px;
+    }
+    .banner strong { display: block; }
+    .banner span { display: block; margin-top: 3px; color: #d5ebe6; font-size: 13px; }
+    .roles {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 12px 16px 0;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .roles button, .nav button {
+      min-height: 40px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 0 12px;
+    }
+    .roles button[aria-pressed="true"], .nav button[aria-selected="true"] {
+      background: var(--foreground);
+      color: #fff;
+      border-color: var(--foreground);
+    }
+    .layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 16px 40px;
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 900px) {
+      .layout { grid-template-columns: 220px 1fr; align-items: start; }
+    }
+    .nav {
+      display: flex;
+      gap: 6px;
+      overflow: auto;
+      padding-bottom: 4px;
+    }
+    @media (min-width: 900px) {
+      .nav { display: grid; }
+    }
+    .screen { display: none; }
+    .screen.active { display: block; }
+    .card, .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .kicker {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 4px 0 0; font-size: 26px; letter-spacing: -.03em; }
+    h2 { margin: 0; font-size: 16px; }
+    .muted { color: var(--muted); }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .btn {
+      min-height: 48px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      padding: 0 14px;
+      font-weight: 650;
+    }
+    .btn.primary { background: var(--primary); color: #fff; }
+    .btn.secondary { background: #fff; color: var(--foreground); border-color: var(--border); }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stat {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+      background: #fff;
+    }
+    .stat b { display: block; font-size: 20px; }
+    .bar { height: 10px; background: #e7eef0; border-radius: 999px; overflow: hidden; margin-top: 6px; }
+    .bar span { display: block; height: 100%; background: var(--primary); width: 0; }
+    .pill { display: inline-block; border-radius: 999px; background: var(--primary-subtle); color: var(--primary); padding: 2px 8px; font-size: 12px; font-weight: 700; }
+    .alert { margin-top: 10px; border: 1px solid #f0c2c2; background: var(--danger-subtle); color: var(--danger); border-radius: 10px; padding: 10px; }
+    label { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }
+    select, input[type="text"] {
+      width: 100%;
+      height: 44px;
+      margin-top: 4px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0 10px;
+      background: #fff;
+      color: var(--foreground);
+    }
+    .choice { display: flex; align-items: center; gap: 8px; min-height: 44px; }
+    .hidden { display: none; }
+    fieldset { border: 1px solid var(--border); border-radius: 12px; margin-top: 12px; }
+    ul { margin: 8px 0 0; padding-left: 18px; }
+    li { margin: 6px 0; }
+    .login {
+      max-width: 420px;
+      margin: 24px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <strong>نمونهٔ نمایشی HTML — EnglishBridge</strong>
+    <span>این سرور زنده نیست. ظاهر نقش‌های دانش‌آموز، معلم و مدیر از فاز ۱ تا ۱۰ است. عددها نمونهٔ رابط هستند، نه آمار زنده. رتبه‌بندی عمومی وجود ندارد.</span>
+  </div>
+  <div class="roles" role="group" aria-label="Role">
+    <button type="button" aria-pressed="true" data-role="student">Student</button>
+    <button type="button" aria-pressed="false" data-role="teacher">Teacher</button>
+    <button type="button" aria-pressed="false" data-role="admin">Admin</button>
+    <button type="button" aria-pressed="false" data-role="login">Login</button>
+  </div>
+  <div class="layout">
+    <nav class="nav" id="nav" aria-label="Preview pages"></nav>
+    <main id="main">
+      <section class="screen active" id="student-dashboard" data-role="student">
+        <p class="kicker">Student</p>
+        <h1>Welcome back, James</h1>
+        <p class="muted">English level: Pre-A1 · Firefighter Shift B. This is the course level, not the motivation level.</p>
+        <article class="card" style="margin-top:14px">
+          <p class="kicker">Motivation</p>
+          <h2>Learning Level 2</h2>
+          <p class="muted">This is not your English level.</p>
+          <div class="bar" aria-label="Learning level progress"><span style="width:40%"></span></div>
+          <p>60 XP · 60 XP to the next learning level</p>
+          <div class="bar" aria-label="Today's goal"><span style="width:60%"></span></div>
+          <p>Today's goal: 6 of 10 minutes</p>
+          <p>3-day learning streak. A missed day is not a penalty.</p>
+          <p>Your learning plan is waiting.</p>
+        </article>
+        <article class="card" style="margin-top:12px">
+          <p class="kicker">Your learning plan</p>
+          <h2>Today's goal: 10 minutes</h2>
+          <ol>
+            <li>Review helmet — due for review. Previous correct answers stay on record.</li>
+            <li>Practice the verb be — several transcripts were not the full phrase.</li>
+            <li>Listen to one short dialogue.</li>
+            <li>Say: I work at a fire station.</li>
+          </ol>
+        </article>
+      </section>
+
+      <section class="screen" id="student-plan" data-role="student">
+        <p class="kicker">Today's plan</p>
+        <h1>10 minutes</h1>
+        <p class="muted">A learning progress estimate from your own records. Not a grade. Not compared with other students.</p>
+        <p class="card">Shift B is a shift group. This plan uses your study minutes. It does not change the work schedule.</p>
+        <article class="card" style="margin-top:12px"><strong>1 · Review</strong><p>Review helmet. 4 correct and 1 incorrect answers are still on record.</p></article>
+        <article class="card" style="margin-top:8px"><strong>2 · Teacher</strong><p>Your teacher asked this group to review Present Simple.</p></article>
+        <p>This week: Saturday vocabulary, Sunday grammar, Monday listening. A missed day is not a penalty.</p>
+      </section>
+
+      <section class="screen" id="student-speaking" data-role="student">
+        <p class="kicker">Speaking lab</p>
+        <h1>Listen. Speak. Try again.</h1>
+        <p class="muted">Words recognized are stored. The recording is not. This is practice, not a grade.</p>
+        <div class="row" id="modes">
+          <button type="button" class="btn secondary" data-kind="Speak" aria-pressed="true">Speak</button>
+          <button type="button" class="btn secondary" data-kind="Repeat">Repeat a word</button>
+          <button type="button" class="btn secondary" data-kind="Shadow">Shadow</button>
+          <button type="button" class="btn secondary" data-kind="Tutor">Talk with tutor</button>
+        </div>
+        <label>Topic
+          <select id="topic">
+            <option>Greetings</option>
+            <option>Job</option>
+            <option>Basic safety words</option>
+            <option>Asking for help</option>
+          </select>
+        </label>
+        <article class="card" style="margin-top:12px" aria-live="polite">
+          <p class="kicker" id="state">Ready</p>
+          <p id="prompt" style="font-size:20px">Hello. What is your name?</p>
+          <p id="heard" class="hidden"></p>
+          <p id="feedback" class="hidden"></p>
+        </article>
+        <p id="error" class="alert hidden" role="alert"></p>
+        <div class="grid" style="margin-top:12px">
+          <button class="btn primary" type="button" id="start">Start speaking</button>
+          <button class="btn secondary" type="button" id="hear">Hear</button>
+          <button class="btn secondary" type="button" id="again">Try again</button>
+          <button class="btn secondary" type="button" id="help">Show help</button>
+        </div>
+        <p id="help-text" class="hidden muted">Press Start speaking, or type the sentence.</p>
+        <form id="type-form" class="row">
+          <input id="typed" type="text" placeholder="Type your answer" />
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+      </section>
+
+      <section class="screen" id="student-listening" data-role="student">
+        <p class="kicker">Listening lab</p>
+        <h1>Listen first.</h1>
+        <p class="muted">The transcript stays hidden until you ask. This is practice, not an exam. No audio file is attached.</p>
+        <div class="row">
+          <button class="btn primary" type="button" id="play">Play</button>
+          <button class="btn secondary" type="button" id="slow">Slow</button>
+          <button class="btn secondary" type="button" id="show-script">Show transcript</button>
+        </div>
+        <p id="audio-note" class="muted">If audio cannot play, read the sentence. No invented audio URL.</p>
+        <p id="script" class="card hidden">Hello. My name is Sam. I work at a fire station.</p>
+        <form id="listen-form">
+          <fieldset>
+            <legend>What is his name?</legend>
+            <label class="choice"><input type="radio" name="q1" value="Sam" /> Sam</label>
+            <label class="choice"><input type="radio" name="q1" value="Ali" /> Ali</label>
+          </fieldset>
+          <button class="btn primary" type="submit" style="margin-top:12px">Check</button>
+        </form>
+        <p id="listen-result" class="hidden card"></p>
+      </section>
+
+      <section class="screen" id="student-tutor" data-role="student">
+        <p class="kicker">English Tutor</p>
+        <h1>AI Practice</h1>
+        <p class="muted">The tutor uses your lesson and recent misses. It does not change a grade or publish an exam.</p>
+        <article class="card">Hello. What is your name?</article>
+        <article class="card" style="margin-top:8px">Practice recommended because recent speaking was not the full phrase for am / is / are. Let's practice “I work.”</article>
+        <p class="pill">AI Practice — not an exam</p>
+      </section>
+
+      <section class="screen" id="student-achievements" data-role="student">
+        <p class="kicker">Achievements</p>
+        <h1>Learning Level 2</h1>
+        <p class="muted">Motivation only. Not Pre-A1, A1, or B2. No public ranking.</p>
+        <div class="row">
+          <div class="stat"><b>Earned</b>First Step</div>
+          <div class="stat"><b>Locked</b>Speaker · 10 speaking sessions</div>
+        </div>
+        <p>This week: 4 sessions, 32 estimated minutes, 3 speaking sessions. Last week: 2 active days. Compared only with you.</p>
+        <p class="card">Shift B together: 42 / 100 activities. Individual names are not shown.</p>
+      </section>
+
+      <section class="screen" id="teacher-learning" data-role="teacher">
+        <p class="kicker">Teacher</p>
+        <h1>Learning plans</h1>
+        <p class="muted">Descriptive groups. Students are not ranked. Shifts are not ranked.</p>
+        <article class="card"><h2>Needs Review</h2><p>James Carter · Shift B · grammar estimate from recorded misses.</p></article>
+        <article class="card" style="margin-top:8px"><h2>No practice recorded yet</h2><p>A new student stays here until a real activity is stored.</p></article>
+        <article class="card" style="margin-top:8px"><h2>Override</h2><p>Priority skill: Speaking. Required review: Present Simple. This does not change a grade.</p></article>
+      </section>
+
+      <section class="screen" id="teacher-engagement" data-role="teacher">
+        <p class="kicker">Engagement</p>
+        <h1>Shift B</h1>
+        <p>8 of 12 students finished at least one activity this week.</p>
+        <p>Group total: 42 / 100. No best shift. No top student.</p>
+        <p>1 ledger flagged for review. This is not a penalty.</p>
+      </section>
+
+      <section class="screen" id="admin-home" data-role="admin">
+        <p class="kicker">Admin</p>
+        <h1>Organization</h1>
+        <div class="row">
+          <div class="stat"><b>Users</b>Accounts stay active or deactivated. No plain-text passwords.</div>
+          <div class="stat"><b>Groups</b>Shift A–D and day workers are one LMS, not separate systems.</div>
+        </div>
+        <article class="card" style="margin-top:12px">
+          <h2>Gamification</h2>
+          <p>Lesson 20 XP · Speaking 15 XP · Daily cap 80. Changes are audited. No leaderboard.</p>
+        </article>
+        <article class="card" style="margin-top:8px">
+          <h2>Speaking and listening</h2>
+          <p>No provider key is shown. Raw audio storage stays off. Usage is a count, not a ranking.</p>
+        </article>
+      </section>
+
+      <section class="screen" id="login-screen" data-role="login">
+        <form class="login card" onsubmit="event.preventDefault(); document.querySelector('[data-role=student]').click();">
+          <p class="kicker">EnglishBridge</p>
+          <h1>Sign in</h1>
+          <p class="muted">Demo accounts are marked development only. This preview does not log anyone in.</p>
+          <label>Username or email<input type="text" value="james.carter" /></label>
+          <label>Password<input type="text" value="••••••••" /></label>
+          <button class="btn primary" type="submit" style="margin-top:14px;width:100%">Continue to student preview</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script>
+    const pages = {
+      student: [
+        ["student-dashboard", "Dashboard"],
+        ["student-plan", "Today's plan"],
+        ["student-speaking", "Speaking"],
+        ["student-listening", "Listening"],
+        ["student-tutor", "English Tutor"],
+        ["student-achievements", "Achievements"]
+      ],
+      teacher: [
+        ["teacher-learning", "Learning plans"],
+        ["teacher-engagement", "Engagement"]
+      ],
+      admin: [["admin-home", "Admin"]],
+      login: [["login-screen", "Sign in"]]
+    };
+    const nav = document.getElementById("nav");
+    function show(id) {
+      document.querySelectorAll(".screen").forEach((screen) => screen.classList.toggle("active", screen.id === id));
+      nav.querySelectorAll("button").forEach((button) => button.setAttribute("aria-selected", String(button.dataset.page === id)));
+    }
+    function setRole(role) {
+      document.querySelectorAll("[data-role]").forEach((button) => {
+        if (button.dataset.role && pages[button.dataset.role]) button.setAttribute("aria-pressed", String(button.dataset.role === role));
+      });
+      nav.innerHTML = "";
+      pages[role].forEach(([id, label], index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = label;
+        button.dataset.page = id;
+        button.setAttribute("aria-selected", String(index === 0));
+        button.addEventListener("click", () => show(id));
+        nav.appendChild(button);
+      });
+      show(pages[role][0][0]);
+    }
+    document.querySelectorAll(".roles button").forEach((button) => button.addEventListener("click", () => setRole(button.dataset.role)));
+    setRole("student");
+
+    const prompts = { Greetings: "Hello. What is your name?", Job: "What is your job?", "Basic safety words": "Say: Stop.", "Asking for help": "Say: Can you help me?" };
+    const topic = document.getElementById("topic");
+    const prompt = document.getElementById("prompt");
+    const state = document.getElementById("state");
+    topic.addEventListener("change", () => { prompt.textContent = prompts[topic.value]; });
+    document.getElementById("start").addEventListener("click", () => {
+      state.textContent = "Listening";
+      window.setTimeout(() => {
+        state.textContent = "Error";
+        const error = document.getElementById("error");
+        error.textContent = "Voice recognition is unavailable in this preview. You can type your answer instead.";
+        error.classList.remove("hidden");
+      }, 600);
+    });
+    document.getElementById("help").addEventListener("click", () => document.getElementById("help-text").classList.toggle("hidden"));
+    function answer(text) {
+      const heard = document.getElementById("heard");
+      const feedback = document.getElementById("feedback");
+      heard.textContent = "Your answer: “" + text + "”";
+      heard.classList.remove("hidden");
+      const target = prompt.textContent.replace(/^Say:\s*/i, "").replace(/[?.!]/g, "").toLowerCase();
+      const ok = text.toLowerCase().includes(target.split(" ")[0]);
+      feedback.textContent = ok ? "Good. The sentence was understood. This is not a pronunciation score." : "I heard something different. Try again, or type it.";
+      feedback.classList.remove("hidden");
+      state.textContent = "Finished";
+    }
+    document.getElementById("type-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const text = document.getElementById("typed").value.trim();
+      if (text) answer(text);
+    });
+    document.getElementById("again").addEventListener("click", () => {
+      const text = document.getElementById("typed").value.trim();
+      if (text) answer(text);
+    });
+    document.getElementById("play").addEventListener("click", () => {
+      document.getElementById("script").classList.remove("hidden");
+      document.getElementById("audio-note").textContent = "Audio is unavailable in this preview. Read the sentence below.";
+    });
+    document.getElementById("slow").addEventListener("click", () => document.getElementById("play").click());
+    document.getElementById("show-script").addEventListener("click", () => document.getElementById("script").classList.toggle("hidden"));
+    document.getElementById("listen-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const value = new FormData(event.currentTarget).get("q1");
+      const result = document.getElementById("listen-result");
+      result.classList.remove("hidden");
+      result.textContent = "Listening practice. This is not an exam grade. " + (value === "Sam" ? "1 of 1 correct." : "0 of 1 correct. He says: My name is Sam.");
+    });
+  </script>
+</body>
+</html>

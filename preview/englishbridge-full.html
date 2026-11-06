@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EnglishBridge — نقشهٔ کامل</title>
+  <style>
+    :root {
+      --bg: #f3f6f7;
+      --surface: #fff;
+      --line: #e2e8ee;
+      --ink: #1f2937;
+      --muted: #627084;
+      --teal: #18685c;
+      --teal-soft: #e7f5f2;
+      --danger: #bd2c2c;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif; }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+    header { background: #123f39; color: #f4fffc; padding: 16px 18px 14px; }
+    header strong { display: block; font-size: 16px; }
+    header p { margin: 6px 0 0; color: #d7ece8; font-size: 13px; max-width: 78ch; }
+    .shell { display: grid; grid-template-columns: 250px 1fr; min-height: calc(100vh - 92px); }
+    @media (max-width: 860px) { .shell { grid-template-columns: 1fr; } aside { position: sticky; top: 0; z-index: 2; } }
+    aside { background: #fff; border-left: 1px solid var(--line); padding: 10px; max-height: 100vh; overflow: auto; }
+    aside h2 { margin: 12px 8px 6px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    aside button { display: block; width: 100%; text-align: right; border: 0; background: transparent; border-radius: 10px; min-height: 38px; padding: 6px 10px; color: var(--ink); }
+    aside button[aria-current="true"] { background: var(--teal-soft); color: var(--teal); font-weight: 700; }
+    main { padding: 18px; }
+    .view { display: none; max-width: 760px; }
+    .view.active { display: block; }
+    .why { background: #fff8e8; border: 1px solid #ead7a2; border-radius: 12px; padding: 10px 12px; margin-bottom: 12px; font-size: 14px; }
+    .app { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 16px; }
+    .kicker { margin: 0; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 4px 0 8px; font-size: 26px; letter-spacing: -.03em; }
+    h3 { margin: 0 0 6px; font-size: 16px; }
+    .muted { color: var(--muted); }
+    .cards { display: grid; gap: 10px; margin-top: 12px; }
+    @media (min-width: 700px) { .cards.two { grid-template-columns: 1fr 1fr; } }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 12px; background: #fff; }
+    .bar { height: 10px; background: #e7eef0; border-radius: 999px; overflow: hidden; margin-top: 6px; }
+    .bar span { display: block; height: 100%; background: var(--teal); }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .btn { min-height: 44px; border-radius: 12px; border: 1px solid var(--line); background: #fff; padding: 0 12px; font-weight: 650; }
+    .btn.primary { background: var(--teal); color: #fff; border-color: transparent; }
+    .pill { display: inline-block; border-radius: 999px; background: var(--teal-soft); color: var(--teal); font-size: 12px; font-weight: 700; padding: 2px 8px; }
+    ol, ul { margin: 8px 0 0; padding-right: 18px; }
+    li { margin: 5px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: right; border-bottom: 1px solid var(--line); padding: 8px 4px; }
+    input, select { width: 100%; height: 42px; border: 1px solid var(--line); border-radius: 10px; padding: 0 10px; margin-top: 4px; }
+    label { display: block; margin-top: 10px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>نقشهٔ EnglishBridge — آنچه واقعاً ساخته شده</strong>
+    <p>فایل قبلی فقط چند کارت نمونه بود و برای همین بدرد‌نخور به نظر می‌رسید. این صفحه خودِ درس‌ها، تمرین، آزمون، برنامه، صحبت و شنیدن را نشان می‌دهد. هنوز سرور زنده نیست؛ یک قالب برای دیدن وسعت کار است.</p>
+  </header>
+  <div class="shell">
+    <aside>
+      <h2>دانش‌آموز</h2>
+      <button type="button" data-view="home" aria-current="true">خانه</button>
+      <button type="button" data-view="course">مسیر درس</button>
+      <button type="button" data-view="lesson">یک درس واقعی</button>
+      <button type="button" data-view="practice">تمرین</button>
+      <button type="button" data-view="review">مرور واژه‌ها</button>
+      <button type="button" data-view="exam">آزمون</button>
+      <button type="button" data-view="task">تکلیف</button>
+      <button type="button" data-view="schedule">برنامه کلاس</button>
+      <button type="button" data-view="tutor">معلم انگلیسی</button>
+      <button type="button" data-view="speak">صحبت</button>
+      <button type="button" data-view="listen">شنیدن</button>
+      <button type="button" data-view="plan">برنامه امروز</button>
+      <button type="button" data-view="achieve">پیشرفت شخصی</button>
+      <h2>معلم</h2>
+      <button type="button" data-view="teacher">مرکز معلم</button>
+      <h2>مدیر</h2>
+      <button type="button" data-view="admin">مرکز مدیر</button>
+    </aside>
+    <main>
+      <section class="view active" id="home">
+        <div class="why">ورود، گروه شیفت، سطح زبان و کار امروز. سطح انگلیسی Pre-A1 است. Learning Level فقط انگیزه است و جای سطح زبان را نمی‌گیرد.</div>
+        <div class="app">
+          <p class="kicker">Student · Shift B</p>
+          <h1>Welcome back, James</h1>
+          <p class="muted">English level: Pre-A1 · Course: English Starter</p>
+          <div class="cards two">
+            <article class="card"><h3>Continue</h3><p>Workplace Words · Everyday English</p><p class="pill">Next lesson</p></article>
+            <article class="card"><h3>Today, 10 minutes</h3><p>1. Review station · 2. Practice “I am” · 3. One short listen</p><div class="bar"><span style="width:40%"></span></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="course">
+        <div class="why">یک دورهٔ واقعی در پایگاه داده است، نه پنج سیستم جدا برای شیفت‌ها. همهٔ گروه‌ها همان English Starter را می‌بینند.</div>
+        <div class="app">
+          <p class="kicker">My Learning</p>
+          <h1>English Starter</h1>
+          <div class="cards">
+            <article class="card"><h3>Getting Started</h3><p>What is English? · Hello and Goodbye · My Name Is... · Basic Classroom English</p></article>
+            <article class="card"><h3>Alphabet & Sounds</h3><p>The English Alphabet · Letter Names · Basic English Sounds · Spelling Simple Words</p></article>
+            <article class="card"><h3>Basic Words</h3><p>People · Family · Common Objects · Colors</p></article>
+            <article class="card"><h3>Basic Sentences</h3><p>I, You, He, She · The verb “to be” · This and That · Simple Questions</p></article>
+            <article class="card"><h3>Numbers & Time</h3><p>Numbers 1–20 · Numbers 20–100 · Days · Months · What Time Is It?</p></article>
+            <article class="card"><h3>Everyday English</h3><p>Food and Drinks · Workplace Words · Simple Requests · My Daily Routine</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="lesson">
+        <div class="why">درس از واژه‌ها و گرامر ذخیره‌شده ساخته می‌شود. دکمهٔ صحبت و شنیدن همان درس را باز می‌کند، نه یک موضوع تصادفی.</div>
+        <div class="app">
+          <p class="kicker">Lesson</p>
+          <h1>Workplace Words</h1>
+          <p>station · helmet · water · careful · firefighter</p>
+          <article class="card"><h3>Grammar on this lesson</h3><p>I am a firefighter. You are at the station.</p></article>
+          <div class="row">
+            <button class="btn primary" type="button">Practice</button>
+            <button class="btn" type="button">Practice speaking</button>
+            <button class="btn" type="button">Practice listening</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="practice">
+        <div class="why">تمرین جدا از آزمون است. پاسخ روی سرور تصحیح می‌شود. دانش‌آموز نمی‌تواند نمره را از مرورگر بفرستد.</div>
+        <div class="app">
+          <p class="kicker">Practice score · not an exam</p>
+          <h1>Complete: I ___ a firefighter.</h1>
+          <div class="row">
+            <button class="btn" type="button">am</button>
+            <button class="btn" type="button">are</button>
+            <button class="btn" type="button">is</button>
+          </div>
+          <p>اگر غلط باشد، یک اصلاح کوتاه می‌آید و تلاش قبلی پاک نمی‌شود.</p>
+        </div>
+      </section>
+
+      <section class="view" id="review">
+        <div class="why">کلمهٔ «helmet» اگر قبلاً درست بوده و بعد غلط شود، پاک نمی‌شود. برمی‌گردد برای مرور. این نمرهٔ علمی تلفظ نیست.</div>
+        <div class="app">
+          <p class="kicker">Review</p>
+          <h1>helmet</h1>
+          <p class="muted">Due today · 4 correct, 1 incorrect still on record</p>
+          <div class="row">
+            <button class="btn primary" type="button">I know it</button>
+            <button class="btn" type="button">Review again</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="exam">
+        <div class="why">آزمون رسمی زمان‌دار است و نتیجه‌اش با تمرین قاطی نمی‌شود. معلم نمرهٔ آزمون را مستقیم عوض نمی‌کند؛ اصلاح باید ثبت شود.</div>
+        <div class="app">
+          <p class="kicker">Exam · separate from practice</p>
+          <h1>Starter check</h1>
+          <table>
+            <tr><th>وضعیت</th><th>معنی</th></tr>
+            <tr><td>Scheduled</td><td>هنوز باز نشده</td></tr>
+            <tr><td>Open</td><td>می‌توان شروع کرد</td></tr>
+            <tr><td>Result</td><td>نمرهٔ رسمی، نه XP</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="view" id="task">
+        <div class="why">تکلیف متنی است. آپلود فایل جعلی ندارد. تکلیف صحبت و شنیدن جداست و نمرهٔ رسمی نمی‌شود مگر معلم خودش بازبینی کند.</div>
+        <div class="app">
+          <p class="kicker">Assignments</p>
+          <h1>Write two sentences about your job</h1>
+          <label>Answer<textarea style="width:100%;min-height:80px;margin-top:4px;border:1px solid var(--line);border-radius:10px;padding:8px">I am a firefighter.</textarea></label>
+          <p class="pill">Speaking practice is listed separately and is not an exam.</p>
+        </div>
+      </section>
+
+      <section class="view" id="schedule">
+        <div class="why">شیفت A تا D و روزکارها یک تقویم سازمانی دارند. برنامهٔ یادگیری ساعت کار را عوض نمی‌کند. اگر کلاس باشد، تمرین کوتاه می‌ماند.</div>
+        <div class="app">
+          <p class="kicker">Schedule</p>
+          <h1>Shift B · this week</h1>
+          <table>
+            <tr><th>کلاس</th><th>وضعیت</th></tr>
+            <tr><td>Workplace Words</td><td>Scheduled</td></tr>
+            <tr><td>Speaking practice</td><td>Around the class, not instead of it</td></tr>
+          </table>
+          <p class="muted">حضور و غیاب با ساعت سرور ثبت می‌شود، نه با ساعت گوشی دانش‌آموز.</p>
+        </div>
+      </section>
+
+      <section class="view" id="tutor">
+        <div class="why">معلم انگلیسی از درس و اشتباه‌های واقعی حرف می‌زند. اگر کلید هوش مصنوعی نباشد، همان محتوای دوره را تمرین می‌کند. نمره عوض نمی‌کند.</div>
+        <div class="app">
+          <p class="kicker">English Tutor · AI Practice</p>
+          <h1>Let's practice “I am”.</h1>
+          <article class="card">You missed am / is / are in speaking. Say: I am a firefighter.</article>
+          <p class="pill">Not an exam. Not a grade.</p>
+        </div>
+      </section>
+
+      <section class="view" id="speak">
+        <div class="why">اگر میکروفون نباشد، سکوت نمی‌کند. می‌گوید بنویس. فایل صوتی ساختگی نمی‌سازد و نمرهٔ دهان و لهجه نمی‌دهد.</div>
+        <div class="app">
+          <p class="kicker">Speaking · Ready</p>
+          <h1>Say: I work at a fire station.</h1>
+          <div class="row">
+            <button class="btn primary" type="button">Start speaking</button>
+            <button class="btn" type="button">Hear</button>
+            <button class="btn" type="button">Try again</button>
+          </div>
+          <label>Or type<input value="I work at a fire station." /></label>
+          <p>Understood from the text. Pronunciation score: none.</p>
+        </div>
+      </section>
+
+      <section class="view" id="listen">
+        <div class="why">شنیدن از متن درس خوانده می‌شود. متن تا وقتی دانش‌آموز نخواهد مخفی است. نتیجه تمرین است، نه آزمون.</div>
+        <div class="app">
+          <p class="kicker">Listening</p>
+          <h1>Hello at the station</h1>
+          <p>Play · Replay · Slow · Show transcript</p>
+          <article class="card">Hello. My name is Sam. I work at a fire station.</article>
+          <p class="pill">If audio is missing: read the sentence. No fake file.</p>
+        </div>
+      </section>
+
+      <section class="view" id="plan">
+        <div class="why">برنامه از رویداد واقعی می‌آید: درس ناتمام، مرور عقب‌افتاده، اشتباه صحبت. اگر روزی نیاید، عقب‌افتادگی انباشته نمی‌شود.</div>
+        <div class="app">
+          <p class="kicker">Today's plan</p>
+          <h1>10 minutes</h1>
+          <ol>
+            <li>Review helmet — due, history kept.</li>
+            <li>Practice be verb — teacher asked Shift B to review it.</li>
+            <li>One listening item.</li>
+            <li>One speaking sentence.</li>
+          </ol>
+          <p class="muted">Your previous activity is still available. Let's continue from here.</p>
+        </div>
+      </section>
+
+      <section class="view" id="achieve">
+        <div class="why">امتیاز برای تمام‌کردن کار است، نه برای باز کردن صفحه. سقف روزانه دارد تا با تکرار الکی امتیاز جمع نشود. تابلوی رتبه وجود ندارد.</div>
+        <div class="app">
+          <p class="kicker">Achievements</p>
+          <h1>Learning Level 2</h1>
+          <p>This is not your English level.</p>
+          <div class="bar"><span style="width:45%"></span></div>
+          <p>First Step: earned after a real lesson. Speaker: locked until 10 speaking sessions.</p>
+          <p>Shift B together: 42 / 100. Names are hidden.</p>
+        </div>
+      </section>
+
+      <section class="view" id="teacher">
+        <div class="why">معلم فقط گروه خودش را می‌بیند. نمرهٔ آزمون را قاطی تمرین نمی‌کند. رونوشت خصوصی صحبت پیش‌فرض مخفی است.</div>
+        <div class="app">
+          <p class="kicker">Teacher center</p>
+          <h1>Shift B</h1>
+          <div class="cards two">
+            <article class="card"><h3>Attendance</h3><p>Present, absent, late. Not guessed from a cancelled class.</p></article>
+            <article class="card"><h3>Exam results</h3><p>Official attempts only. Speaking practice is a separate link.</p></article>
+            <article class="card"><h3>Learning plans</h3><p>Needs review. Low recent activity. No best or worst student.</p></article>
+            <article class="card"><h3>Engagement</h3><p>8 of 12 finished one activity. Group total only.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="admin">
+        <div class="why">مدیر کاربران، دوره، محدودیت صدا، برنامهٔ تطبیقی و امتیاز را تنظیم می‌کند. رمز و کلید سرویس در صفحه نیست. حذف دائمی پیش‌فرض نیست.</div>
+        <div class="app">
+          <p class="kicker">Admin</p>
+          <h1>One organization</h1>
+          <ul>
+            <li>Users and groups: Shift A, B, C, D, day workers.</li>
+            <li>Curriculum: publish a lesson only after confirmation.</li>
+            <li>Voice: browser or typed answer. Raw audio stays off.</li>
+            <li>Adaptive learning: intervals and daily minutes, audited.</li>
+            <li>Gamification: XP values and daily cap, no leaderboard.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll("aside button").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("aside button").forEach((item) => item.setAttribute("aria-current", String(item === button)));
+        document.querySelectorAll(".view").forEach((view) => view.classList.toggle("active", view.id === button.dataset.view));
+      });
+    });
+  </script>
+</body>
+</html>

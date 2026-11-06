@@ -1,0 +1,558 @@
+[
+  {
+    "state": "neutral",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-neutral-front-v1.svg",
+    "png": "assets/leo/png/leo-neutral-front-v1-raster-v3.png",
+    "svg_sha256": "aa012d49e4c877503c4848371056859bb177041ad5ffdf3ef56acf8f0f6b2fa4",
+    "png_sha256": "675a065bf0371b61bfdd3ee5556857ac40bead724b99fb80f16a83d5015f7b1d",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      137,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "happy",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-happy-front-v1.svg",
+    "png": "assets/leo/png/leo-happy-front-v1-raster-v3.png",
+    "svg_sha256": "2ebaa56ee9d1b370cbd9c9f674be3f255f9ad4ee3bda8c0522cdd0dd93f02691",
+    "png_sha256": "60f5fed804818f6713338fbf29cbbb0b42a319e7c2fe2cacb4ccd056ff847ac1",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      99,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "excited",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-excited-front-v1.svg",
+    "png": "assets/leo/png/leo-excited-front-v1-raster-v3.png",
+    "svg_sha256": "d11a9fcc537eb9989891abfeb2fa224d56a4e553858e2ec8d4fe61264d5d3909",
+    "png_sha256": "fa571b1061e6953794177f973d3248c6bf83b883b819ac86f9127ae1f3e0bccf",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      104,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "thinking",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-thinking-front-v1.svg",
+    "png": "assets/leo/png/leo-thinking-front-v1-raster-v3.png",
+    "svg_sha256": "5c62fe878cd200bcdf8c265589d1104a02447de946b0775a3f0ccc325a6f34d7",
+    "png_sha256": "be0c7597828353ad5d5d8d75c25881549bf9e99beda577d6a2f40c72dbf7eea8",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      141,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "confused",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-confused-front-v1.svg",
+    "png": "assets/leo/png/leo-confused-front-v1-raster-v3.png",
+    "svg_sha256": "f790822eb54c98c2dedb5b3d191ff5fc3dbcf0cba30991ed58f89a45d3374ebf",
+    "png_sha256": "da69d56829022819afbee00d251eaf66af6e67a2e50e2883a14bd42d627c37aa",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      87,
+      47,
+      638,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "teaching",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-teaching-front-v1.svg",
+    "png": "assets/leo/png/leo-teaching-front-v1-raster-v3.png",
+    "svg_sha256": "f9e55348f7a97ae4f63f0441c074e321dd54a9aad502fd13c5e2a1ab95197aef",
+    "png_sha256": "f884ee27fa1ff7d9ce20420330295aadc2d4be521f7fa1444b21fd81f5e18826",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      137,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "listening",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-listening-front-v1.svg",
+    "png": "assets/leo/png/leo-listening-front-v1-raster-v3.png",
+    "svg_sha256": "21652f0f971fab331b4d5efe3a19f32c273478e4c485531bab01e5626256593d",
+    "png_sha256": "255a7a80dd854c6db7e24a0b2fdfb56d087e0f5be79297e7f881b5ab3352ea4f",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      155,
+      47,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "speaking",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-speaking-front-v1.svg",
+    "png": "assets/leo/png/leo-speaking-front-v1-raster-v3.png",
+    "svg_sha256": "933523b43320e1edcdcf695d21dc1137f0cbaacf49ecbb35d21df90bcab007ce",
+    "png_sha256": "e2012234625d9b53bef556c3210bcff33f97e90d7b466c5f87cbf6b1636b884c",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      89,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "celebrating",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-celebrating-front-v1.svg",
+    "png": "assets/leo/png/leo-celebrating-front-v1-raster-v3.png",
+    "svg_sha256": "914cef00ef9d7771f674309f31fdbcefdc3f49497a015545a2126d0053816ec1",
+    "png_sha256": "f88ba8bb7d05cd933c2634976729d1c62b4bfc65102a4ff1f491da6e1a2bfb3c",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      87,
+      46,
+      634,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "encouraging",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-encouraging-front-v1.svg",
+    "png": "assets/leo/png/leo-encouraging-front-v1-raster-v3.png",
+    "svg_sha256": "bc554381f77f9c817ab0a263f537e3b537f8b26624f33df2da5119d931f1e50a",
+    "png_sha256": "559bf7d0f39a551507fcad68e18e586e1890321980b0b65fe1b3c357814f900c",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      94,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "sad-after-mistake",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-sad-after-mistake-front-v1.svg",
+    "png": "assets/leo/png/leo-sad-after-mistake-front-v1-raster-v3.png",
+    "svg_sha256": "a11d3e3c73299e1b360d0460d6cb61e9e7972f929f96ac19ed177352aea8d0df",
+    "png_sha256": "ad80ce64f47cffe36b92df321b992e668984801dcc1cc050513c4f744464bd01",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      200,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "sleeping",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-sleeping-front-v1.svg",
+    "png": "assets/leo/png/leo-sleeping-front-v1-raster-v3.png",
+    "svg_sha256": "580ff590941d667a3a9bd0e24b67b7d20e7298397a4a6f5e803aa7430ea990da",
+    "png_sha256": "8bf5db089597dd08fcd681150e270b0050928faace3f1b385b30d84a9b83b3c9",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      199,
+      49,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "running",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-running-front-v1.svg",
+    "png": "assets/leo/png/leo-running-front-v1-raster-v3.png",
+    "svg_sha256": "47b878cbedfa00eff52e476a2dfb1f55c326cc4deb8444d7d4d0ce4f4c153474",
+    "png_sha256": "df5ab58fe7b602720cae5b3860207b128195b443eac4cdee4cd5148b8efcc355",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      104,
+      49,
+      612,
+      893
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "jumping",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-jumping-front-v1.svg",
+    "png": "assets/leo/png/leo-jumping-front-v1-raster-v3.png",
+    "svg_sha256": "b4968d20d6ec1f5eaf6ba059de0d6dd50ee098dcd233da1d50e2dd2f664bf2a0",
+    "png_sha256": "db3ec5b60c71fc61e084653de68511231a099fd297cbb5f6a8ca2530a6097ff9",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      105,
+      28,
+      627,
+      854
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "winning",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-winning-front-v1.svg",
+    "png": "assets/leo/png/leo-winning-front-v1-raster-v3.png",
+    "svg_sha256": "d97b00823829ce9273a6e24560c0e9d108c8059898321d528f0f6437436dc0a8",
+    "png_sha256": "98c5c924e87398cd4b59b84f6adab979f52e7f0d46bc615a512d5fa2ff65a99a",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      135,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "explaining",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-explaining-front-v1.svg",
+    "png": "assets/leo/png/leo-explaining-front-v1-raster-v3.png",
+    "svg_sha256": "95fa4c23adbf89b53e300165fb25b05684c5b4107b3b5d1d536eb72a8830df75",
+    "png_sha256": "08989d0a8ac3a3b53f6afd86d60e965c47bff3a5278eb048cf36b24fc8241853",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      179,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; not production animation or approved rig",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "neutral",
+    "view": "three-quarter",
+    "svg": "assets/leo/svg/leo-neutral-three-quarter-v1.svg",
+    "png": "assets/leo/png/leo-neutral-three-quarter-v1-raster-v3.png",
+    "svg_sha256": "f0c49b95c0795cb69a298779a6b707cb04cc0c4f88e10f6e33b8c93868596201",
+    "png_sha256": "56c3f7de13d1152a1b43232cce06bbf696f975c25e508068c79ca484bcfae5b8",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      137,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; view construction needs artist review",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "TURNAROUND CONSTRUCTION DRAFT; artist refinement required"
+  },
+  {
+    "state": "neutral",
+    "view": "profile",
+    "svg": "assets/leo/svg/leo-neutral-profile-v1.svg",
+    "png": "assets/leo/png/leo-neutral-profile-v1-raster-v3.png",
+    "svg_sha256": "54550e3f085c4d834d57d953f403ac06e3d6900f8f856ae9792e874c3b07e60e",
+    "png_sha256": "fbbb4ec7082e469b787ad297e2415a1905f1e5db48176b8f82fd65191b51dc6f",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      93,
+      63,
+      516,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; view construction needs artist review",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "TURNAROUND CONSTRUCTION DRAFT; artist refinement required"
+  },
+  {
+    "state": "neutral",
+    "view": "back",
+    "svg": "assets/leo/svg/leo-neutral-back-v1.svg",
+    "png": "assets/leo/png/leo-neutral-back-v1-raster-v3.png",
+    "svg_sha256": "367bf22c03460192f47d32fddc384e73f8ef1989cfa9b088a32f2f6ce6f0c4b6",
+    "png_sha256": "401c8dd8bfa7a371b8945fe9618f0c47470c9343e0c01bcc53a53ac9ede93a2c",
+    "size": [
+      720,
+      1020
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      137,
+      46,
+      627,
+      956
+    ],
+    "status": "CANONICAL_DESIGN_CANDIDATE; view construction needs artist review",
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "acceptance": "TURNAROUND CONSTRUCTION DRAFT; artist refinement required"
+  },
+  {
+    "state": "portrait",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-portrait-v1.svg",
+    "png": "assets/leo/png/leo-portrait-v1-raster-v3.png",
+    "size": [
+      230,
+      221
+    ],
+    "status": "Derived crop of canonical neutral asset",
+    "png_sha256": "85f4d1a1a1cdbea068f4d301b6322025029d2c4d1aa83626159becaf3e9195c0",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      2,
+      1,
+      226,
+      221
+    ],
+    "rasterizer": "Local Pillow geometry authoring renderer v3; existing library; not a browser",
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "svg_sha256": "be805bea7239d26cc80dbfb11eda628da6301d2d992859974f92e0578a58c072",
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  },
+  {
+    "state": "blink-closed",
+    "view": "front",
+    "svg": "assets/leo/svg/leo-blink-closed-keyframe-v1.svg",
+    "png": "assets/leo/png/leo-blink-closed-keyframe-v1-raster-v3.png",
+    "status": "Design blink keyframe only",
+    "size": [
+      720,
+      1020
+    ],
+    "mode": "RGBA",
+    "alpha_verified": true,
+    "png_sha256": "15acb773ace033546d6767dc96f14c129401e0b0270071407d992081a538a6e4",
+    "svg_sha256": "f7f0e6db2c0b316b95f29eddebe33b5e6bf3d9d4f02dcb8440bcbfdbb232eee8",
+    "acceptance": "CANONICAL DESIGN FAMILY; owner/artist approval pending"
+  }
+]
